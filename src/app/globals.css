@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Font settings for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ivar Text", sans-serif;
+  font-weight: 600;
+}
+W
+
+/* Font settings for body text */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Optional: Style for bold text in body */
+strong {
+  font-weight: 700;
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
