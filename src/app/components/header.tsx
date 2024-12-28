@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className="bg-black w-full top-0 z-50">
       {/* Upper Header */}
-      <div className="container border-b border-gray-700">
+      <div className="container border-b border-gray-700 bg-gradient-to-b from-black to-gray-900">
         <div className="flex justify-between items-center h-20 px-4 mx-auto max-w-6xl">
           <Image
             src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735141308/EESL/EESL-Logo.png"

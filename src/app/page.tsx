@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import HeroSlider from "./components/Hero-Slider";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
+      <HeroSlider />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-white to-gray-50">
         <div className="container px-4 py-16 md:py-24">
