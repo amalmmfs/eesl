@@ -27,7 +27,7 @@ export default function Header() {
       <div className="container border-b border-gray-700 bg-gradient-to-b from-black to-gray-900">
         <div className="flex justify-between items-center h-20 px-4 mx-auto max-w-6xl">
           <Image
-            src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735141308/EESL/EESL-Logo.png"
+            src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
             alt="EESL Logo"
             width={190}
             height={120}

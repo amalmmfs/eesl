@@ -4,7 +4,7 @@ import { Mail, Twitter, Linkedin, BookOpen } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-black to-gray-900 text-white">
-      <div className="container px-4 py-12 md:py-16">
+      <div className="container px-4 py-12 md:py-16 mx-auto max-w-6xl">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3 max-w-6xl mx-auto">
           <div>
             <h3 className="text-lg font-semibold text-primary">Contact</h3>

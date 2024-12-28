@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import HeroSlider from "./components/Hero-Slider";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <HeroSlider />
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-white to-gray-50">
-        <div className="container px-4 py-16 md:py-24">
+        <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-2 md:gap-12">
             <div className="flex flex-col justify-center space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
@@ -28,10 +29,14 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div className="relative h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full opacity-20 blur-3xl" />
-                <div className="relative h-full flex items-center justify-center">
-                  {/* You can add a hero image or animation here */}
-                </div>
+                <Image
+                  src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735410394/EESL/Hero-Section/eua4crmhymqvgars1ngn.png"
+                  alt="EESL Team"
+                  fill
+                  className="object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+                  priority
+                  sizes="(max-width: 768px) 300px, 400px"
+                />
               </div>
             </div>
           </div>
