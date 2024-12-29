@@ -1,11 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Twitter, Linkedin, BookOpen } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-black to-gray-900 text-white">
       <div className="container px-4 py-12 md:py-16 mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-4 max-w-6xl mx-auto">
           <div>
             <h3 className="text-lg font-semibold text-primary">Contact</h3>
             <ul className="mt-6 space-y-4 text-gray-300">
@@ -83,6 +86,29 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+
+          <div className="flex flex-col items-center gap-6">
+            <Image
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
+              alt="EESL Logo"
+              width={180}
+              height={50}
+              className="dark:invert cursor-pointer"
+              priority
+              onClick={() => window.location.assign("/")}
+            />
+            <Image
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
+              alt="TCG Crest Logo"
+              width={180}
+              height={50}
+              className="brightness-400 contrast-125 cursor-pointer"
+              priority
+              onClick={() =>
+                window.location.assign("https://www.tcgcrest.org/")
+              }
+            />
           </div>
         </div>
 
