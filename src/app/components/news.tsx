@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Marquee from "react-fast-marquee";
 
 interface NewsItem {
   date: string;
@@ -50,11 +51,16 @@ export default function NewsSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Marquee
+          gradient={true}
+          speed={40}
+          pauseOnHover={true}
+          className="overflow-hidden"
+        >
           {newsItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 mx-4 w-[300px]"
             >
               <div className="p-6">
                 <div className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-blue-50 text-blue-600">
@@ -77,7 +83,7 @@ export default function NewsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );
