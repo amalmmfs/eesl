@@ -1,4 +1,4 @@
-import HeroSlider from "./components/hero-slider";
+import HeroSlider from "./components/hero-section";
 import IntroContent from "./components/intro-content";
 import NewsSection from "./components/news";
 
