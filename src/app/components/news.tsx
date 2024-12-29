@@ -31,7 +31,7 @@ const newsItems: NewsItem[] = [
     category: "Events",
   },
   {
-    date: "2024-01-01",
+    date: "2024-01-12",
     title: "Research Grant Awarded",
     description:
       "EESL secured major funding for advanced energy storage solutions development.",
