@@ -6,7 +6,7 @@ export default function IntroContent() {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50">
       <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Welcome to EESL
@@ -23,15 +23,17 @@ export default function IntroContent() {
               <Button variant="outline">View Publications</Button>
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <div className="relative h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
+
+          <div className="relative flex items-center justify-center w-full h-full">
+            <div className="absolute w-[600px] h-[600px] bg-blue-100 rounded-full opacity-20 blur-3xl"></div>
+            <div className="relative w-full aspect-square max-w-[500px]">
               <Image
-                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735410394/EESL/Hero-Section/eua4crmhymqvgars1ngn.png"
-                alt="EESL Team"
+                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735494259/EESL/i3vdzlo9clr8oog2f1we.png"
+                alt="EESL"
                 fill
-                className="object-cover rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+                className="object-contain rounded-2xl"
                 priority
-                sizes="(max-width: 768px) 300px, 400px"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
