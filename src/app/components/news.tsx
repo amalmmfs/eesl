@@ -45,7 +45,9 @@ export default function NewsSection() {
     <section className="bg-white py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold tracking-tight">Latest News</h2>
+          <h2 className="text-3xl font-bold tracking-tight">
+            Latest Developments
+          </h2>
           <p className="text-gray-500 mt-2">
             Stay updated with our latest developments and achievements
           </p>
@@ -60,7 +62,7 @@ export default function NewsSection() {
           {newsItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 mx-4 w-[300px]"
+              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 mx-4 w-[300px] h-[340px]"
             >
               <div className="p-6">
                 <div className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-blue-50 text-blue-600">

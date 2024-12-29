@@ -15,9 +15,6 @@ export default function Footer() {
               <li className="hover:text-white transition-colors">
                 Electrochemical Energy Storage Laboratory
               </li>
-              <li className="hover:text-white transition-colors">
-                Department of Chemistry
-              </li>
               <li className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={16} />
                 <a href="mailto:contact@eesl.org">contact@eesl.org</a>
