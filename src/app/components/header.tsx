@@ -40,7 +40,7 @@ export default function Header() {
             alt="TCG Crest Logo"
             width={180}
             height={50}
-            className="brightness-200 contrast-125 cursor-pointer"
+            className="brightness-400 contrast-125 cursor-pointer"
             priority
             onClick={() => window.location.assign("https://www.tcgcrest.org/")}
           />
