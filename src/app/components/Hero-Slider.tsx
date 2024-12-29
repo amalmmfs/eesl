@@ -94,7 +94,7 @@ export default function HeroSlider() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-12 text-white">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 mx-auto max-w-6xl">
                   {image.caption}
                 </h2>
               </div>
