@@ -4,33 +4,7 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, ExternalLink } from "lucide-react";
-
-interface Publication {
-  title: string;
-  authors: string[];
-  journal: string;
-  year: number;
-  acsLink: string;
-  pdf?: string;
-}
-
-const publications: Publication[] = [
-  {
-    title:
-      "Evolution of Interfacial Electro-Chemo-Mechanics between Lithium Metal and Halide Solid Electrolyte",
-    authors: ["L Mandal", "RK Biswas", "S Bera", "SB Ogale", "A Banerjee"],
-    journal: "Chemistry of Materials 36 (20), 10336-10350",
-    year: 2024,
-    acsLink: "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.4c02307",
-  },
-  {
-    title: "Electrochemical Properties of Novel Battery Materials",
-    authors: ["Michael Chen", "Robert Wilson", "Emma Davis"],
-    journal: "ACS Energy Letters, 8(4), 567-579",
-    year: 2023,
-    acsLink: "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.4c02307",
-  },
-];
+import { publications } from "@/app/data/publications";
 
 export default function PublicationsPage() {
   const [isClient, setIsClient] = useState(false);
@@ -53,8 +27,22 @@ export default function PublicationsPage() {
     );
   });
 
-  const years = [...new Set(filteredPublications.map((pub) => pub.year))].sort(
+  // Get current publications
+  const indexOfLastPublication = currentPage * publicationsPerPage;
+  const indexOfFirstPublication = indexOfLastPublication - publicationsPerPage;
+  const currentPublications = filteredPublications.slice(
+    indexOfFirstPublication,
+    indexOfLastPublication
+  );
+
+  // Get unique years only from current publications
+  const years = [...new Set(currentPublications.map((pub) => pub.year))].sort(
     (a, b) => b - a
+  );
+
+  // Calculate page numbers
+  const pageNumbers = Math.ceil(
+    filteredPublications.length / publicationsPerPage
   );
 
   if (!isClient) {
@@ -77,7 +65,7 @@ export default function PublicationsPage() {
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
           <Input
             type="search"
-            placeholder="Search by keyword, phrase, or author..."
+            placeholder="Search by Keyword, Phrase, or Author"
             className="pl-10 py-6 text-lg"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -85,7 +73,7 @@ export default function PublicationsPage() {
         </div>
 
         {years.map((year) => {
-          const yearPublications = filteredPublications.filter(
+          const yearPublications = currentPublications.filter(
             (pub) => pub.year === year
           );
           if (yearPublications.length === 0) return null;
@@ -94,26 +82,21 @@ export default function PublicationsPage() {
             <div key={year} className="mb-12">
               <h2 className="text-2xl font-semibold mb-6">{year}</h2>
               <div className="space-y-6">
-                {yearPublications.map((pub, index) => (
+                {yearPublications.map((pub) => (
                   <div
-                    key={index}
+                    key={pub.id}
                     className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <a
-                      href={pub.acsLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors mb-2 block"
-                    >
-                      {pub.title}
-                    </a>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 mb-3">
                       {pub.authors.join(", ")}
+                    </p>
+                    <p className="font-semibold mb-3 text-blue-600">
+                      &quot;{pub.title}&quot;
                     </p>
                     <div className="flex items-center justify-between">
                       <p className="text-gray-500 italic">{pub.journal}</p>
                       <a
-                        href={pub.acsLink}
+                        href={pub.publicationLink}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
@@ -129,21 +112,38 @@ export default function PublicationsPage() {
           );
         })}
 
-        <div className="flex justify-center gap-2 mt-8">
-          {Array.from({
-            length: Math.ceil(
-              filteredPublications.length / publicationsPerPage
-            ),
-          }).map((_, i) => (
+        {pageNumbers > 1 && (
+          <div className="flex justify-center items-center gap-4 mt-12">
             <Button
-              key={i}
-              variant={currentPage === i + 1 ? "default" : "outline"}
-              onClick={() => setCurrentPage(i + 1)}
+              variant="outline"
+              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
             >
-              {i + 1}
+              Previous
             </Button>
-          ))}
-        </div>
+            <div className="flex gap-2">
+              {Array.from({ length: pageNumbers }, (_, i) => (
+                <Button
+                  key={i + 1}
+                  variant={currentPage === i + 1 ? "default" : "outline"}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className="min-w-[40px]"
+                >
+                  {i + 1}
+                </Button>
+              ))}
+            </div>
+            <Button
+              variant="outline"
+              onClick={() =>
+                setCurrentPage((prev) => Math.min(prev + 1, pageNumbers))
+              }
+              disabled={currentPage === pageNumbers}
+            >
+              Next
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
