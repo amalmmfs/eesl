@@ -90,7 +90,7 @@ export interface Publication {
       authors: [
         "Subha Samanta",
         "Susmita Bera",
-        "Ropan K Biswas",
+        "Ripan K Biswas",
         "Sukanta Mondal",
         "Lily Mandal",
         "Abhik Banerjee",
