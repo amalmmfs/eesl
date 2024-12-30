@@ -7,15 +7,24 @@ export default function IntroContent() {
     <section className="bg-gradient-to-b from-white to-gray-50">
       <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-          <div className="flex flex-col justify-center space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+          <div className="flex flex-col justify-center space-y-4 md:space-y-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
               Welcome to EESL
             </h1>
-            <p className="text-gray-500 md:text-xl">
-              We are dedicated to developing next-generation energy storage
-              technologies through innovative research and collaboration.
+            <p className="text-gray-500 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
+              The growing popularity of next-generation high-end electronic
+              devices and the increasing adoption of electric vehicles (EVs)
+              have highlighted a significant challenge in cutting-edge
+              lithium-ion battery (LIB) technology. Key performance metrics—such
+              as energy density, power density, cycle life, safety, and
+              cost—have not yet harmonized to meet the escalating demands of
+              electrified transportation and the integration of renewable energy
+              into the electricity grid. EESL is dedicated to addressing
+              high-priority challenges that pose significant difficulties for
+              India and the world in developing advanced and alternative
+              versions of lithium-ion batteries.
             </p>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Button className="gap-2">
                 Learn More
                 <ArrowRight className="h-4 w-4" />
