@@ -10,8 +10,12 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function ResearchPage() {
+  useEffect(() => {
+    document.title = "Research Areas | EESL";
+  }, []);
   return (
     <div className="w-full bg-white border-b">
       <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
@@ -32,7 +36,7 @@ export default function ResearchPage() {
           </div>
           <Tabs defaultValue="characterization" className="space-y-12">
             <div className="relative">
-              <TabsList className="">
+              <TabsList className="sticky top-0 z-10">
                 {/* TODO Add suitable styles here and improve the UI */}
                 {[
                   {
