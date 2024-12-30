@@ -31,7 +31,7 @@ export default function IntroContent() {
                 src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735494259/EESL/i3vdzlo9clr8oog2f1we.png"
                 alt="EESL"
                 fill
-                className="object-contain rounded-2xl"
+                className="object-contain rounded-2xl brightness-100 contrast-50"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
