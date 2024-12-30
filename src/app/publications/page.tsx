@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, ExternalLink } from "lucide-react";
@@ -10,6 +10,10 @@ export default function PublicationsPage() {
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const publicationsPerPage = 10;
+
+  useEffect(() => {
+    document.title = "Publications | EESL";
+  }, []);
 
   const filteredPublications = publications.filter((pub) => {
     const searchLower = search.toLowerCase();
