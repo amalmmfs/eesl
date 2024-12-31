@@ -86,25 +86,25 @@ export default function PublicationsPage() {
                 {yearPublications.map((pub) => (
                   <div
                     key={pub.id}
-                    className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 mx-4"
+                    className="bg-white p-3 sm:p-4 md:p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 mx-4"
                   >
-                    <p className="text-gray-700 mb-3 sm:mb-4 text-base sm:text-lg break-words">
+                    <p className="text-gray-700 mb-2 sm:mb-3 text-sm sm:text-base break-words">
                       {pub.authors.join(", ")}
                     </p>
-                    <p className="font-medium mb-3 sm:mb-4 text-lg sm:text-xl text-blue-600 break-words">
+                    <p className="font-medium mb-2 sm:mb-3 text-base sm:text-lg text-blue-600 break-words">
                       &quot;{pub.title}&quot;
                     </p>
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0">
-                      <p className="text-gray-600 italic text-sm sm:text-base">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-0">
+                      <p className="text-gray-600 italic text-xs sm:text-sm">
                         {pub.journal}
                       </p>
                       <a
                         href={pub.publicationLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm sm:text-base"
+                        className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium transition-colors text-xs sm:text-sm"
                       >
-                        <ExternalLink className="h-4 w-4" />
+                        <ExternalLink className="h-3 w-3" />
                         View Article
                       </a>
                     </div>
