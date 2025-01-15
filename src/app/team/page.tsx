@@ -1,6 +1,8 @@
 "use client";
 
 import { TeamMember } from "@/app/components/team-member";
+import { TeamMember as TeamMemberType } from "@/app/types/team";
+
 import { teamData } from "@/app/data/team";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -87,7 +89,7 @@ export default function TeamPage() {
               variants={staggerChildren}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {members.map((member) => (
+              {members.map((member: TeamMemberType) => (
                 <TeamMember key={member.name} {...member} />
               ))}
             </motion.div>
