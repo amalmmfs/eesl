@@ -20,7 +20,7 @@ export const teamData: TeamData = {
       ],
       "Scientific Officer": [
         {
-          name: "Lily Mondal",
+          name: "Dr. Lily Mondal",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736865778/EESL/Team/Current%20Members/Scientific%20Officer/Lily%20Mondal.jpg",
           educationQualification: [
             "PhD: NCL, Pune",
@@ -50,7 +50,8 @@ export const teamData: TeamData = {
             "PhD: CGCRI, Kolkata",
           ],
           research_area: [
-            "Solid State Li and Na superionic conductor, Synchrotron based X-ray-based charactrazation of solid electrolytes"
+            "Solid State Li and Na superionic conductor", 
+            "Synchrotron based X-ray-based charactrazation of solid electrolytes"
           ]
         },
         {
@@ -60,7 +61,9 @@ export const teamData: TeamData = {
             "PhD: CGCRI, Kolkata",
           ],
           research_area: [
-            "Solid State Li and Na superionic conductor, X-ray and neutron based charactrazation of solid electrolytes. Anode free solid-state battery",
+            "Solid State Li and Na superionic conductor", 
+            "X-ray and neutron based charactrazation of solid electrolytes", 
+            "Anode free solid-state battery",
           ]
         }
       ],
@@ -82,7 +85,8 @@ export const teamData: TeamData = {
             "BTech: KIT, Bhubaneshwar",
           ],
           research_area: [
-            "Dry coating for Na ion and Solid-State Battery technology"
+            "Dry coating for Na ion",  
+            "Solid-State Battery Technology"
           ]
         },
         {
@@ -178,11 +182,12 @@ export const teamData: TeamData = {
           "PhD: IACS, Kolkata",
         ],
         research_area: [
-          "Solvent free processing of Solid Electrolyte, Solid state Battery"
+          "Solvent free processing of Solid Electrolyte", 
+          "Solid state Battery"
         ]
       },
       {
-        name: "Dr. K Shriprathy",
+        name: "Dr. K Shiprath",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884333/EESL/Team/Current%20Members/Alumni/K%20Shriprathy.png",
         educationQualification: [
           "PhD: CGCRI, Kolkata",
@@ -198,7 +203,8 @@ export const teamData: TeamData = {
           "BTech: IIT Kharagpur",
         ],
         research_area: [
-          "Development of electrolyte for fast charging Graphite, Additive design for Zn ion battery"
+          "Development of electrolyte for fast charging Graphite", 
+          "Additive design for Zn ion battery"
         ]
       }
     ],
