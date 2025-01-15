@@ -1,8 +1,9 @@
 export interface TeamMember {
     name: string
-    educationQualification: string[]
+    educationQualification?: string[]
     image: string
     research_area?: string[]
+    about?: string
   }
   
   export interface CurrentMembers {
