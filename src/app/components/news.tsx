@@ -42,7 +42,7 @@ const newsItems: NewsItem[] = [
 
 export default function NewsSection() {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-16" id="next-section">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-12">
           <h2 className="text-3xl font-bold tracking-tight">
