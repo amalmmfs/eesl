@@ -22,82 +22,82 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-black w-full top-0 z-50">
+    <header className="bg-black w-full sticky top-0 z-50">
       {/* Upper Header */}
       <div className="container border-b border-gray-700 bg-gradient-to-b from-black to-gray-900">
-        <div className="flex justify-between items-center h-20 px-4 mx-auto max-w-6xl">
-          <Image
-            src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
-            alt="EESL Logo"
-            width={190}
-            height={120}
-            className="dark:invert cursor-pointer"
-            priority
-            onClick={() => window.location.assign("/")}
-          />
-          <Image
-            src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
-            alt="TCG Crest Logo"
-            width={180}
-            height={50}
-            className="brightness-400 contrast-125 cursor-pointer"
-            priority
-            onClick={() => window.location.assign("https://www.tcgcrest.org/")}
-          />
+        <div className="flex justify-between items-center h-24 md:h-28 px-4 mx-auto max-w-6xl">
+          <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
+            <Image
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
+              alt="EESL Logo"
+              fill
+              className="dark:invert cursor-pointer object-contain"
+              priority
+              onClick={() => window.location.assign("/")}
+            />
+          </div>
+          <div className="relative w-[140px] md:w-[200px] h-[40px] md:h-[60px]">
+            <Image
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
+              alt="TCG Crest Logo"
+              fill
+              className="brightness-400 contrast-125 cursor-pointer object-contain"
+              priority
+              onClick={() =>
+                window.location.assign("https://www.tcgcrest.org/")
+              }
+            />
+          </div>
         </div>
       </div>
 
       {/* Lower Header */}
       <div className="container border-b border-gray-700 bg-gradient-to-r from-gray-900 to-black">
-        <div className="relative flex h-16 items-center justify-center px-4 mx-auto max-w-6xl">
+        <div className="relative flex h-16 items-center justify-between px-4 mx-auto max-w-6xl">
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center justify-center space-x-12">
+          <nav className="hidden md:flex items-center justify-center w-full space-x-12">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-all duration-200 hover:scale-105
-                  ${
-                    pathname === link.href
-                      ? "text-white border-b-2 border-white pb-1"
-                      : "text-gray-300 hover:text-white"
-                  }`}
+                className={`relative text-sm font-medium group`}
               >
-                {link.label}
+                <span
+                  className={`
+            relative z-10 transition-colors duration-200
+            ${
+              pathname === link.href
+                ? "text-white"
+                : "text-gray-300 hover:text-white"
+            }
+          `}
+                >
+                  {link.label}
+                </span>
+                {/* Animated underline */}
+                <span
+                  className={`
+            absolute -bottom-1 left-0 w-full h-0.5 bg-primary transform origin-left
+            transition-transform duration-200 ease-out
+            ${
+              pathname === link.href
+                ? "scale-x-100"
+                : "scale-x-0 group-hover:scale-x-100"
+            }
+          `}
+                />
               </Link>
             ))}
           </nav>
 
-          {/* Mobile Navigation */}
+          {/* Mobile Navigation Button with animation */}
           <Button
             variant="ghost"
-            className="md:hidden absolute right-4"
+            className="md:hidden relative z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <Menu className="h-6 w-6 text-white" />
+            <Menu className="h-6 w-6 text-white transition-transform duration-200 hover:scale-110" />
           </Button>
-
-          {isMenuOpen && (
-            <div className="absolute top-16 right-0 w-full bg-black/95 backdrop-blur-sm md:hidden">
-              <nav className="flex flex-col items-center py-4">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`w-full text-center py-3 text-sm font-medium 
-                      ${
-                        pathname === link.href
-                          ? "text-primary bg-gray-800/50"
-                          : "text-gray-300 hover:bg-gray-800/30 hover:text-white"
-                      }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          )}
         </div>
       </div>
     </header>
