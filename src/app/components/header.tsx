@@ -36,7 +36,7 @@ export default function Header() {
               onClick={() => window.location.assign("/")}
             />
           </div>
-          <div className="relative w-[140px] md:w-[200px] h-[40px] md:h-[60px]">
+          <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
             <Image
               src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
               alt="TCG Crest Logo"

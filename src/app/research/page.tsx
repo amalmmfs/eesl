@@ -102,7 +102,7 @@ export default function ResearchPage() {
                       transition={{ delay: 0.2 }}
                       className="space-y-6"
                     >
-                      <div className="prose prose-gray max-w-none">
+                      <div className="prose prose-gray max-w-none text-justify">
                         {item.content}
                       </div>
                     </motion.div>

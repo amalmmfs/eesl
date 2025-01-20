@@ -6,16 +6,35 @@ export const teamData: TeamData = {
         {
           name: "Dr. Abhik Banerjee",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736880584/EESL/Team/Current%20Members/Principal%20Investigator/Abhik%20Banerjee.png",
-          educationQualification: [
-            "Ph.D. in Materials Science, Stanford University",
-            "M.S. in Chemistry, MIT",
-            "B.Tech in Chemical Engineering, IIT"
+          contactInfo: {
+            phone: "+91-7365834846",
+            email: ["abhikchm@gmail.com", "abhik.banerjee@tcgcrest.org"],
+            website: "https://www.tcgcrest.org/"
+          },
+          timeline: [
+            {
+              period: "2020 onwards",
+              position: "Principal Scientist of TCG-CREST"
+            },
+            {
+              period: "2017-2022",
+              position: "Postdoctoral Scholar at University of California, San Diego"
+            },
+            {
+              period: "2015-2016",
+              position: "Postdoctoral Scholar at UNI"
+            },
+            {
+              period: "2015",
+              position: "Employee at KPIT Technologies"
+            },
+            {
+              period: "2009-2015",
+              position: "PhD Student at National Chemical Laboratory, Pune"
+            }
           ],
-          research_area: [
-            "Solid state batteries",
-            "In-situ XPS",
-            "Silicon anode"
-          ]
+          about: "Dr. Abhik currently holds position of team leader of the Research Institute of Sustainable Energy (RISE) under TCG CREST. The RISE will work on underlying causes currently hindering solid-state battery, Silicon, and Li metal anode while providing practical approaches towards enabling safety, higher energy density and fast charging batteries. Dr. Abhik Banerjee has more than 10 years of experience in the design, novel chemical synthesis, characterization, and structure-property-performance relationships of a variety of materials, especially materials for solid-state electrochemical energy storage. With a profound fundamental understanding of the relevant scientific and technological issues, Abhik has contributed significantly to developing new materials for rechargeable batteries, the development of novel synthesis/processing approaches, and understanding their structure-composition-performance relationships. His contributions are attested by 40 articles in archival journals and 5 patents.",
+          isPrincipal: true
         }
       ],
       "Scientific Officer": [
