@@ -4,6 +4,16 @@ export interface TeamMember {
     image: string
     research_area?: string[]
     about?: string
+    contactInfo?: {
+      phone: string
+      email: string[]
+      website: string
+    }
+    timeline?: {
+      period: string
+      position: string
+    }[]
+    isPrincipal?: boolean
   }
   
   export interface CurrentMembers {
