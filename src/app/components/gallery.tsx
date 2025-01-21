@@ -7,7 +7,7 @@ export function Gallery({ items }: GalleryProps) {
       {items.map((item) => (
         <div
           key={item.id}
-          className="relative break-inside-avoid mb-4 group cursor-pointer"
+          className="relative break-inside-avoid mb-4 group cursor-pointer overflow-hidden rounded-lg"
         >
           <div className="relative aspect-auto">
             <Image
@@ -15,15 +15,17 @@ export function Gallery({ items }: GalleryProps) {
               alt={item.description}
               width={500}
               height={500}
-              className="w-full rounded-lg object-cover"
+              className="w-full object-cover 
+        hover:scale-110 
+        transition-all duration-500 ease-in-out"
             />
             <div
               className="absolute inset-0 bg-gradient-to-t 
-            from-black/90 via-black/60 to-transparent 
+            from-black/90 via-black/20 to-transparent 
             p-6 opacity-0 group-hover:opacity-100 
             transition-all duration-300 ease-in-out 
             flex items-end rounded-lg
-            backdrop-blur-[2px]"
+            backdrop-blur-[1px]"
             >
               <p
                 className="text-white text-sm leading-relaxed font-medium
