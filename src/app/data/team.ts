@@ -229,19 +229,87 @@ export const teamData: TeamData = {
     ],
     collaborators: [
       {
-        name: "Prof. Maria Garcia",
-        image: "/placeholder.svg?height=400&width=400",
+        name: "Y. Shirley Meng",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911658/EESL/Team/Collaborators/sfhpbgjzemr9ylqwkcvh.jpg",
         educationQualification: [
-            "Ph.D. in Chemistry, University of California, Berkeley",
-            "M.S. in Materials Science, Stanford University"
+            "University of Chicago"
           ],
       },
       {
-        name: "Dr. James Wilson",
-        image: "/placeholder.svg?height=400&width=400",
+        name: "Chibueze Amanchukwu",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911657/EESL/Team/Collaborators/uz7xkatbolubicypqn9j.jpg",
         educationQualification: [
-          "Ph.D. in Chemistry, University of California, Berkeley",
-          "M.S. in Materials Science, Stanford University"
+          "University of Chicago"
+        ]
+      },
+      {
+        name: "Raphaële Clément",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911657/EESL/Team/Collaborators/p51bfcsxrlprdtn5vbga.jpg",
+        educationQualification: [
+          "UC Santa Barbara"
+        ]
+      },
+      {
+        name: "Biplab Sanyal",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911657/EESL/Team/Collaborators/mcpbj0prnzljclyy4fni.jpg",
+        educationQualification: [ 
+          "Uppsala University"
+        ]
+      },
+      {
+        name: "Amartya Mukhopadhyay",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911657/EESL/Team/Collaborators/yqo5in0kvqb7rwxndden.jpg",
+        educationQualification: [ 
+          "Indian Institute of Technology, Bombay"
+        ]
+      },
+      {
+        name: "Tarak Karmakar",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/f7daxvj0p0fzhjrppjnb.jpg",
+        educationQualification: [ 
+          "Indian Institute of Technology, Delhi"
+        ]
+      },
+      {
+        name: "Sheetal Kumar Jain",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/zox1hrkkxjbfdoenwj4l.jpg",
+        educationQualification: [ 
+          "Indian Institute of Science, Bengaluru"
+        ]
+      },
+      {
+        name: "Rahul Banerjee",
+        image: "/https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/xluvklv4hssczrwowcje.jpg",
+        educationQualification: [ 
+          "IISER Kolkata"
+        ]
+      },
+      {
+        name: "Minghao Zhang",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/ynw54lsldpxuhkv0byon.jpg",
+        educationQualification: [ 
+          "University of Chicago"
+        ]
+      },
+      {
+        name: "Partha Mukherjee",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/uzkyvk9o5xhws28bqkle.jpg",
+        educationQualification: [ 
+          "Purdue University"
+        ]
+      },
+      {
+        name: "Swapan Pati",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/zpccfheyyf2gutgydz8x.jpg",
+        educationQualification: [ 
+          "JNCASR, Bengaluru"
+        ]
+      },
+      {
+        name: "Jeffrey E. Dick",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/jcsk2mz56wjtvpb7z1xz.jpg",
+        educationQualification: [ 
+          "Purdue University"
         ]
       }
     ],
