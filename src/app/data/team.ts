@@ -279,7 +279,7 @@ export const teamData: TeamData = {
       },
       {
         name: "Rahul Banerjee",
-        image: "/https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/xluvklv4hssczrwowcje.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/xluvklv4hssczrwowcje.jpg",
         educationQualification: [ 
           "IISER Kolkata"
         ]
