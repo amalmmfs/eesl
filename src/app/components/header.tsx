@@ -50,11 +50,8 @@ export default function Header() {
               />
             </div>
 
-            {/* Seperator */}
-            <div className="hidden md:block w-px h-12 bg-gray-700 mx-2" />
-
             {/* RISE Logo */}
-            <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
+            {/* <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
               <Image
                 src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737442249/RISE_bahozf.png"
                 alt="RISE Logo"
@@ -67,7 +64,7 @@ export default function Header() {
                   )
                 }
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
