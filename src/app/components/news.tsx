@@ -56,21 +56,11 @@ export default function NewsSection() {
             <div
               key={index}
               className="bg-white border border-gray-100 rounded-xl shadow-sm 
-                hover:shadow-lg transition-all duration-300 mx-4 w-[320px] h-[360px]
-                hover:transform hover:-translate-y-1"
+              hover:shadow-lg transition-all duration-300 mx-4 w-[320px] h-[340px]
+              hover:transform hover:-translate-y-1"
             >
-              {item.image && (
-                <div className="h-40 overflow-hidden rounded-t-xl">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={320}
-                    height={160}
-                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
-              <div className="p-6">
+              <div className="p-6 h-full flex flex-col">
+                {/* Header with Category and Date */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 text-sm font-medium rounded-full bg-blue-50 text-blue-600">
                     {item.category}
@@ -80,21 +70,28 @@ export default function NewsSection() {
                     {new Date(item.date).toLocaleDateString()}
                   </time>
                 </div>
-                <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+
+                {/* Title with more space */}
+                <h3 className="font-semibold text-lg mb-4 line-clamp-3">
                   {item.title}
                 </h3>
-                {/* <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
+
+                {/* Description with more lines visible */}
+                <p className="text-gray-600 mb-6 line-clamp-4 text-sm flex-grow">
                   {item.description}
-                </p> */}
+                </p>
+
+                {/* Button remains at bottom */}
                 <Button
                   variant="ghost"
                   className="text-sm gap-2 group relative overflow-hidden
                   bg-gradient-to-r from-blue-50 to-blue-100
-                hover:from-blue-100 hover:to-blue-200
-                text-blue-600 font-medium px-4 py-2
+                  hover:from-blue-100 hover:to-blue-200
+                  text-blue-600 font-medium px-4 py-2
                   transition-all duration-300 ease-in-out
                   border border-blue-200 hover:border-blue-300
-                  shadow-sm hover:shadow-md"
+                  shadow-sm hover:shadow-md
+                  mt-auto"
                   onClick={() => openNewsModal(item)}
                 >
                   Read More
