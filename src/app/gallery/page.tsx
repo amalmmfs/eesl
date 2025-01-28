@@ -10,7 +10,7 @@ export default function GalleryPage() {
 
   useEffect(() => {
     document.title = "Gallery | EESL";
-    const timer = setTimeout(() => setIsLoading(false), 1500);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
