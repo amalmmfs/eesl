@@ -1,91 +1,195 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, X, Calendar, Link } from "lucide-react";
 import Marquee from "react-fast-marquee";
-
-interface NewsItem {
-  date: string;
-  title: string;
-  description: string;
-  category: string;
-}
-
-const newsItems: NewsItem[] = [
-  {
-    date: "2024-01-15",
-    title: "Breakthrough in Energy Storage Research",
-    description:
-      "Our team has achieved significant progress in developing new battery technology with improved efficiency.",
-    category: "Research",
-  },
-  {
-    date: "2024-01-10",
-    title: "New Laboratory Equipment Installation",
-    description:
-      "State-of-the-art testing facilities have been added to enhance our research capabilities.",
-    category: "Facility",
-  },
-  {
-    date: "2024-01-05",
-    title: "International Conference Participation",
-    description:
-      "EESL researchers presented their findings at the International Energy Storage Summit.",
-    category: "Events",
-  },
-  {
-    date: "2024-01-12",
-    title: "Research Grant Awarded",
-    description:
-      "EESL secured major funding for advanced energy storage solutions development.",
-    category: "Grants",
-  },
-];
+import { newsItems } from "@/app/data/news";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function NewsSection() {
+  const [selectedNews, setSelectedNews] = useState<
+    (typeof newsItems)[0] | null
+  >(null);
+
+  // Handle escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeNewsModal();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
+  const openNewsModal = (news: (typeof newsItems)[0]) => {
+    setSelectedNews(news);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeNewsModal = () => {
+    setSelectedNews(null);
+    document.body.style.overflow = "unset";
+  };
+
   return (
-    <section className="bg-gray-50 py-16" id="next-section">
+    <section
+      className="bg-gradient-to-b from-gray-50 to-white py-16"
+      id="news-section"
+    >
       <div className="container mx-auto px-4 max-w-6xl">
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold tracking-tight">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-black to-gray-900 bg-clip-text text-transparent">
             Latest Developments
           </h2>
-          <p className="text-gray-500 mt-2">
+          <p className="text-gray-600 mt-3 text-lg">
             Stay updated with our latest developments and achievements
           </p>
         </div>
 
         <Marquee
           gradient={true}
-          speed={40}
+          speed={25}
           pauseOnHover={true}
           className="overflow-hidden"
         >
           {newsItems.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 mx-4 w-[300px] h-[340px]"
+              className="bg-white border border-gray-100 rounded-xl shadow-sm 
+                hover:shadow-lg transition-all duration-300 mx-4 w-[320px] h-[360px]
+                hover:transform hover:-translate-y-1"
             >
-              <div className="p-6">
-                <div className="inline-block px-3 py-1 mb-4 text-sm font-medium rounded-full bg-blue-50 text-blue-600">
-                  {item.category}
+              {item.image && (
+                <div className="h-40 overflow-hidden rounded-t-xl">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={320}
+                    height={160}
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <time className="text-sm text-gray-500 block mb-2">
-                  {new Date(item.date).toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                </time>
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">
+              )}
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 text-sm font-medium rounded-full bg-blue-50 text-blue-600">
+                    {item.category}
+                  </span>
+                  <time className="text-sm text-gray-500 flex items-center">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {new Date(item.date).toLocaleDateString()}
+                  </time>
+                </div>
+                <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+                  {item.title}
+                </h3>
+                {/* <p className="text-gray-600 mb-4 line-clamp-2 text-sm">
                   {item.description}
-                </p>
-                <Button variant="ghost" className="text-sm gap-2">
-                  Read More <ArrowRight className="h-4 w-4" />
+                </p> */}
+                <Button
+                  variant="ghost"
+                  className="text-sm gap-2 group relative overflow-hidden
+                  bg-gradient-to-r from-blue-50 to-blue-100
+                hover:from-blue-100 hover:to-blue-200
+                text-blue-600 font-medium px-4 py-2
+                  transition-all duration-300 ease-in-out
+                  border border-blue-200 hover:border-blue-300
+                  shadow-sm hover:shadow-md"
+                  onClick={() => openNewsModal(item)}
+                >
+                  Read More
+                  <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
                 </Button>
               </div>
             </div>
           ))}
         </Marquee>
+
+        {/* Enhanced Modal */}
+        {selectedNews && (
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 
+              flex items-center justify-center p-4 animate-fadeIn"
+            onClick={closeNewsModal}
+          >
+            <div
+              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] 
+                overflow-y-auto animate-scaleIn shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div
+                className="sticky top-0 bg-white/80 backdrop-blur-sm 
+                border-b border-gray-100 p-4 flex items-center justify-between z-10"
+              >
+                <div className="flex items-center space-x-3">
+                  <span
+                    className="px-3 py-1 text-sm font-medium rounded-full 
+                    bg-blue-50 text-blue-600"
+                  >
+                    {selectedNews.category}
+                  </span>
+                  <time className="text-sm text-gray-500 flex items-center">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {new Date(selectedNews.date).toLocaleDateString()}
+                  </time>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={closeNewsModal}
+                  className="rounded-full hover:bg-red-50 hover:text-red-500"
+                >
+                  <X className="h-5 w-5" />
+                </Button>
+              </div>
+
+              <div className="p-8">
+                <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                  {selectedNews.title}
+                </h2>
+
+                {selectedNews.image && (
+                  <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={selectedNews.image}
+                      alt={selectedNews.title}
+                      width={1200}
+                      height={600}
+                      className="w-full h-auto object-cover"
+                      priority={true}
+                    />
+                  </div>
+                )}
+
+                <div className="prose prose-lg max-w-none space-y-6">
+                  {/* News Content */}
+                  <div className="text-black leading-relaxed whitespace-pre-wrap text-justify">
+                    {selectedNews.news}
+                  </div>
+
+                  {/* News Link Section */}
+                  {selectedNews.newsLink && (
+                    <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                      <a
+                        href={selectedNews.newsLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-blue-600 hover:text-blue-700
+                          font-medium group transition-colors duration-300"
+                      >
+                        <Link className="w-5 h-5" />
+                        <span className="underline-offset-4 group-hover:underline">
+                          Related News
+                        </span>
+                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
