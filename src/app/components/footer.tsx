@@ -106,6 +106,19 @@ export default function Footer() {
                 window.location.assign("https://www.tcgcrest.org/")
               }
             />
+            <Image
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737442249/RISE.png"
+              alt="RISE Logo"
+              width={200}
+              height={80}
+              className="brightness-400 contrast-125 cursor-pointer"
+              priority
+              onClick={() =>
+                window.location.assign(
+                  "https://www.tcgcrest.org/institutes/rise/"
+                )
+              }
+            />
           </div>
         </div>
 
