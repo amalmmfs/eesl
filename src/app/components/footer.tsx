@@ -96,7 +96,7 @@ export default function Footer() {
               onClick={() => window.location.assign("/")}
             />
             <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/TCG-Crest.png"
               alt="TCG Crest Logo"
               width={180}
               height={50}
@@ -104,19 +104,6 @@ export default function Footer() {
               priority
               onClick={() =>
                 window.location.assign("https://www.tcgcrest.org/")
-              }
-            />
-            <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737442249/RISE.png"
-              alt="RISE Logo"
-              width={200}
-              height={80}
-              className="brightness-400 contrast-125 cursor-pointer"
-              priority
-              onClick={() =>
-                window.location.assign(
-                  "https://www.tcgcrest.org/institutes/rise/"
-                )
               }
             />
           </div>

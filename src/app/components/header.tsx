@@ -28,10 +28,10 @@ export default function Header() {
         <div className="flex justify-between items-center h-24 md:h-28 px-4 mx-auto max-w-6xl">
           <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
             <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/EESL.png"
               alt="EESL Logo"
               fill
-              className="dark:invert cursor-pointer object-contain"
+              className="brightness-400 contrast-125 cursor-pointer object-contain"
               priority
               onClick={() => window.location.assign("/")}
             />
@@ -39,7 +39,7 @@ export default function Header() {
           <div className="flex items-center space-x-4 md:space-x-8">
             <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
               <Image
-                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735142800/EESL/TCG-Crest.png"
+                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/TCG-Crest.png"
                 alt="TCG Crest Logo"
                 fill
                 className="brightness-400 contrast-125 cursor-pointer object-contain"
@@ -49,22 +49,6 @@ export default function Header() {
                 }
               />
             </div>
-
-            {/* RISE Logo */}
-            {/* <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
-              <Image
-                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737442249/RISE_bahozf.png"
-                alt="RISE Logo"
-                fill
-                className="brightness-400 contrast-125 cursor-pointer object-contain"
-                priority
-                onClick={() =>
-                  window.location.assign(
-                    "https://www.tcgcrest.org/institutes/rise/"
-                  )
-                }
-              />
-            </div> */}
           </div>
         </div>
       </div>
