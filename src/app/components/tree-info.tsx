@@ -14,16 +14,9 @@ export default function IntroContent() {
     >
       <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
-            }
-            transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center w-full h-full group"
-          >
+          <div className="relative flex items-center justify-center w-full h-full group">
             <div className="absolute w-[600px] h-[600px] bg-blue-100 rounded-full opacity-20 blur-3xl group-hover:bg-blue-200 transition-colors duration-500"></div>
-            <div className="relative w-full aspect-square max-w-[500px] hover:scale-105 transition-transform duration-500">
+            <div className="relative w-full aspect-square max-w-[500px]">
               <Image
                 src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735674103/EESL/Intro%20Content.png"
                 alt="EESL"
@@ -33,7 +26,7 @@ export default function IntroContent() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-          </motion.div>
+          </div>
 
           {/* Text Content - Now Second */}
           <motion.div
@@ -54,7 +47,7 @@ export default function IntroContent() {
               The growing popularity of next-generation high-end electronic
               devices and the increasing adoption of electric vehicles (EVs)
               have highlighted a significant challenge in cutting-edge
-              lithium-ion battery (LIB) technology. Key performance metrics—such
+              Lithium-ion battery (LIB) technology. Key performance metrics—such
               as energy density, power density, cycle life, safety, and
               cost—have not yet harmonized to meet the escalating demands of
               electrified transportation and the integration of renewable energy

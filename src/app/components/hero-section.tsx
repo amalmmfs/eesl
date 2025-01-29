@@ -91,15 +91,6 @@ export default function HeroSection() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Electrochemical Energy Storage Laboratory
               </h1>
-
-              <p className="text-lg md:text-xl text-gray-300 font-medium leading-relaxed">
-                Welcome to EESL at TCG CREST, pioneering advanced research in
-                <span className="text-primary">
-                  {" "}
-                  electrochemical energy storage solutions
-                </span>
-                .
-              </p>
             </div>
             <div className="space-y-4 text-gray-300 text-justify">
               <p>
