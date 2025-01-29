@@ -144,20 +144,31 @@ export default function NewsSection() {
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
                   {selectedNews.title}
                 </h2>
-
-                {selectedNews.image && (
+                {selectedNews.videoUrl ? (
                   <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
-                    <Image
-                      src={selectedNews.image}
-                      alt={selectedNews.title}
-                      width={1200}
-                      height={600}
-                      className="w-full h-auto object-cover"
-                      priority={true}
-                    />
+                    <video
+                      controls
+                      className="w-full h-auto"
+                      poster={selectedNews.image} // Optional: Use image as poster if available
+                    >
+                      <source src={selectedNews.videoUrl} type="video/mp4" />
+                      Your browser does not support video playback.
+                    </video>
                   </div>
+                ) : (
+                  selectedNews.image && (
+                    <div className="mb-8 rounded-xl overflow-hidden shadow-lg">
+                      <Image
+                        src={selectedNews.image}
+                        alt={selectedNews.title}
+                        width={1200}
+                        height={600}
+                        className="w-full h-auto object-cover"
+                        priority={true}
+                      />
+                    </div>
+                  )
                 )}
-
                 <div className="prose prose-lg max-w-none space-y-6">
                   {/* News Content */}
                   <div className="text-black leading-relaxed whitespace-pre-wrap text-justify">

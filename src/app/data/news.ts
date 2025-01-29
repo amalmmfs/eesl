@@ -4,7 +4,8 @@ export interface NewsItem {
     title: string;
     description: string;
     news: string;
-    image: string;
+    image?: string;
+    videoUrl?: string;
     category: string;
     newsLink?: string;
   }
@@ -50,7 +51,7 @@ export interface NewsItem {
         "We thoroughly examined the dynamics of metastable phases at the interface of Li metal and Halide solid electrolytes (Li3YCl6, Li2ZrCl6, Li3InCl6) and their impact on interface passivation.",
       news: "We thoroughly examined the dynamics of metastable phases at the interface of Li metal and Halide solid electrolytes (Li3YCl6, Li2ZrCl6, Li3InCl6) and their impact on interface passivation. This was achieved using operando XPS analysis and virtual Li metal plating. We meticulously analyzed over 300 XPS spectra for this paper. A comprehensive analysis of this data would be invaluable for young researchers engaged in XPS studies for battery research. The research has been accepted in Chemistry of Materials.",
       category: "Research",
-      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738049525/EESL/News/Conference-Announcement.png",
+      // image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738049525/EESL/News/Conference-Announcement.png",
       newsLink: "https://pubs.acs.org/doi/abs/10.1021/acs.chemmater.4c02307"
     },
     {
@@ -61,6 +62,6 @@ export interface NewsItem {
         "EESL lab has achieved a breakthrough in developing a novel liquid electrolyte for a sodium-ion battery pouch cell that operates at -50°C.",
       news: "EESL lab has achieved a breakthrough in developing a novel liquid electrolyte for a sodium-ion battery pouch cell that operates at -50°C. This innovation unlocks unique capabilities for sodium-ion batteries in various low-temperature applications.",
       category: "Research",
-      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738049525/EESL/News/Conference-Announcement.png"
+      videoUrl: "https://res.cloudinary.com/dmw1bwmpr/video/upload/f_auto:video,q_auto/v1/EESL/News/zizssnil8yvcxihmahjg"
     }
   ];
