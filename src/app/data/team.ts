@@ -251,7 +251,7 @@ export const teamData: TeamData = {
       },
       {
         name: "Biplab Sanyal",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911657/EESL/Team/Collaborators/mcpbj0prnzljclyy4fni.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160709/EESL/Team/Collaborators/gw4yirrc5unmahavgjpa.png",
         educationQualification: [ 
           "Uppsala University"
         ]
@@ -265,49 +265,49 @@ export const teamData: TeamData = {
       },
       {
         name: "Tarak Karmakar",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/f7daxvj0p0fzhjrppjnb.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160710/EESL/Team/Collaborators/piwcf5u0cmtsl6pk0dac.jpg",
         educationQualification: [ 
           "Indian Institute of Technology, Delhi"
         ]
       },
       {
         name: "Sheetal Kumar Jain",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/zox1hrkkxjbfdoenwj4l.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160709/EESL/Team/Collaborators/buobbixyjna70cjheevm.png",
         educationQualification: [ 
           "Indian Institute of Science, Bengaluru"
         ]
       },
       {
         name: "Rahul Banerjee",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/xluvklv4hssczrwowcje.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160708/EESL/Team/Collaborators/ps1kwdqe3ctpca5cftqy.png",
         educationQualification: [ 
           "IISER Kolkata"
         ]
       },
       {
         name: "Minghao Zhang",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/ynw54lsldpxuhkv0byon.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160708/EESL/Team/Collaborators/jhhaa5chwic5iroruuig.png",
         educationQualification: [ 
           "University of Chicago"
         ]
       },
       {
         name: "Partha Mukherjee",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/uzkyvk9o5xhws28bqkle.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160709/EESL/Team/Collaborators/xvma5yp508y1mrsez6ev.png",
         educationQualification: [ 
           "Purdue University"
         ]
       },
       {
         name: "Swapan Pati",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/zpccfheyyf2gutgydz8x.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160709/EESL/Team/Collaborators/oueuhlo6zjftotlq17ej.png",
         educationQualification: [ 
           "JNCASR, Bengaluru"
         ]
       },
       {
         name: "Jeffrey E. Dick",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737911656/EESL/Team/Collaborators/jcsk2mz56wjtvpb7z1xz.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738160708/EESL/Team/Collaborators/dpzxetxvhwpwe8kjiygq.png",
         educationQualification: [ 
           "Purdue University"
         ]

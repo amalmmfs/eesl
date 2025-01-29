@@ -39,7 +39,7 @@ export interface NewsItem {
         "Dr. Lily Mandal of RISE, TCG-CREST (Kolkata) has been recognized by the prestigious ACS Energy Letters as one of the Women Scientists at the Forefront of Energy Research.",
       news: "Delighted to share a great news that Dr. Lily Mandal of our Research Institute for Sustainable Energy (RISE, TCG-CREST) Kolkata, India, has been chosen by ACS Energy Letters ( A top journal with Impact Factor of 20, with eminent Prof. Prashant Kamat as the Editor) as one of the Women Scientists at the Forefront of Energy Research !!! Many congratulations Lily, you make all of us at TCG very proud. Also, this is a great achievement of other young researchers Dr. Susmita Bera and Dr. Ripan Biswas!!",
       category: "Achievement",
-      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738049522/EESL/News/Lily%20Mandal%20News.jpg",
+      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738161379/EESL/News/emfdtkctxkdeupsmmazt.png",
       newsLink: "https://pubs.acs.org/doi/10.1021/acsenergylett.4c03437"
     },
     {
