@@ -87,20 +87,20 @@ export default function Footer() {
 
           <div className="flex flex-col items-center gap-6">
             <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735413805/EESL/zr3gfwf8d4dmntvi4afk.png"
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png"
               alt="EESL Logo"
               width={180}
               height={50}
-              className="dark:invert cursor-pointer"
+              className="dark:invert cursor-pointer brightness-500 contrast-125"
               priority
               onClick={() => window.location.assign("/")}
             />
             <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/TCG-Crest.png"
-              alt="TCG Crest Logo"
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/TCG-RISE.png"
+              alt="TCG RISE Logo"
               width={180}
               height={50}
-              className="brightness-400 contrast-125 cursor-pointer"
+              className="brightness-500 contrast-125 cursor-pointer"
               priority
               onClick={() =>
                 window.location.assign("https://www.tcgcrest.org/")
