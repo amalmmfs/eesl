@@ -18,7 +18,7 @@ export default function Header() {
     { href: "/equipment", label: "Equipment" },
     { href: "/team", label: "Team" },
     { href: "/gallery", label: "Gallery" },
-    { href: "/contact-us", label: "Contact Us" },
+    { href: "/contact", label: "Contact Us" },
   ];
 
   return (
