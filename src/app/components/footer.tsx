@@ -85,7 +85,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center gap-6">
+          <div className="flex flex-col items-start md:items-center gap-6">
             <Image
               src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png"
               alt="EESL Logo"
