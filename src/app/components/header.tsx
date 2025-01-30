@@ -28,7 +28,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-24 md:h-28 px-4 mx-auto max-w-6xl">
           <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
             <Image
-              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/EESL.png"
+              src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png"
               alt="EESL Logo"
               fill
               className="brightness-400 contrast-125 cursor-pointer object-contain"
@@ -39,7 +39,7 @@ export default function Header() {
           <div className="flex items-center space-x-4 md:space-x-8">
             <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
               <Image
-                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738171177/EESL/TCG-Crest.png"
+                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/TCG-RISE.png"
                 alt="TCG Crest Logo"
                 fill
                 className="brightness-400 contrast-125 cursor-pointer object-contain"
