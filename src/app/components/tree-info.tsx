@@ -15,13 +15,12 @@ export default function IntroContent() {
       <div className="container px-4 py-16 md:py-24 mx-auto max-w-6xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
           <div className="relative flex items-center justify-center w-full h-full group">
-            <div className="absolute w-[600px] h-[600px] bg-blue-100 rounded-full opacity-20 blur-3xl group-hover:bg-blue-200 transition-colors duration-500"></div>
             <div className="relative w-full aspect-square max-w-[500px]">
               <Image
-                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735674103/EESL/Intro%20Content.png"
+                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227750/EESL/Tree-Info.png"
                 alt="EESL"
                 fill
-                className="object-contain rounded-2xl brightness-100 contrast-75 hover:contrast-100 transition-all duration-300"
+                className="object-contain rounded-2xl hover:scale-105 transition-transform duration-300 ease-in-out"
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
