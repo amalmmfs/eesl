@@ -1,121 +1,86 @@
 import { TeamData } from '@/app/types/team';
 
 export const teamData: TeamData = {
-    currentMembers: {
-      "Principal Investigator": [
+  facultyMember: [
+    {
+      name: "Dr. Abhik Banerjee",
+      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736880584/EESL/Team/Current%20Members/Principal%20Investigator/Abhik%20Banerjee.png",
+      contactInfo: {
+        phone: "+91-7365834846",
+        email: ["abhikchm@gmail.com", "abhik.banerjee@tcgcrest.org"],
+        website: "https://www.tcgcrest.org/"
+      },
+      timeline: [
         {
-          name: "Dr. Abhik Banerjee",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736880584/EESL/Team/Current%20Members/Principal%20Investigator/Abhik%20Banerjee.png",
-          contactInfo: {
-            phone: "+91-7365834846",
-            email: ["abhikchm@gmail.com", "abhik.banerjee@tcgcrest.org"],
-            website: "https://www.tcgcrest.org/"
-          },
-          timeline: [
-            {
-              period: "2020 onwards",
-              position: "Principal Scientist of TCG-CREST"
-            },
-            {
-              period: "2017-2022",
-              position: "Postdoctoral Scholar at University of California, San Diego"
-            },
-            {
-              period: "2015-2016",
-              position: "Postdoctoral Scholar at UNI"
-            },
-            {
-              period: "2015",
-              position: "Employee at KPIT Technologies"
-            },
-            {
-              period: "2009-2015",
-              position: "PhD Student at National Chemical Laboratory, Pune"
-            }
-          ],
-          about: "Dr. Abhik currently holds position of team leader of the Research Institute of Sustainable Energy (RISE) under TCG CREST. The RISE will work on underlying causes currently hindering solid-state battery, Silicon, and Li metal anode while providing practical approaches towards enabling safety, higher energy density and fast charging batteries. Dr. Abhik Banerjee has more than 10 years of experience in the design, novel chemical synthesis, characterization, and structure-property-performance relationships of a variety of materials, especially materials for solid-state electrochemical energy storage. With a profound fundamental understanding of the relevant scientific and technological issues, Abhik has contributed significantly to developing new materials for rechargeable batteries, the development of novel synthesis/processing approaches, and understanding their structure-composition-performance relationships. His contributions are attested by 40 articles in archival journals and 5 patents.",
-          isPrincipal: true
+          period: "2020 onwards",
+          position: "Principal Scientist of TCG-CREST"
+        },
+        {
+          period: "2017-2022",
+          position: "Postdoctoral Scholar at University of California, San Diego"
+        },
+        {
+          period: "2015-2016",
+          position: "Postdoctoral Scholar at UNI"
+        },
+        {
+          period: "2015",
+          position: "Employee at KPIT Technologies"
+        },
+        {
+          period: "2009-2015",
+          position: "PhD Student at National Chemical Laboratory, Pune"
         }
       ],
+      about: "Dr. Abhik currently holds position of team leader of the Research Institute of Sustainable Energy (RISE) under TCG CREST. The RISE will work on underlying causes currently hindering solid-state battery, Silicon, and Li metal anode while providing practical approaches towards enabling safety, higher energy density and fast charging batteries. Dr. Abhik Banerjee has more than 10 years of experience in the design, novel chemical synthesis, characterization, and structure-property-performance relationships of a variety of materials, especially materials for solid-state electrochemical energy storage. With a profound fundamental understanding of the relevant scientific and technological issues, Abhik has contributed significantly to developing new materials for rechargeable batteries, the development of novel synthesis/processing approaches, and understanding their structure-composition-performance relationships. His contributions are attested by 40 articles in archival journals and 5 patents.",
+      isPrincipal: true,
+    }
+  ],
+    currentMembers: {
       "Scientific Officer": [
         {
           name: "Dr. Lily Mondal",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736865778/EESL/Team/Current%20Members/Scientific%20Officer/Lily%20Mondal.jpg",
           educationQualification: [
-            "PhD: NCL, Pune",
+            "PhD: CSIR-National Chemical Laboratory",
           ],
           research_area: [
             "Interface and Interphases in solid state batteries",
-            "In-situ XPS", 
-            "Silicon anode"
-          ]
+            "Operando measurements and electrolytes for Na anode free and Na metal batteries",
+          ],
         }
       ],
-      "Research Associate": [
+      "Research Associates": [
         {
           name: "Dr. Soumita Chakraborty",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883371/EESL/Team/Current%20Members/Research%20Associate/Soumita%20Chakraborty.png",
           educationQualification: [
-            "PhD: JNCSR, Bangalore",
+            "PhD: JNCASR, Bangalore",
           ],
           research_area: [
-            "Development of electrolyte for fast charging graphite"
+            "Electrolyte and SEI engineering for Lithium-ion and Lithium Metal batteries"
           ]
         },
         {
           name: "Dr. Ripan Kr. Biswas",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882221/EESL/Team/Current%20Members/Research%20Associate/Ripan%20Kr.%20Biswas.png",
           educationQualification: [
-            "PhD: CGCRI, Kolkata",
+            "PhD: CSIR - Central Glass & Ceramic Research Institute",
           ],
           research_area: [
-            "Solid State Li and Na superionic conductor", 
-            "Synchrotron based X-ray-based charactrazation of solid electrolytes"
+            "Solid-state Li and Na-ion batteries, focusing on structural evolution and defect engineering to enhance ionic conductivity", 
+            "Analyzing ion conduction and diffusion pathways via X-ray and neutron diffraction/scattering to optimize solid electrolytes for high-voltage applications"
           ]
         },
         {
           name: "Dr. Susmita Bera",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882780/EESL/Team/Current%20Members/Research%20Associate/Susmita%20Bera.png",
           educationQualification: [
-            "PhD: CGCRI, Kolkata",
+            "PhD: CSIR-Central Glass & Ceramic Research Institute",
           ],
           research_area: [
-            "Solid State Li and Na superionic conductor", 
-            "X-ray and neutron based charactrazation of solid electrolytes", 
-            "Anode free solid-state battery",
-          ]
-        }
-      ],
-      "Project Associate": [
-        {
-          name: "Shrestha Ghosh",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882861/EESL/Team/Current%20Members/Project%20Associates/Shrestha%20Ghosh.jpg",
-          educationQualification: [
-            "MSc: IACS, Kolkata",
-          ],
-          research_area: [
-            "Oxygen redox in Na ion layered oxide cathodes"
-          ]
-        },
-        {
-          name: "Sreeroop Ghosh",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882932/EESL/Team/Current%20Members/Project%20Associates/Sreeroop%20Ghosh.png",
-          educationQualification: [
-            "BTech: KIT, Bhubaneshwar",
-          ],
-          research_area: [
-            "Dry coating for Na ion",  
-            "Solid-State Battery Technology"
-          ]
-        },
-        {
-          name: "Shristi Pradhan",
-          image: "/placeholder.svg?height=400&width=400",
-          educationQualification: [
-            "MSc: VIT, Vellore",
-          ],
-          research_area: [
-            "Sodium ion batteries"
+            "Design and development of solid electrolytes study of their crystal structures", 
+            "Diffusion dynamics and chemical/electrochemical stability with electrodes", 
           ]
         }
       ],
@@ -124,10 +89,10 @@ export const teamData: TeamData = {
           name: "Newton Roy",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883047/EESL/Team/Current%20Members/PhD%20Students/Newton%20Roy.png",
           educationQualification: [
-            "MSc: JNCSR, Bangalore",
+            "MSc: Bidhannagar College, Kolkata",
           ],
           research_area: [
-            "Synthesis of organic molecules used as either diluents or additives for Lithium Metal Battery (LMB) applications"
+            "Lithium and Sodium ion batteries",
           ]
         },
         {
@@ -137,30 +102,147 @@ export const teamData: TeamData = {
             "MSc: Banaras Hindu University",
           ],
           research_area: [
-            "Na ion diffusion kinetics in Na-Sn alloy system",
-            "In-situ Dilatometer",
-            "In-Situ XRD",
-            "Neutron Scattering",
-            "Na-Hard carbon composite for Na ion Battery anode materials"
+            "Anode modifications for Sodium ion battery",
+            "Electrolyte modifications and solid electrolyte interphase",
           ]
         },
         {
-          name: "Ishita Roy",
+          name: "Ishita Das",
           image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883068/EESL/Team/Current%20Members/PhD%20Students/Ishita%20Roy.png",
           educationQualification: [
-            "MSc: ",
+            "MSc: C.M.D. College, Bilaspur",
           ],
           research_area: [
-            "Poorly solvating single solvent based Electrolyte design for Li metal/graphite anode"
+            "Electrolytes in Lithium Ion and Lithium metal battery"
+          ]
+        },
+        {
+          name: "S Jaishree",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488236/EESL/Team/Current%20Members/PhD%20Students/S%20Jaishree.jpg",
+          educationQualification: [
+            "MSc: NIT, Jamshedpur",
+          ],
+          research_area: [
+            "Electrolytes in Lithium Ion and Lithium metal battery."
+          ]
+        },
+        {
+          name: "Debalina Sarkar",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/PhD%20Students/Debalina%20Sarkar",
+          educationQualification: [
+            "MSc: Savitribai Phule Pune University, Pune",
+          ],
+          research_area: [
+            "Layered transition metal oxide cathodes in Sodium-ion batteries"
+          ]
+        },
+        {
+          name: "Moumita Samanta",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738490418/EESL/Team/Current%20Members/PhD%20Students/Moumita%20Samanta.jpg",
+          educationQualification: [
+            "MSc: Panskura Banamali College",
+          ],
+          research_area: [
+            "Study of electrochemical interfaces of aqueous and non-aqueous battery"
           ]
         }
       ],
+      "Project Associates": [
+        {
+          name: "Shrestha Ghosh",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882861/EESL/Team/Current%20Members/Project%20Associates/Shrestha%20Ghosh.jpg",
+          educationQualification: [
+            "MSc: IACS, Kolkata",
+          ],
+          research_area: [
+            "Layered transition metal oxide cathodes for SIB"
+          ]
+        },
+        {
+          name: "Shristi Pradhan",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/Project%20Associates/Shristi%20Pradhan",
+          educationQualification: [
+            "MSc: VIT, Vellore",
+          ],
+          research_area: [
+            "Sodium ion batteries"
+          ]
+        },
+        {
+          name: "Shruti Guha",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488283/EESL/Team/Current%20Members/Project%20Associates/Shruti%20Guha.jpg",
+          educationQualification: [
+            "M Tech: Technical University of Denmark",
+          ],
+          research_area: [
+            "Formulation and Optimization of dry coating process",
+            "Sodium ion batteries"
+          ]
+        },
+        {
+          name: "Ishani Ganguly",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488295/EESL/Team/Current%20Members/Project%20Associates/Ishani%20Ganguly.jpg",
+          educationQualification: [
+            "M Tech: Calcutta University",
+          ],
+          research_area: [
+            "Layered oxide cathode mareials for Sodium ion batteries"
+          ]
+        }
+      ],
+      "Research Engineer": [
+        {
+          name: "Sreeroop Ghosh",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882932/EESL/Team/Current%20Members/Project%20Associates/Sreeroop%20Ghosh.png",
+          educationQualification: [
+            "BTech: KIT, Bhubaneshwar",
+          ],
+          research_area: [
+            "Dry coating electrode fabrication",  
+            "Anode free sodium pouch cell"
+          ]
+        },
+        {
+          name: "Sayan Ghosh",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488322/EESL/Team/Current%20Members/Research%20Engineer/Sayan%20Ghosh.jpg",
+          educationQualification: [
+            "MSc: IIT, Kharagpur",
+          ],
+          research_area: [
+            "Electrolytes in Lithium Ion and Lithium metal battery"
+          ]
+        }
+      ],
+      
       "Interns": [
         {
-          name: "Alex Turner",
-          image: "/placeholder.svg?height=400&width=400",
+          name: "Mrigesh Palav",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488368/EESL/Team/Current%20Members/Interns/Mrigesh%20Palav.jpg",
           educationQualification: [
-            "Current: B.S. in Materials Science, MIT"
+            "B Tech: NIT, Calicut",
+          ],
+          research_area: [
+            "Cathode study for anode-free Sodium-ion batteries"
+          ]
+        },
+        {
+          name: "Ajith Ambattuparambil Valsan",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488378/EESL/Team/Current%20Members/Interns/Ajith%20Valsan.jpg",
+          educationQualification: [
+            "MSc: IISER, Kolkata",
+          ],
+          research_area: [
+            "Ether-based electrolyte systems for sodium anode-free batteries"
+          ]
+        },
+        {
+          name: "Mahendra Mainkar",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488389/EESL/Team/Current%20Members/Interns/Mahendra%20Mainkar.jpg",
+          educationQualification: [
+            "MSc: IIT, Madras",
+          ],
+          research_area: [
+            "Inorganic solid electrolytes for all-solid-state batteries"
           ]
         }
       ]

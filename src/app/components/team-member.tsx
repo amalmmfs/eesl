@@ -35,7 +35,7 @@ export function TeamMember({
                 src={image}
                 alt={name}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-lg transition-transform duration-300 hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
@@ -104,40 +104,52 @@ export function TeamMember({
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100">
       <div className="aspect-square w-full relative">
         <Image
           src={image}
           alt={name}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
-      <div className="p-6 space-y-3">
-        <h4 className="text-xl font-semibold">{name}</h4>
+      <div className="p-6 space-y-4">
+        <h4 className="text-xl font-semibold text-gray-900">{name}</h4>
+
         {educationQualification && (
-          <div className="space-y-1">
+          <div className="space-y-2">
             {educationQualification.map((qual, index) => (
-              <p key={index} className="text-sm text-gray-600">
+              <p
+                key={index}
+                className="text-sm text-gray-600 flex items-center"
+              >
+                <span className="mr-2">•</span>
                 {qual}
               </p>
             ))}
           </div>
         )}
+
         {about && (
-          <p className="text-sm text-gray-700 leading-relaxed">{about}</p>
+          <p className="text-sm text-gray-700 leading-relaxed border-t border-gray-100 pt-4">
+            {about}
+          </p>
         )}
+
         {research_area && (
-          <div className="flex flex-wrap gap-2">
-            {research_area.map((area, index) => (
-              <span
-                key={index}
-                className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
-              >
-                {area}
-              </span>
-            ))}
+          <div className="space-y-2 pt-2">
+            <p className="text-sm font-medium text-gray-900">Research Areas:</p>
+            <div className="flex flex-wrap gap-2">
+              {research_area.map((area, index) => (
+                <span
+                  key={index}
+                  className="text-xs bg-gray-50 text-gray-700 px-3 py-1 rounded-full border border-gray-200"
+                >
+                  {area}
+                </span>
+              ))}
+            </div>
           </div>
         )}
       </div>
