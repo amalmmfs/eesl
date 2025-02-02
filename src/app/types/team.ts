@@ -17,15 +17,16 @@ export interface TeamMember {
   }
   
   export interface CurrentMembers {
-    "Principal Investigator": TeamMember[]
     "Scientific Officer": TeamMember[]
-    "Research Associate": TeamMember[]
+    "Research Associates": TeamMember[]
     "PhD Students": TeamMember[]
-    "Project Associate": TeamMember[]
+    "Project Associates": TeamMember[]
     "Interns": TeamMember[]
+    "Research Engineer": TeamMember[]
   }
   
   export interface TeamData {
+    facultyMember: TeamMember[]
     currentMembers: CurrentMembers
     alumni: TeamMember[]
     collaborators: TeamMember[]

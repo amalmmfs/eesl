@@ -54,8 +54,14 @@ export default function TeamPage() {
       </motion.section>
 
       <div className="container max-w-6xl mx-auto px-4 py-16">
-        <Tabs defaultValue="current-members" className="space-y-6">
-          <TabsList className="flex flex-wrap justify-center w-full mb-12 bg-muted/50 p-1 rounded-lg">
+        <Tabs defaultValue="faculty-member" className="space-y-6">
+          <TabsList className="flex flex-wrap justify-center w-full mb-12 p-1 rounded-lg">
+            <TabsTrigger
+              value="faculty-member"
+              className="flex-1 max-w-[200px]"
+            >
+              Faculty Member
+            </TabsTrigger>
             <TabsTrigger
               value="current-members"
               className="flex-1 max-w-[200px]"
@@ -69,6 +75,19 @@ export default function TeamPage() {
               Collaborators
             </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="faculty-member">
+            <motion.div
+              variants={staggerChildren}
+              initial="initial"
+              animate="animate"
+              className="grid grid-cols-1 gap-8"
+            >
+              {teamData.facultyMember.map((member: TeamMemberType) => (
+                <TeamMember key={member.name} {...member} isPrincipal={true} />
+              ))}
+            </motion.div>
+          </TabsContent>
 
           <TabsContent value="current-members">
             <div className="space-y-16">
