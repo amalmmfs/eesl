@@ -40,20 +40,19 @@ export const teamData: TeamData = {
       "Scientific Officer": [
         {
           name: "Dr. Lily Mondal",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736865778/EESL/Team/Current%20Members/Scientific%20Officer/Lily%20Mondal.jpg",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1736865778/EESL/Team/Current%20Members/Scientific%20Officer/Lily%20Mondal.jpg",
           educationQualification: [
             "PhD: CSIR-National Chemical Laboratory",
           ],
           research_area: [
-            "Interface and Interphases in solid state batteries",
-            "Operando measurements and electrolytes for Na anode free and Na metal batteries",
+            "Solid state battery, interface studies, Operando measurements and electrolytes for Na anode free and Na metal batteries",
           ],
         }
       ],
       "Research Associates": [
         {
           name: "Dr. Soumita Chakraborty",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883371/EESL/Team/Current%20Members/Research%20Associate/Soumita%20Chakraborty.png",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1736883371/EESL/Team/Current%20Members/Research%20Associate/Soumita%20Chakraborty.png",
           educationQualification: [
             "PhD: JNCASR, Bangalore",
           ],
@@ -103,7 +102,7 @@ export const teamData: TeamData = {
           ],
           research_area: [
             "Anode modifications for Sodium ion battery",
-            "Electrolyte modifications and solid electrolyte interphase",
+            "Electrolyte modifications and solid electrolyte interphase in Sodium ion batteries",
           ]
         },
         {
@@ -138,7 +137,7 @@ export const teamData: TeamData = {
         },
         {
           name: "Moumita Samanta",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738490418/EESL/Team/Current%20Members/PhD%20Students/Moumita%20Samanta.jpg",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738654066/Moumita_Samanta_bkb33a.jpg",
           educationQualification: [
             "MSc: Panskura Banamali College",
           ],
@@ -165,12 +164,12 @@ export const teamData: TeamData = {
             "MSc: VIT, Vellore",
           ],
           research_area: [
-            "Sodium ion batteries"
+            "Study of anionic redox in layered transition metal oxide cathodes in sodium-ion batteries"
           ]
         },
         {
           name: "Shruti Guha",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488283/EESL/Team/Current%20Members/Project%20Associates/Shruti%20Guha.jpg",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1738488283/EESL/Team/Current%20Members/Project%20Associates/Shruti%20Guha.jpg",
           educationQualification: [
             "M Tech: Technical University of Denmark",
           ],
@@ -181,7 +180,7 @@ export const teamData: TeamData = {
         },
         {
           name: "Ishani Ganguly",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488295/EESL/Team/Current%20Members/Project%20Associates/Ishani%20Ganguly.jpg",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738510977/EESL/Team/Current%20Members/Project%20Associates/Ishani%20Ganguly.jpg",
           educationQualification: [
             "M Tech: Calcutta University",
           ],
@@ -250,21 +249,21 @@ export const teamData: TeamData = {
     alumni: [
       {
         name: "Dr. Soumyadeep Ghosh",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883681/EESL/Team/Current%20Members/Alumni/Soumyadeep%20Ghosh.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513368/EESL/Team/Current%20Members/Alumni/Soumyadeep%20Ghosh.png",
         about: 
           "Dr. Soumyadeep Ghosh is currently pursuing his postdoctoral research at LBNL with prof. Dr. Jin Qian"
         
       },
       {
         name: "Ashutosh Rana",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883681/EESL/Team/Current%20Members/Alumni/Ashutosh%20Rana.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513367/EESL/Team/Current%20Members/Alumni/Ashutosh%20Rana.png",
         about: 
           "Ashutosh Rana is currently pursuing his Ph.D. at the University of Perdue under the guidance of Prof. Partha Mukherjee",
         
       },
       {
         name: "Minal Wable",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883681/EESL/Team/Current%20Members/Alumni/Minal%20Wable.jpg",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513368/EESL/Team/Current%20Members/Alumni/Minal%20Wable.jpg",
         about: 
           "Minal Wable is currently pursuing his Ph.D. at the Oklahoma State University under the guidance of Prof. Ömer Özgür Çapraz",
         
@@ -273,40 +272,33 @@ export const teamData: TeamData = {
         name: "Dr. Debanjana Pahari",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884328/EESL/Team/Current%20Members/Alumni/Debanjana%20Pahari.png",
         about: 
-          "Dr. Debanjana Pahari did her Ph.D. from IIT KGP, and she is working on the design of Mn-based layered oxide cathodes for Na ion battery applications. She also works on in situ dilatometer and operando X-ray diffraction for battery degradation analysis",
+          "Dr. Debanjana Pahari did her Ph.D. from IIT KGP, and she is working on the design of Mn-based layered oxide cathodes for Na ion battery applications",
         
       },
       {
         name: "Dr. Subha Samanta",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884348/EESL/Team/Current%20Members/Alumni/Subha%20Samanta.png",
-        educationQualification: [
-          "PhD: IACS, Kolkata",
-        ],
-        research_area: [
-          "Solvent free processing of Solid Electrolyte", 
-          "Solid state Battery"
-        ]
+        about: "Dr. Subha Samanta is currently working as a Postdoctoral Researcher at the University of California, San Diego"
       },
       {
         name: "Dr. K Shiprath",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884333/EESL/Team/Current%20Members/Alumni/K%20Shriprathy.png",
-        educationQualification: [
-          "PhD: CGCRI, Kolkata",
-        ],
-        research_area: [
-          "Electrolyte additive design for Zn ion battery"
-        ]
+        about: "Dr. K Shiprath is currently working as a Postdoctoral Researcher at the University of California, San Diego"
       },
       {
         name: "Rachana Ravi",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884339/EESL/Team/Current%20Members/Alumni/Rachana%20Raavi.png",
-        educationQualification: [
-          "BTech: IIT Kharagpur",
-        ],
-        research_area: [
-          "Development of electrolyte for fast charging Graphite", 
-          "Additive design for Zn ion battery"
-        ]
+        about: "Rachana Ravi is currently working as a Postdoctoral Researcher at the University of California, San Diego"
+      },
+      {
+        name: "Prabhat Thapliyal",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513368/EESL/Team/Current%20Members/Alumni/Prabhat%20Thapiyal.png",
+        about: "Prabhat is currently pursuing his PhD at the University of Bayreuth under the supervision of Prof. Matteo Bianchini"
+      },
+      {
+        name: "Adithya K.R.",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513367/EESL/Team/Current%20Members/Alumni/Adithya.png",
+        about: "Adithya is currently working as a Junior-Engineer-1 in Gegadyne Energy, Mumbai"
       }
     ],
     collaborators: [
