@@ -106,4 +106,29 @@ export const galleryItems: GalleryItem[] = [
         imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1737395478/WhatsApp_Image_2025-01-20_at_21.42.46_9498ac5c_czpwu0.jpg',
         description: 'Hosting professors from IISER Kolkata at RISE'
     },
+    {
+        id: '22',
+        imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512449/EESL/Gallery/cnt105a9sjntycungzhr.png',
+        description: 'Dr. Abhik Banerjee presenting at DAE-SSPS24'
+    },
+    {
+        id: '23',
+        imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512088/EESL/Gallery/tslplibkjcxadk5xknib.jpg',
+        description: 'Visit with Dr. Pati at JNCASR'
+    },
+    {
+        id: '24',
+        imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512086/EESL/Gallery/s6u1l6exxx89s5bl2brz.jpg',
+        description: 'RISE annual picnic 2025'
+    },
+    {
+        id: '25',
+        imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512086/EESL/Gallery/gtxkbuczdrtmpksbyyfm.jpg',
+        description: 'Prof. Mukkhopadhyay and students at RISE lab'
+    },
+    {
+        id: '26',
+        imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512086/EESL/Gallery/yrps7k8fgjjpzsgn1ucg.jpg',
+        description: 'Prof. Amartya\'s visit to RISE lab'
+    },
 ];

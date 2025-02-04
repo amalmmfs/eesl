@@ -110,8 +110,8 @@ export function TeamMember({
           src={image}
           alt={name}
           fill
-          className="object-cover transition-transform duration-300 hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover  object-[center_25%] transition-transform duration-300 hover:scale-95"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
       <div className="p-6 space-y-4">
