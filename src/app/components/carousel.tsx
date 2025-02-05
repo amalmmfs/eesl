@@ -73,7 +73,7 @@ export function Carousel({ images }: CarouselProps) {
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
             fill
-            className="object-cover"
+            className="object-cover object-center[25%]"
             priority
           />
         </motion.div>
@@ -95,16 +95,12 @@ export function Carousel({ images }: CarouselProps) {
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex ? "bg-white" : "bg-white/50"
-            }`}
-          />
-        ))}
+      <div className="absolute bottom-6 right-6 z-10">
+        <div className="bg-black/50 text-white px-4 py-2 rounded-full backdrop-blur-sm">
+          <span className="font-medium">{currentIndex + 1}</span>
+          <span className="mx-1">/</span>
+          <span className="text-white/70">{images.length}</span>
+        </div>
       </div>
     </div>
   );
