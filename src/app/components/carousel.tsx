@@ -73,7 +73,8 @@ export function Carousel({ images }: CarouselProps) {
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
             fill
-            className="object-cover object-center[25%]"
+            className="object-cover md:object-center object-top w-full h-full"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
             priority
           />
         </motion.div>
