@@ -278,17 +278,17 @@ export const teamData: TeamData = {
       {
         name: "Dr. Subha Samanta",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884348/EESL/Team/Current%20Members/Alumni/Subha%20Samanta.png",
-        about: "Dr. Subha Samanta is currently working as a Postdoctoral Researcher at the University of California, San Diego"
+        about: "Put content here"
       },
       {
         name: "Dr. K Shiprath",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884333/EESL/Team/Current%20Members/Alumni/K%20Shriprathy.png",
-        about: "Dr. K Shiprath is currently working as a Postdoctoral Researcher at the University of California, San Diego"
+        about: "Put content here"
       },
       {
         name: "Rachana Ravi",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884339/EESL/Team/Current%20Members/Alumni/Rachana%20Raavi.png",
-        about: "Rachana Ravi is currently working as a Postdoctoral Researcher at the University of California, San Diego"
+        about: "Put content here"
       },
       {
         name: "Prabhat Thapliyal",
