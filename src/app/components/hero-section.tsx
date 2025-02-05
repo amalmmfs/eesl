@@ -92,7 +92,7 @@ export default function HeroSection() {
                 Electrochemical Energy Storage Laboratory
               </h1>
             </div>
-            <div className="space-y-4 text-gray-300 text-justify">
+            <div className="space-y-4 text-gray-300 text-justify font-body">
               <p>
                 Our research focuses on developing next-generation energy
                 storage technologies, with particular emphasis on solid-state
