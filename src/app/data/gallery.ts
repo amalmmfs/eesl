@@ -131,4 +131,9 @@ export const galleryItems: GalleryItem[] = [
         imageUrl: 'https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738512086/EESL/Gallery/yrps7k8fgjjpzsgn1ucg.jpg',
         description: 'Prof. Amartya\'s visit to RISE lab'
     },
+    {
+        id: '27',
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776061/Abhik_1_htwgdx.jpg",
+        description: 'Put content here' //TODO: Add description
+    }
 ];
