@@ -13,7 +13,7 @@
     @apply font-roboto font-bold;
   }
 
-  h1 {
+  /* h1 {
     @apply text-4xl;
   }
   h2 {
@@ -30,7 +30,7 @@
   }
   h6 {
     @apply text-base;
-  }
+  } */
 
   /* Body text styles */
   body {
@@ -40,6 +40,12 @@
   /* Strong text */
   strong {
     @apply font-bold;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }
 
