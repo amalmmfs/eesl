@@ -52,7 +52,7 @@ export const teamData: TeamData = {
       "Research Associates": [
         {
           name: "Dr. Soumita Chakraborty",
-          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1736883371/EESL/Team/Current%20Members/Research%20Associate/Soumita%20Chakraborty.png",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738853933/Soumita_Chakraborty_rfj8vv.jpg",
           educationQualification: [
             "PhD: JNCASR, Bangalore",
           ],

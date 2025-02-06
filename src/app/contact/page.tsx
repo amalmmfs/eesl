@@ -41,11 +41,12 @@ export default function ContactPage() {
               <div className="flex items-start space-x-3 group">
                 <MapPin className="mt-1 text-primary group-hover:scale-110 transition-transform" />
                 <p className="text-gray-600 leading-relaxed">
-                  TCG CREST
+                  TCG Crest, TCG Crest RISE
                   <br />
-                  Block DN, Sector V, Salt Lake
+                  Near Qatar Visa Center, Bengal Intelligent Park, EP Block,
+                  Bidhannagar
                   <br />
-                  Kolkata - 700091
+                  Sector V, Kolkata - 700091
                   <br />
                   West Bengal, India
                 </p>
