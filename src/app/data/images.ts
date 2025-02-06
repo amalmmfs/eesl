@@ -65,9 +65,6 @@ export const images = [
   // {
   //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776062/gvsgsgsg_uzbem8.jpg",
   // },
-  // {
-  //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776061/Abhik_1_htwgdx.jpg",
-  // },
   {
     url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776056/6_mz2tgu.jpg",
   },
