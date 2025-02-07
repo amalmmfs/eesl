@@ -244,6 +244,18 @@ export const teamData: TeamData = {
             "Inorganic solid electrolytes for all-solid-state batteries"
           ]
         }
+      ],
+      "Visiting Student": [
+        {
+          name: "Anupama Joy",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738932634/Visiting_Student_hvb20p.jpg",
+          educationQualification: [
+            "Research Scholar at IIT (ISM), Dhanbad",
+          ],
+          research_area: [
+            "Development of Iron-Manganese transition metal oxides for sodium-ion batteries"
+          ]
+        }
       ]
     },    
     alumni: [
