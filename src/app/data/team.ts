@@ -253,7 +253,7 @@ export const teamData: TeamData = {
             "Research Scholar at IIT (ISM), Dhanbad",
           ],
           research_area: [
-            "Development of Iron-Manganese transition metal oxides for sodium-ion batteries"
+            "Development of Iron-Manganese based transition metal oxides for sodium-ion batteries"
           ]
         }
       ]

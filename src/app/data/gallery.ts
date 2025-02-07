@@ -135,5 +135,15 @@ export const galleryItems: GalleryItem[] = [
         id: '27',
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776061/Abhik_1_htwgdx.jpg",
         description: 'Put content here' //TODO: Add description
+    },
+    {
+        id: '28',
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738935846/Gallery_1_ypt2xu.jpg",
+        description: 'Put content here' //TODO: Add description
+    },
+    {
+        id: '29',
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738935846/Gallery_2_a8mxft.jpg",
+        description: 'Put content here' //TODO: Add description
     }
 ];
