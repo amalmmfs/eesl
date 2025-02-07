@@ -15,7 +15,7 @@ export default function Header() {
     { href: "/", label: "About" },
     { href: "/research", label: "Research" },
     { href: "/publications", label: "Publications" },
-    { href: "/equipment", label: "Equipment" },
+    { href: "/equipments", label: "Equipment" },
     { href: "/team", label: "Team" },
     { href: "/gallery", label: "Gallery" },
     { href: "/contact", label: "Contact Us" },

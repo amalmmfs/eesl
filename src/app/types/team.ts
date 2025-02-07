@@ -23,6 +23,7 @@ export interface TeamMember {
     "Project Associates": TeamMember[]
     "Interns": TeamMember[]
     "Research Engineer": TeamMember[]
+    "Visiting Student": TeamMember[]
   }
   
   export interface TeamData {
