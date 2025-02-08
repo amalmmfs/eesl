@@ -1,3 +1,6 @@
+import { formatChemicalFormula } from "../utils/formatChemicalFormula";
+
+
 export interface Publication {
     id: number;
     title: string;
@@ -5,7 +8,17 @@ export interface Publication {
     journal: string;
     year: number;
     publicationLink: string;
+    formattedTitle?: string;
   }
+
+  export const processPublications = (publications: Publication[]): Publication[] => {
+    return publications.map(pub => ({
+      ...pub,
+      formattedTitle: formatChemicalFormula(pub.title),
+      // formattedJournal: formatChemicalFormula(pub.journal)
+    }));
+  };
+
 
   export const publications: Publication[] = [
     {
@@ -881,4 +894,8 @@ export interface Publication {
       year: 2011,
       publicationLink: "https://pubs.acs.org/doi/abs/10.1021/jp203318n",
     },
-  ];
+  ].map(pub => ({
+    ...pub,
+    formattedTitle: formatChemicalFormula(pub.title),
+    formattedJournal: formatChemicalFormula(pub.journal)
+  }));
