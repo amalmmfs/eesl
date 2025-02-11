@@ -1,39 +1,159 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useMemo } from "react";
 import { equipments } from "../data/equipments";
+import Image from "next/image";
+import { SearchIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function EquipmentPage() {
+const EquipmentFacility = () => {
+  const [activeCategory, setActiveCategory] = useState(equipments[0].category);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filter equipment based on search query
+  const filteredEquipments = useMemo(() => {
+    if (!searchQuery) return equipments;
+
+    return equipments
+      .map((category) => ({
+        ...category,
+        items: category.items.filter(
+          (item) =>
+            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+        ),
+      }))
+      .filter((category) => category.items.length > 0);
+  }, [searchQuery]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
-        Laboratory Equipment
-      </h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8"
+    >
+      {/* Hero Section */}
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Equipment & Facilities
+        </h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Explore our state-of-the-art research equipment and facilities
+        </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {equipments.map((equipment) => (
-          <div
-            key={equipment.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="relative h-64 w-full">
-              <Image
-                src={equipment.image}
-                alt={equipment.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                {equipment.name}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {equipment.description}
-              </p>
-            </div>
+        {/* Search Bar */}
+        <div className="max-w-xl mx-auto relative">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search equipment..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+            />
+            <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl" />
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      </motion.div>
+
+      {/* Category Tabs */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="max-w-6xl mx-auto mb-12"
+      >
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+          {filteredEquipments.map((equipment) => (
+            <button
+              key={equipment.category}
+              onClick={() => setActiveCategory(equipment.category)}
+              className={`px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300 ${
+                activeCategory === equipment.category
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "bg-white text-gray-600 hover:bg-gray-100"
+              }`}
+            >
+              {equipment.category}
+            </button>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Equipment Grid */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="max-w-6xl mx-auto"
+      >
+        {filteredEquipments
+          .filter((equipment) => equipment.category === activeCategory)
+          .map((equipment) => (
+            <div key={equipment.category}>
+              <motion.h2
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="text-3xl font-semibold text-gray-800 mb-8 border-b pb-2"
+              >
+                {equipment.category}
+              </motion.h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {equipment.items.map((item) => (
+                  <motion.div
+                    key={item.title}
+                    variants={cardVariants}
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="relative h-48">
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className="object-cover"
+                        fill
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+      </motion.div>
+    </motion.div>
   );
-}
+};
+
+export default EquipmentFacility;
