@@ -36,7 +36,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="canonical" href="" /> #TODO add canonical URL
+        <link rel="canonical" href="" suppressHydrationWarning /> #TODO add
+        canonical URL
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
