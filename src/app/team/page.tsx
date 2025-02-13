@@ -4,8 +4,8 @@ import { TeamMember } from "@/app/components/team-member";
 import { teamData } from "@/app/data/team";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TeamMember as TeamMemberType } from "@/app/types/team";
 
 const fadeInUp = {
@@ -14,23 +14,24 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-const staggerChildren = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+// const staggerChildren = {
+//   animate: {
+//     transition: {
+//       staggerChildren: 0.1,
+//     },
+//   },
+// };
 
 export default function TeamPage() {
-  const { currentMembers, alumni, collaborators } = teamData;
+  const { currentMembers, alumni, collaborators, facultyMember } = teamData;
+  const [activeTab, setActiveTab] = useState("faculty-member");
 
   useEffect(() => {
     document.title = "Team | EESL";
   }, []);
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background" suppressHydrationWarning>
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -53,79 +54,84 @@ export default function TeamPage() {
         </motion.div>
       </motion.section>
 
-      <div className="container max-w-6xl mx-auto px-4 py-16">
-        <Tabs defaultValue="faculty-member" className="space-y-6">
-          <TabsList className="flex flex-wrap justify-center w-full mb-12 p-1 rounded-lg">
-            <TabsTrigger
-              value="faculty-member"
-              className="flex-1 max-w-[200px]"
-            >
-              Faculty Member
-            </TabsTrigger>
-            <TabsTrigger
-              value="current-members"
-              className="flex-1 max-w-[200px]"
-            >
-              Current Members
-            </TabsTrigger>
-            <TabsTrigger value="alumni" className="flex-1 max-w-[200px]">
-              Alumni
-            </TabsTrigger>
-            <TabsTrigger value="collaborators" className="flex-1 max-w-[200px]">
-              Collaborators
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="faculty-member">
+      <div className="mx-auto max-w-6xl px-4 py-16">
+        <div className="flex flex-col items-center">
+          {/* <div className="tabs-wrapper w-full max-w-3xl"> */}
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+            {[
+              "Faculty Member",
+              "Current Members",
+              "Alumni",
+              "Collaborators",
+            ].map((tab) => {
+              const value = tab.toLowerCase().replace(" ", "-");
+              return (
+                <button
+                  key={value}
+                  onClick={() => setActiveTab(value)}
+                  className={`
+                      px-4 py-2 
+                      rounded-full
+                      text-sm md:text-base 
+                      font-medium
+                      transform transition-all duration-300 
+                      ${
+                        activeTab === value
+                          ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white translate-y-1 shadow-inner"
+                          : "bg-white text-gray-700 hover:-translate-y-1 hover:shadow-lg"
+                      }
+                      border border-gray-100
+                      shadow-[0_4px_0px_0px_rgba(0,0,0,0.1)]
+                      active:shadow-none active:translate-y-1
+                    `}
+                >
+                  {tab}
+                </button>
+              );
+            })}
+          </div>
+          {/* </div> */}
+        </div>
+        <div className="mt-8 w-full">
+          {activeTab === "faculty-member" && (
             <motion.div
-              variants={staggerChildren}
+              variants={fadeInUp}
               initial="initial"
               animate="animate"
               className="grid grid-cols-1 gap-8"
             >
-              {teamData.facultyMember.map((member: TeamMemberType) => (
+              {facultyMember.map((member: TeamMemberType) => (
                 <TeamMember key={member.name} {...member} isPrincipal={true} />
               ))}
             </motion.div>
-          </TabsContent>
+          )}
 
-          <TabsContent value="current-members">
+          {activeTab === "current-members" && (
             <div className="space-y-16">
               {Object.entries(currentMembers).map(([category, members]) => (
                 <motion.div
                   key={category}
                   variants={fadeInUp}
                   initial="initial"
-                  whileInView="animate"
-                  viewport={{ once: true }}
+                  animate="animate"
                   className="space-y-8"
                 >
                   <h3 className="text-2xl font-semibold text-gray-800 border-l-4 border-primary pl-4">
                     {category}
                   </h3>
-                  <div
-                    className={`grid gap-8 ${
-                      category === "Principal Investigator"
-                        ? "grid-cols-1"
-                        : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-                    }`}
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {members.map((member: TeamMemberType) => (
-                      <TeamMember
-                        key={member.name}
-                        {...member}
-                        isPrincipal={category === "Principal Investigator"}
-                      />
+                      <TeamMember key={member.name} {...member} />
                     ))}
                   </div>
                 </motion.div>
               ))}
             </div>
-          </TabsContent>
+          )}
 
-          <TabsContent value="alumni">
+          {activeTab === "alumni" && (
             <motion.div
-              variants={staggerChildren}
+              variants={fadeInUp}
               initial="initial"
               animate="animate"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -134,11 +140,11 @@ export default function TeamPage() {
                 <TeamMember key={member.name} {...member} />
               ))}
             </motion.div>
-          </TabsContent>
+          )}
 
-          <TabsContent value="collaborators">
+          {activeTab === "collaborators" && (
             <motion.div
-              variants={staggerChildren}
+              variants={fadeInUp}
               initial="initial"
               animate="animate"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -147,8 +153,8 @@ export default function TeamPage() {
                 <TeamMember key={member.name} {...member} />
               ))}
             </motion.div>
-          </TabsContent>
-        </Tabs>
+          )}
+        </div>
       </div>
     </main>
   );
