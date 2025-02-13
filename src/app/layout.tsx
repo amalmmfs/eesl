@@ -30,27 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${roboto.variable} ${sourceSans.variable}`}
-      suppressHydrationWarning
-    >
-      <head>
-        <link rel="canonical" href="" suppressHydrationWarning /> #TODO add
-        canonical URL
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="keywords"
-          content={
-            Array.isArray(metadata.keywords)
-              ? metadata.keywords.join(", ")
-              : metadata.keywords || ""
-          }
-        />
-        <meta name="description" content={metadata.description || ""} />
-        <title>{metadata.title?.toString()}</title>
-      </head>
+    <html lang="en" className={`${roboto.variable} ${sourceSans.variable}`}>
       <body>
         <div className="flex min-h-screen flex-col">
           <Header />
