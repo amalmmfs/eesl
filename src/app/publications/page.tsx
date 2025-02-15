@@ -63,7 +63,7 @@ export default function PublicationsPage() {
             <Input
               type="search"
               placeholder="Search by Keyword, Author, or Journal"
-              className="pl-10 sm:pl-12 pr-4 py-4 sm:py-6 text-base sm:text-lg border-none ring-2 ring-transparent focus:ring-blue-200 rounded-xl"
+              className="w-full px-4 py-3 pl-12 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
