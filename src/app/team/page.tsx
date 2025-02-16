@@ -23,7 +23,7 @@ const fadeInUp = {
 // };
 
 export default function TeamPage() {
-  const { currentMembers, alumni, collaborators, facultyMember } = teamData;
+  const { currentMembers, alumni, collaborators, faculty } = teamData;
   const [activeTab, setActiveTab] = useState("faculty-member");
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function TeamPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background" suppressHydrationWarning>
+    <main className="min-h-screen bg-background">
       <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,18 +58,14 @@ export default function TeamPage() {
         <div className="flex flex-col items-center">
           {/* <div className="tabs-wrapper w-full max-w-3xl"> */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            {[
-              "Faculty Member",
-              "Current Members",
-              "Alumni",
-              "Collaborators",
-            ].map((tab) => {
-              const value = tab.toLowerCase().replace(" ", "-");
-              return (
-                <button
-                  key={value}
-                  onClick={() => setActiveTab(value)}
-                  className={`
+            {["Faculty", "Current Members", "Alumni", "Collaborators"].map(
+              (tab) => {
+                const value = tab.toLowerCase().replace(" ", "-");
+                return (
+                  <button
+                    key={value}
+                    onClick={() => setActiveTab(value)}
+                    className={`
                       px-4 py-2 
                       rounded-full
                       text-sm md:text-base 
@@ -84,23 +80,24 @@ export default function TeamPage() {
                       shadow-[0_4px_0px_0px_rgba(0,0,0,0.1)]
                       active:shadow-none active:translate-y-1
                     `}
-                >
-                  {tab}
-                </button>
-              );
-            })}
+                  >
+                    {tab}
+                  </button>
+                );
+              }
+            )}
           </div>
           {/* </div> */}
         </div>
         <div className="mt-8 w-full">
-          {activeTab === "faculty-member" && (
+          {activeTab === "faculty" && (
             <motion.div
               variants={fadeInUp}
               initial="initial"
               animate="animate"
               className="grid grid-cols-1 gap-8"
             >
-              {facultyMember.map((member: TeamMemberType) => (
+              {faculty.map((member: TeamMemberType) => (
                 <TeamMember key={member.name} {...member} isPrincipal={true} />
               ))}
             </motion.div>
