@@ -89,7 +89,7 @@ export default function CareersPage() {
                     ))}
                   </ul>
                   <Button
-                    onClick={() => setSelectedPosition(position.title)}
+                    onClick={() => setSelectedPosition(position.role)}
                     variant="ghost"
                     className="text-sm gap-2 group relative overflow-hidden
                   bg-gradient-to-r from-blue-50 to-blue-100
@@ -149,7 +149,7 @@ export default function CareersPage() {
             </ul>
             <Button
               onClick={() =>
-                setSelectedPosition(careerOpportunities.phdPosition.title)
+                setSelectedPosition(careerOpportunities.phdPosition.role)
               }
               variant="ghost"
               className="text-sm gap-2 group relative overflow-hidden
@@ -220,7 +220,7 @@ export default function CareersPage() {
         {/* Application Form Modal */}
         {selectedPosition && (
           <ApplicationForm
-            positionTitle={selectedPosition}
+            role={selectedPosition}
             isOpen={!!selectedPosition}
             onClose={() => setSelectedPosition(null)}
           />
