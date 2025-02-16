@@ -33,13 +33,13 @@ export default function NewsSection() {
 
   return (
     <section
-      className="bg-gradient-to-b from-gray-50 to-white py-16"
+      className="bg-gradient-to-b from-slate-200 via-white to-gray-50 py-16" //TODO: Change the background color
       id="news-section"
     >
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-black to-gray-900 bg-clip-text text-transparent">
-            Latest Developments
+            Latest News
           </h2>
           <p className="text-gray-600 mt-3 text-lg">
             Stay updated with our latest developments and achievements

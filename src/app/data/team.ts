@@ -1,7 +1,7 @@
 import { TeamData } from '@/app/types/team';
 
 export const teamData: TeamData = {
-  facultyMember: [
+  faculty: [
     {
       name: "Dr. Abhik Banerjee",
       image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736880584/EESL/Team/Current%20Members/Principal%20Investigator/Abhik%20Banerjee.png",
@@ -21,7 +21,7 @@ export const teamData: TeamData = {
         },
         {
           period: "2015-2016",
-          position: "Postdoctoral Scholar at UNI"
+          position: "Postdoctoral Scholar at UNIST, South Korea"
         },
         {
           period: "2015",
@@ -45,7 +45,7 @@ export const teamData: TeamData = {
             "PhD: CSIR-National Chemical Laboratory",
           ],
           research_area: [
-            "Solid state battery, interface studies, Operando measurements and electrolytes for Na anode free and Na metal batteries",
+            "Interfaces and interphases in solid-state batteries, in-operando analysis of solid-state batteries",
           ],
         }
       ],
@@ -91,7 +91,7 @@ export const teamData: TeamData = {
             "MSc: Bidhannagar College, Kolkata",
           ],
           research_area: [
-            "Lithium and Sodium ion batteries",
+            "Electrolyte design for anode free Li and Na metal batteries",
           ]
         },
         {
@@ -132,7 +132,7 @@ export const teamData: TeamData = {
             "MSc: Savitribai Phule Pune University, Pune",
           ],
           research_area: [
-            "Layered transition metal oxide cathodes in Sodium-ion batteries"
+            "Understanding the structure and thermal safety aspect of Na layered oxide cathodes"
           ]
         },
         {
@@ -154,7 +154,7 @@ export const teamData: TeamData = {
             "MSc: IACS, Kolkata",
           ],
           research_area: [
-            "Layered transition metal oxide cathodes for SIB"
+            "Oxygen redox in Na layered oxide cathodes"
           ]
         },
         {
@@ -185,7 +185,7 @@ export const teamData: TeamData = {
             "M Tech: Calcutta University",
           ],
           research_area: [
-            "Layered oxide cathode mareials for Sodium ion batteries"
+            "Understanding the stability of Na layered oxide cathodes under ambient conditions "
           ]
         }
       ],

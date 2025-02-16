@@ -27,7 +27,7 @@ export interface TeamMember {
   }
   
   export interface TeamData {
-    facultyMember: TeamMember[]
+    faculty: TeamMember[]
     currentMembers: CurrentMembers
     alumni: TeamMember[]
     collaborators: TeamMember[]

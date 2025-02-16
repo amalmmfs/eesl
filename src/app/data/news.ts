@@ -30,7 +30,7 @@ export interface NewsItem {
         "State-of-the-art testing facilities have been added to enhance our research capabilities.",
       news: "A new Cryo Dual Ion Microscope has been installed in the RISE lab. This instrument features a unique capability for ion milling, specifically designed for beam-sensitive materials such as lithium (Li), sodium (Na), polymers, and soft glassy materials. These features are crucial for battery research. Additionally, the microscope is equipped with Energy Dispersive X-ray Spectroscopy (EDX) and Time-of-Flight Secondary Ion Mass Spectrometry (TOF-SIMS).",
       category: "Facility",
-      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738049525/EESL/News/Conference-Announcement.png"
+      image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739691337/Tof-sims_w4bx5y.jpg"
     },
     {
       id: 3,
@@ -63,5 +63,15 @@ export interface NewsItem {
       news: "EESL lab has achieved a breakthrough in developing a novel liquid electrolyte for a sodium-ion battery pouch cell that operates at -50°C. This innovation unlocks unique capabilities for sodium-ion batteries in various low-temperature applications.",
       category: "Research",
       videoUrl: "https://res.cloudinary.com/dmw1bwmpr/video/upload/f_auto:video,q_auto/v1/EESL/News/zizssnil8yvcxihmahjg"
+    },
+    {
+      id: 6,
+      date: "2024-02-11",
+      title: "DRDO Awards Project to EESL Lab for Advanced Si-Graphite Li-ion Battery Development",
+      description:
+        "DRDO awarded EESL Lab a project to develop a silicon-graphite composite for high-energy, high-power Li-ion batteries.",
+      news: "A recent DRDO project was granted to EESL lab for the development of a Si-graphite composite for high energy and power density Li ion battery application.",
+      category: "Research",
+      // videoUrl: "https://res.cloudinary.com/dmw1bwmpr/video/upload/f_auto:video,q_auto/v1/EESL/News/zizssnil8yvcxihmahjg"
     }
   ];

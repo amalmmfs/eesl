@@ -94,14 +94,17 @@ export default function HeroSection() {
             </div>
             <div className="space-y-4 text-gray-300 text-justify font-body">
               <p>
-                Our research focuses on developing next-generation energy
-                storage technologies, with particular emphasis on solid-state
-                batteries and advanced characterization techniques.
+                Our research focuses on advancing next-generation energy storage
+                technologies, particularly solid-state and sodium-ion batteries,
+                along with the development of anode-free lithium and sodium
+                metal technology.
               </p>
               <p>
-                We collaborate with leading institutions worldwide to address
-                critical challenges in energy storage and contribute to a
-                sustainable future.
+                Equipped with comprehensive characterization facilities and a
+                solid and liquid pouch cell assembly unit, our lab also utilizes
+                synchrotron and neutron facilities worldwide to study battery
+                materials. Through global collaborations, we tackle key energy
+                storage challenges, driving innovation for a sustainable future.
               </p>
             </div>
 
