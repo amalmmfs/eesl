@@ -5,7 +5,6 @@ import { teamData } from "@/app/data/team";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TeamMember as TeamMemberType } from "@/app/types/team";
 
 const fadeInUp = {
@@ -24,7 +23,7 @@ const fadeInUp = {
 
 export default function TeamPage() {
   const { currentMembers, alumni, collaborators, faculty } = teamData;
-  const [activeTab, setActiveTab] = useState("faculty-member");
+  const [activeTab, setActiveTab] = useState("faculty");
 
   useEffect(() => {
     document.title = "Team | EESL";
@@ -70,15 +69,17 @@ export default function TeamPage() {
                       rounded-full
                       text-sm md:text-base 
                       font-medium
-                      transform transition-all duration-300 
+                      transform transition-all duration-300 ease-out
+                      backdrop-filter backdrop-blur-sm
                       ${
                         activeTab === value
-                          ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white translate-y-1 shadow-inner"
-                          : "bg-white text-gray-700 hover:-translate-y-1 hover:shadow-lg"
+                          ? "bg-gradient-to-br from-blue-500/95 to-blue-600/95 text-white translate-y-1 shadow-inner"
+                          : "bg-white/95 text-gray-700 hover:-translate-y-1 hover:shadow-lg"
                       }
-                      border border-gray-100
-                      shadow-[0_4px_0px_0px_rgba(0,0,0,0.1)]
+                      border border-gray-100/20
+                      shadow-[0_4px_0px_0px_rgba(0,0,0,0.08)]
                       active:shadow-none active:translate-y-1
+                      hover:ring-2 hover:ring-blue-200/50
                     `}
                   >
                     {tab}

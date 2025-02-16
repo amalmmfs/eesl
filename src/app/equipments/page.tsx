@@ -96,19 +96,21 @@ const EquipmentFacility = () => {
               key={equipment.category}
               onClick={() => setActiveCategory(equipment.category)}
               className={`
-              px-4 py-2 
-              rounded-full
-              text-sm md:text-base 
-              font-medium
-              transform transition-all duration-300 
+                      px-4 py-2 
+                      rounded-full
+                      text-sm md:text-base 
+                      font-medium
+                      transform transition-all duration-300 ease-out
+                      backdrop-filter backdrop-blur-sm 
               ${
                 activeCategory === equipment.category
-                  ? "bg-gradient-to-br from-blue-500 to-blue-600 text-white translate-y-1 shadow-inner"
-                  : "bg-white text-gray-700 hover:-translate-y-1 hover:shadow-lg"
+                  ? "bg-gradient-to-br from-blue-500/95 to-blue-600/95 text-white translate-y-1 shadow-inner"
+                  : "bg-white/95 text-gray-700 hover:-translate-y-1 hover:shadow-lg"
               }
-              border border-gray-100
-              shadow-[0_4px_0px_0px_rgba(0,0,0,0.1)]
-              active:shadow-none active:translate-y-1
+              border border-gray-100/20
+                      shadow-[0_4px_0px_0px_rgba(0,0,0,0.08)]
+                      active:shadow-none active:translate-y-1
+                      hover:ring-2 hover:ring-blue-200/50
             `}
             >
               {equipment.category}
