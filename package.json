@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.1",
     "@radix-ui/react-tabs": "^1.1.2",
     "class-variance-authority": "^0.7.1",
@@ -20,6 +21,7 @@
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
     "react-particles": "^2.12.2",
+    "react-phone-input-2": "^2.15.1",
     "swiper": "^11.1.15",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
