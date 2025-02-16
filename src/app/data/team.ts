@@ -284,23 +284,23 @@ export const teamData: TeamData = {
         name: "Dr. Debanjana Pahari",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884328/EESL/Team/Current%20Members/Alumni/Debanjana%20Pahari.png",
         about: 
-          "Dr. Debanjana Pahari did her Ph.D. from IIT KGP, and she is working on the design of Mn-based layered oxide cathodes for Na ion battery applications",
+          "Dr. Debanjana Pahari is currently holding a position of Postdoctoral Research Associate at the Bavarian Center for Battery Technology, Germany",
         
       },
       {
         name: "Dr. Subha Samanta",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884348/EESL/Team/Current%20Members/Alumni/Subha%20Samanta.png",
-        about: "Put content here"
+        about: "Dr. Subha Samanta is currently a Research Fellow at the University of Birmingham, UK"
       },
       {
         name: "Dr. K Shiprath",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884333/EESL/Team/Current%20Members/Alumni/K%20Shriprathy.png",
-        about: "Put content here"
+        about: "Dr. Shiprath Gowda is currently an Electrolyte Scientist at Neocell Industries Private Limited, India"
       },
       {
-        name: "Rachana Ravi",
+        name: "Rachana Raavi",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884339/EESL/Team/Current%20Members/Alumni/Rachana%20Raavi.png",
-        about: "Put content here"
+        about: "Dr. Rachana Raavi is currently working as a an Electrolyte and Separator Engineer at Amara Raja Advanced Cell Technologies, Hyderabad"
       },
       {
         name: "Prabhat Thapliyal",
