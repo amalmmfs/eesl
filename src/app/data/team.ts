@@ -270,7 +270,7 @@ export const teamData: TeamData = {
         name: "Ashutosh Rana",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513367/EESL/Team/Current%20Members/Alumni/Ashutosh%20Rana.png",
         about: 
-          "Ashutosh Rana is currently pursuing his Ph.D. at the University of Perdue under the guidance of Prof. Partha Mukherjee",
+          "Ashutosh Rana is currently pursuing his Ph.D. at the University of Purdue under the guidance of Prof. Partha Mukherjee",
         
       },
       {
@@ -284,7 +284,7 @@ export const teamData: TeamData = {
         name: "Dr. Debanjana Pahari",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736884328/EESL/Team/Current%20Members/Alumni/Debanjana%20Pahari.png",
         about: 
-          "Dr. Debanjana Pahari is currently holding a position of Postdoctoral Research Associate at the Bavarian Center for Battery Technology, Germany",
+          "Dr. Debanjana Pahari is currently a Postdoctoral Research Associate at the Bavarian Center for Battery Technology, Germany",
         
       },
       {
