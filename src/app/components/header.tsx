@@ -6,10 +6,31 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const router = useRouter();
+
+  const handleNewsClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (pathname !== "/") {
+      await router.push("/");
+    }
+
+    setTimeout(() => {
+      const newsSection = document.getElementById("news");
+      if (newsSection) {
+        window.scrollTo({
+          top: newsSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }, 300);
+  };
 
   const navLinks = [
     { href: "/", label: "About" },
@@ -18,6 +39,8 @@ export default function Header() {
     { href: "/equipments", label: "Equipment" },
     { href: "/team", label: "Team" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/#news", label: "News", onClick: handleNewsClick },
+    { href: "/careers", label: "Oppurtunities" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -62,6 +85,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                onClick={link.onClick || undefined}
                 className={`relative text-sm font-medium group transition-all duration-300 ease-in-out hover:-translate-y-0.5`} // Added transform on hover
               >
                 <span
