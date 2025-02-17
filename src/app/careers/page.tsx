@@ -49,7 +49,7 @@ export default function CareersPage() {
           variants={fadeInUp}
           initial="initial"
           animate="animate"
-          className="mb-16"
+          className="mb-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-8 shadow-sm"
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-primary pl-4">
             Research Associate Positions
@@ -113,7 +113,7 @@ export default function CareersPage() {
           variants={fadeInUp}
           initial="initial"
           animate="animate"
-          className="mb-16"
+          className="mb-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-8 shadow-sm"
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-primary pl-4">
             PhD Position

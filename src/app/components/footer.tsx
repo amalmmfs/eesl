@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Twitter, Linkedin, BookOpen } from "lucide-react";
+import { Mail, Twitter, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={16} />
-                <a href="mailto:contact@eesl.org">contact@eesl.org</a>
+                <a href="mailto:contact@eesl.org">abhikchm@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -134,15 +134,6 @@ export default function Footer() {
                 >
                   <Linkedin size={16} />
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2"
-                >
-                  <BookOpen size={16} />
-                  ResearchGate
                 </a>
               </li>
             </ul>
