@@ -22,6 +22,16 @@ export interface Publication {
 
   export const publications: Publication[] = [
     {
+      id: 0,
+      title: "Key Anodic Interfacial Phenomena and their Control in Next-Generation Lithium and Sodium Metal Batteries",
+      authors: [
+        "Kingshuk Roy", "Manas K. Bhunia", "Pitchiah E. Karthik", "Ashutosh Rana", "Bidisa Das", "Abhik Banerjee", "Satishchandra Ogale"
+      ],
+      journal: "Wiley",
+      year: 2025,
+      publicationLink: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202410167"
+    },
+    {
       id: 1,
       title:
         "Evolution of Interfacial Electro-Chemo-Mechanics between Lithium Metal and Halide Solid Electrolyte",

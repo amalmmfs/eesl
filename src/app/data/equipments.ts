@@ -221,7 +221,7 @@ export const equipments = [
       {
         title: "Solid State Cells",
         description: "Put content here",
-        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794995/Solid_State_Cells_svehpf.jpg"
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739802391/In-situ_Pressure_Monitoring_for_Solid_State-LE_Battery_Cycling_tallcn.jpg"
       },
       {
         title: "Electrospinning Setup",

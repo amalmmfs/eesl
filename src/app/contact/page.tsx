@@ -41,7 +41,7 @@ export default function ContactPage() {
               <div className="flex items-start space-x-3 group">
                 <MapPin className="mt-1 text-primary group-hover:scale-110 transition-transform" />
                 <p className="text-gray-600 leading-relaxed">
-                  TCG Crest, TCG Crest RISE
+                  Research Institute for Sustainable Energy
                   <br />
                   Near Qatar Visa Center, Bengal Intelligent Park, EP Block,
                   Bidhannagar
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 </a>
                 <div className="flex items-center space-x-3 p-2">
                   <Phone className="text-primary" />
-                  <p className="text-gray-600">+91 XXXXX XXXXX</p>
+                  <p className="text-gray-600">+91 7365834846</p>
                 </div>
               </div>
             </div>
