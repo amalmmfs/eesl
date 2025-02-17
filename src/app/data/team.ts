@@ -144,6 +144,14 @@ export const teamData: TeamData = {
           research_area: [
             "Study of electrochemical interfaces of aqueous and non-aqueous battery"
           ]
+        },
+        {
+          name: "Debopam Pal",
+          image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739791661/Debopam_Pal_kzlmxl.jpg",
+          educationQualification: ["MSc: Visva-Bharati university"],
+          research_area: [
+            "Synthesis of organic solvents and additives for Li and Na-metal Batteries"
+          ]
         }
       ],
       "Project Associates": [

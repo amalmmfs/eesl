@@ -6,7 +6,7 @@ import Image from "next/image";
 import { SearchIcon } from "lucide-react";
 import { motion } from "framer-motion";
 
-const EquipmentFacility = () => {
+const Facilities = () => {
   const [activeCategory, setActiveCategory] = useState(equipments[0].category);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -62,7 +62,7 @@ const EquipmentFacility = () => {
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Equipment & Facilities
+          Facilities in RISE
         </h1>
         <p className="text-xl text-gray-600 mb-8">
           Explore our state-of-the-art research equipment and facilities
@@ -168,4 +168,4 @@ const EquipmentFacility = () => {
   );
 };
 
-export default EquipmentFacility;
+export default Facilities;
