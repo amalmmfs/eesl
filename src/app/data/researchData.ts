@@ -17,7 +17,7 @@ export const researchData: Research[] = [
       id: 2,
     title: "Structure Diffusion Relationship In Solid Electrolyte",
 content: "Solid electrolytes are relatively new research topics that can overcome tough challenges in conventional lithium-ion batteries. These include potential combustion accidents resulting from flammable liquid electrolyte solvents and low energy density. High room temperature ionic conductivity (10⁻³ S/cm) is the most primal criterion for solid electrolytes to be applied in the solid-state battery. The general illustration of structures and fundamental features, for example, ion occupancies, ion migration paths and dimensionalities, carrier types, point defects, ion-doping sites, and interfacial structures important to ionic conductivity. We synthesize new solid electrolytes and correlate their structure-property relationship through various electrochemistry and advanced characterizations, which further help us to design better solid electrolytes. ",
-    image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735589231/EESL/Research%20Page/Structure%20Diffusion%20relationship%20in%20Solid%20Electrolyte.png",
+    image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739802698/Solid_Diffusion_aj3roi.jpg",
   },   
   {
     id: 3,
@@ -36,7 +36,7 @@ content: "Solid electrolytes are relatively new research topics that can overcom
     title: "Anode-Free (Metal) Batteries",
     // content: "The metal anode or anode-free battery is becoming a major research topic for realizing high energy and power density battery. However, dendrite growth has become a major concern as it lowers the Columbic efficiency and limits cycle life. The kinetic parameters of the charge transfer step (exchange current density, j0j0​, transfer coefficient, αα) of the Li+/LiLi+/Li redox system, the mass transfer parameters of Li+Li+ (transfer number of Li+Li+, tLi+tLi+​, diffusion coefficient of Li+Li+, DLi+DLi+​), and the bulk conductivity (κκ) of electrolyte, surface diffusion barrier atom are associated with dendritic growth of metal. We design experiments (electrochemical and analytical) to quantify the various key parameters associated with dendrite growth and cell failure.",
       content: "The metal anode or anode-free battery is becoming a major research topic for realizing high energy and power density battery. However, dendrite growth has become a major concern as it lowers the Columbic efficiency and limits cycle life. The kinetic parameters of the charge transfer step (exchange current density, j₀, transfer coefficient, α) of the Li⁺/Li redox system, the mass transfer parameters of Li⁺ (transfer number of Li⁺, tₗᵢ₊, diffusion coefficient of Li⁺, DLi+​), and the bulk conductivity (κ) of electrolyte, surface diffusion barrier atom are associated with dendritic growth of metal. We design experiments (electrochemical and analytical) to quantify the various key parameters associated with dendrite growth and cell failure.", //TODO: Fix the subscripts
-    image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735588896/EESL/Research%20Page/Anode%20Free%20Metal%20Batteries.png",
+    image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739802622/Anode_free_ihdlyv.png",
   },
   // 
   {
