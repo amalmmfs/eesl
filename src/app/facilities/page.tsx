@@ -20,7 +20,10 @@ const Facilities = () => {
         items: category.items.filter(
           (item) =>
             item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+            (item.description
+              ?.toLowerCase()
+              .includes(searchQuery.toLowerCase()) ??
+              false)
         ),
       }))
       .filter((category) => category.items.length > 0);
@@ -144,19 +147,20 @@ const Facilities = () => {
                     variants={cardVariants}
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
                   >
-                    <div className="relative h-48">
+                    <div className="relative h-64 sm:h-72 md:h-80">
                       <Image
                         src={item.imageUrl}
                         alt={item.title}
-                        className="object-cover"
+                        className="object-contain hover:object-cover transition-all duration-300"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold text-gray-900 text-center">
                         {item.title}
                       </h3>
-                      <p className="text-gray-600">{item.description}</p>
                     </div>
                   </motion.div>
                 ))}
