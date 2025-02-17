@@ -12,7 +12,7 @@ export const careerOpportunities = {
       },
       {
         role: "Research Associate",
-        title: "Na Ion Battery Full Cell Degradation Analysis",
+        title: "Na-ion Battery Full Cell Degradation Analysis",
         // description: "Full cell analysis using three-electrode configuration.",
         responsibilities: [
           "Full cell analysis using three-electrode configuration.",

@@ -173,7 +173,7 @@ export default function CareersPage() {
           className="mb-16"
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-primary pl-4">
-            How to Apply
+            Further Oppurtunities
           </h2>
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg p-8">
             <p className="text-white mb-6 text-lg">
