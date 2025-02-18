@@ -55,7 +55,6 @@ export default function TeamPage() {
 
       <div className="mx-auto max-w-6xl px-4 py-16">
         <div className="flex flex-col items-center">
-          {/* <div className="tabs-wrapper w-full max-w-3xl"> */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
             {["Faculty", "Current Members", "Alumni", "Collaborators"].map(
               (tab) => {
