@@ -19,22 +19,22 @@ export const equipments = [
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739793491/Probe_Sonicator_jcqota.jpg",
       },
       {
-        title: "Coprecipitation set up with Peristaltic pump and pH feedback controller",
+        title: "Coprecipitation set up with Peristaltic Pump and pH Feedback Controller",
         description: "Used for synthesizing layered Na- and Li-based cathode materials under controlled pH, temperature, stirring speed, and argon gas flow",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739793523/pH_Temp_controlled_Co-precipation_setup_s5bped.jpg"
       },
       {
-        title: "High-temperature Muffle furnaces",
+        title: "High-temperature Muffle Furnaces",
         description: "Furnaces can go up to 1200 C to synthesize materials under air",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739793532/Box_Furnace1200_C_w0bcct.jpg"
       },
       {
-        title: "High-temperature Tube furnaces",
+        title: "High-temperature Tube Furnaces",
         description: "Furnaces can go up to 1200 C to synthesize materials under passing desired gas",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739793513/Tube_Furnace1200_C_kbnmst.jpg"
       },
       {
-        title: "Mili-Q deionized water system",
+        title: "Mili-Q Deionized Water System",
         description: "Produces Type 1 ion-free ultrapure water with low organic carbon content for sensitive laboratory applications",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739793517/Mili-Q_deionized_water_fiawk2.jpg"
       },
@@ -89,7 +89,7 @@ export const equipments = [
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739796033/Liquid_Electrolyte_Glove_box_se86mu.jpg"
       },
       {
-        title: "Drying Oven",
+        title: "Vacuum Drying Oven",
         description: "Used for drying glassware and other related materials up to 120 C under ambient pressure",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794407/Vaccum_Drying_Oven_bte4xw.jpg"
       },
@@ -119,7 +119,7 @@ export const equipments = [
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794967/Hot_Rolling_Press._i2srzm.jpg"
       },
       {
-        title: "Pressure controlled split pouch cell for battery research",
+        title: "Pressure Controlled Split Pouch Cell",
         description: "Put content here",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794994/Pressure_controlled_split_pouch_cell._dgoigz.jpg"
       },
@@ -129,7 +129,7 @@ export const equipments = [
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794955/Compact_precision_die_cutter_adogve.jpg"
       },
       {
-        title: "Pressure and Temperature controller for pouch and split cell cycling",
+        title: "Pressure and Temperature controller for Pouch and Split cell cycling",
         description: "Pneumatic Press with a precision constant pressure controller within +/- 0.5 Kg up to 9KN and 150°C. It is designed for testing the effect of pressure on solid-state battery performance and also can be used as the SEI formation or electrode lamination under hot pressing",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794989/Pressure_and_Temperature_controller_for_pouch_and_split_cell_cycling_f3sipw.jpg"
       },
@@ -233,6 +233,11 @@ export const equipments = [
         description: "Put content here",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739794948/Battery_Cycler_Biologic_BCS-805_y5yzql.jpg"
       },
+      {
+        title: "Rotating Ring Disk Electrode",
+        description: "Put content here",
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739800353/Rotating_Ring_Disc_Electrode_Setup_ks4qev.jpg"
+      },
       
     ]
   },
@@ -288,11 +293,6 @@ export const equipments = [
         title: "Atomic Absorption Spectroscopy",
         description: "Put content here",
         imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739800083/Atomic_Absorption_Spectrometer_je3eva.jpg"
-      },
-      {
-        title: "Rotating Disk Electrode",
-        description: "Put content here",
-        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739800353/Rotating_Ring_Disc_Electrode_Setup_ks4qev.jpg"
       },
       {
         title: "Themrmogravimetric Analyzer",

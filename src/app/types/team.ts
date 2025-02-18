@@ -8,6 +8,7 @@ export interface TeamMember {
       phone: string
       email: string[]
       website: string
+      linkedin: string
     }
     timeline?: {
       period: string

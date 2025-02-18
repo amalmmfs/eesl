@@ -1,6 +1,6 @@
 export const images = [
   {
-    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735410392/EESL/Hero-Section/jz1lqsnkmsqmoksuoojd.png",
+    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739902372/IMG_2721_dqgzvj.png",
   },
   // {
   //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735411383/EESL/Hero-Section/zq90qgrfsdvspsnmproy.png",
@@ -9,7 +9,7 @@ export const images = [
     url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735411383/EESL/Hero-Section/qke477yfjmd19e0s3wd7.png",
   },
   {
-    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735410437/EESL/Hero-Section/jrqkbmh4bsctbzsqa8xg.png",
+    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739902369/IMG_3155_mhbakz.png",
   },
   // {
   //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1735410397/EESL/Hero-Section/bpseglqtqys3e6vlnxbz.png",
@@ -39,7 +39,7 @@ export const images = [
     url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776068/Picture_6_quloyj.jpg",
   },
   {
-    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776068/Picture_11_nu0q6a.jpg",
+    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739902367/IMG_2959_vzak1m.png",
   },
   // {
   //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776061/Abhik_2_mzajzc.jpg",
@@ -77,10 +77,10 @@ export const images = [
   {
     url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776054/3_lq8tht.jpg",
   },
-  {
-    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776053/2_xtz5or.jpg",
-  },
-  {
-    url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776053/1_lso12q.jpg",
-  }
+  // {
+  //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776053/2_xtz5or.jpg",
+  // },
+  // {
+  //   url: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738776053/1_lso12q.jpg",
+  // }
 ];

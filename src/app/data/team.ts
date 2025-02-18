@@ -8,7 +8,8 @@ export const teamData: TeamData = {
       contactInfo: {
         phone: "+91-7365834846",
         email: ["abhikchm@gmail.com", "abhik.banerjee@tcgcrest.org"],
-        website: "https://www.tcgcrest.org/"
+        website: "https://www.tcgcrest.org/",
+        linkedin: "https://www.linkedin.com/in/abhik-banerjee-2b0b5616?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
       timeline: [
         {
@@ -405,7 +406,21 @@ export const teamData: TeamData = {
         educationQualification: [ 
           "Purdue University"
         ]
-      }
+      },
+      {
+        name: "Neeraj Sharma",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739900558/Neeraj-Sharma_aymcoz.png",
+        educationQualification: [ 
+          "University of New South Wales"
+        ]
+      },
+      {
+        name: "Anh Ngo",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739900558/Anh_mfvbfa.png",
+        educationQualification: [ 
+          "University of Illinois, Chicago"
+        ]
+      },
     ],
   }
   
