@@ -2,8 +2,17 @@
 
 import { Mail, MapPin, Phone, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function ContactPage() {
+  const [, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    document.title = "Contact Us  | EESL";
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
