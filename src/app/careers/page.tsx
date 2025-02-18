@@ -24,14 +24,6 @@ export default function CareersPage() {
         transition={{ duration: 1 }}
         className="relative h-[300px] w-full bg-white"
       >
-        {/* <div className="absolute inset-0">
-          <Image
-            src="/careers-hero.jpg"
-            alt="Careers at EESL"
-            fill
-            className="object-cover opacity-40"
-          />
-        </div> */}
         <div className="relative container max-w-6xl mx-auto px-4 h-full flex flex-col justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-900">
             Join Our Team
@@ -65,9 +57,6 @@ export default function CareersPage() {
                   <h3 className="text-2xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                     {position.title}
                   </h3>
-                  {/* <p className="text-gray-600 mb-6 leading-relaxed">
-                    {position.description}
-                  </p> */}
                   <ul className="space-y-3 mb-8">
                     {position.responsibilities.map((resp, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
