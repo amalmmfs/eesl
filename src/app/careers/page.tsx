@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { careerOpportunities } from "@/app/data/careerOppurtunities";
 import { ApplicationForm } from "@/app/components/application-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 // import Image from "next/image";
 
@@ -13,6 +13,14 @@ export default function CareersPage() {
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.5 },
   };
+
+  const [, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    document.title = "Careers | EESL";
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const [selectedPosition, setSelectedPosition] = useState<string | null>(null);
 
@@ -41,7 +49,7 @@ export default function CareersPage() {
           variants={fadeInUp}
           initial="initial"
           animate="animate"
-          className="mb-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-8 shadow-sm"
+          className="mb-16 bg-gradient-to-r from-slate-100 to-blue-100 rounded-xl p-8 shadow-sm"
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-primary pl-4">
             Research Associate Positions
@@ -102,7 +110,7 @@ export default function CareersPage() {
           variants={fadeInUp}
           initial="initial"
           animate="animate"
-          className="mb-16 bg-gradient-to-r from-slate-50 to-blue-50 rounded-xl p-8 shadow-sm"
+          className="mb-16 bg-gradient-to-r from-slate-100 to-blue-100 rounded-xl p-8 shadow-sm"
         >
           <h2 className="text-3xl font-bold text-gray-800 mb-8 border-l-4 border-primary pl-4">
             PhD Position
