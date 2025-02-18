@@ -1,7 +1,7 @@
 
 Todo-
  - [ ] Header Responsiveness
- - [ ] Oppurtunities Page UX and Functionality
+ - [X] Oppurtunities Page UX and Functionality
  - [x] Conditional Design of Facilities
  - [ ] Gallery
  - [ ] Ratelimiting, Security and Traffic Management (Low Priority)
