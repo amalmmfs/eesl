@@ -1,14 +1,27 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { equipments } from "../data/equipments";
 import Image from "next/image";
 import { SearchIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
 const Facilities = () => {
   const [activeCategory, setActiveCategory] = useState(equipments[0].category);
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
 
   // Filter equipment based on search query
   const filteredEquipments = useMemo(() => {
@@ -145,17 +158,37 @@ const Facilities = () => {
                   <motion.div
                     key={item.title}
                     variants={cardVariants}
-                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                    className={`bg-white cursor-pointer rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
+                      equipment.category === "Pouch Cell Facilities" ||
+                      equipment.category === "Inert Sample Transfer Systems"
+                        ? "col-span-full md:col-span-2 lg:col-span-3"
+                        : ""
+                    }`}
+                    onClick={() => setSelectedImage(item.imageUrl)}
                   >
-                    <div className="relative h-64 sm:h-72 md:h-80">
+                    <div
+                      className={`relative ${
+                        equipment.category === "Pouch Cell Facilities" ||
+                        equipment.category === "Inert Sample Transfer Systems"
+                          ? "aspect-[16/9]"
+                          : "aspect-[4/3]"
+                      } w-full bg-gray-50`}
+                    >
                       <Image
                         src={item.imageUrl}
-                        alt={item.title}
-                        className="object-contain hover:object-cover transition-all duration-300"
+                        alt={item.title || "Equipment"}
+                        className="object-contain hover:object-cover transition-all duration-700 ease-out p-2"
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={100}
+                        sizes={
+                          equipment.category === "Pouch Cell Facilities" ||
+                          equipment.category === "Inert Sample Transfer Systems"
+                            ? "100vw"
+                            : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        }
                         priority
                       />
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                     <div className="p-4">
                       <h3 className="text-lg font-semibold text-gray-900 text-center">
@@ -168,6 +201,59 @@ const Facilities = () => {
             </div>
           ))}
       </motion.div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-8"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              className="relative max-w-4xl w-full h-[80vh] bg-white rounded-lg overflow-hidden flex items-center justify-center p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full"
+                  />
+                </div>
+              )}
+              <div className="relative w-full h-full">
+                <Image
+                  src={selectedImage}
+                  alt="Equipment detail"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1536px) 100vw, 1536px"
+                  quality={100}
+                  onLoadingComplete={() => setIsLoading(false)}
+                />
+              </div>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+              >
+                <X size={20} color="white" />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

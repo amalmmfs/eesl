@@ -12,6 +12,7 @@ import { useDropzone } from "react-dropzone";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { motion } from "framer-motion";
 
 const phoneRegex = new RegExp(
   /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
@@ -63,16 +64,6 @@ export function ApplicationForm({
     },
   });
 
-  // const calculateProgress = () => {
-  //   const fields = ["name", "email", "phone", "education", "resume"] as const;
-  //   const filledFields = fields.filter((field) => {
-  //     if (field === "resume") {
-  //       return !!formData.resume;
-  //     }
-  //     return formData[field]?.length > 0;
-  //   });
-  //   return (filledFields.length / fields.length) * 100;
-  // };
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -83,11 +74,11 @@ export function ApplicationForm({
     return () => window.removeEventListener("keydown", handleEscape);
   }, [onClose]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     try {
-      // TODO Handle form submission logic here
+      // Handle form submission logic here
+      console.log("Submitting application data:", data);
       toast.success("Application submitted successfully!");
       onClose();
     } catch (error: unknown) {
@@ -99,79 +90,105 @@ export function ApplicationForm({
   };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-        <div className="bg-white rounded-lg w-full max-w-md p-6 m-4 relative">
+      <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -20, opacity: 0 }}
+          className="bg-white/95 rounded-2xl w-full max-w-xl p-8 m-4 relative shadow-2xl"
+        >
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors"
+            className="absolute top-4 right-4 rounded-full p-2 hover:bg-gray-100 transition-colors"
           >
             <X className="w-5 h-5 text-gray-500" />
           </button>
 
-          <h2 className="text-2xl font-bold mb-4">
-            {role === "PhD"
-              ? "Apply for PhD"
-              : `Apply for the position of ${role}`}
+          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 mb-6">
+            {role === "PhD" ? "Apply for PhD" : `Apply for ${role}`}
           </h2>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium mb-1">Name</label>
+              <label className="text-sm font-medium text-gray-700">
+                Full Name
+              </label>
               <Input
                 {...register("name")}
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full focus:ring-2 focus:ring-primary/20 transition-all"
+                className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your full name"
                 autoFocus
               />
               {errors.name && (
-                <span className="text-red-500 text-sm mt-1">
+                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
                   {errors.name.message}
                 </span>
               )}
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">Email</label>
+              <label className="text-sm font-medium text-gray-700">Email</label>
               <Input
                 {...register("email")}
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full focus:ring-2 focus:ring-primary/20 transition-all"
+                className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your email address"
               />
               {errors.email && (
-                <span className="text-red-500 text-sm mt-1">
+                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
                   {errors.email.message}
                 </span>
               )}
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="text-sm font-medium text-gray-700">
                 Phone Number
               </label>
               <PhoneInput
                 country="in"
                 value={formData.phone}
                 onChange={(phone) => setFormData({ ...formData, phone })}
-                inputClass="w-full p-2 border rounded focus:ring-2 focus:ring-primary/20 transition-all"
+                inputClass="w-full p-2 rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 containerClass="w-full"
               />
               {errors.phone && (
-                <span className="text-red-500 text-sm mt-1">
+                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
                   {errors.phone.message}
                 </span>
               )}
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="text-sm font-medium text-gray-700">
                 Educational Qualification
               </label>
               <Input
@@ -180,35 +197,55 @@ export function ApplicationForm({
                 onChange={(e) =>
                   setFormData({ ...formData, education: e.target.value })
                 }
-                className="w-full focus:ring-2 focus:ring-primary/20 transition-all"
+                className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your highest qualification"
               />
               {errors.education && (
-                <span className="text-red-500 text-sm mt-1">
+                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                  <svg
+                    className="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
                   {errors.education.message}
                 </span>
               )}
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label className="text-sm font-medium text-gray-700">
                 Resume (PDF, max 10MB)
               </label>
               <div
                 {...getRootProps()}
                 className={`
-                border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors
-                ${
-                  isDragActive
-                    ? "border-primary bg-primary/5"
-                    : "border-gray-300 hover:border-primary"
-                }
-              `}
+                  mt-1 rounded-lg border-2 border-dashed p-8 text-center cursor-pointer transition-all
+                  ${
+                    isDragActive
+                      ? "border-blue-500 bg-blue-50"
+                      : "border-gray-300 hover:border-blue-400"
+                  }
+                `}
               >
                 <input {...getInputProps()} />
                 {formData.resume ? (
-                  <div className="text-sm text-gray-600">
-                    Selected: {formData.resume.name}
+                  <div className="flex items-center justify-center gap-2 text-gray-600">
+                    <svg
+                      className="w-6 h-6 text-green-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span>{formData.resume.name}</span>
                   </div>
                 ) : (
                   <p className="text-gray-500">
@@ -220,34 +257,31 @@ export function ApplicationForm({
               </div>
             </div>
 
-            <div className="flex justify-end gap-4 mt-6">
-              <Button variant="outline" onClick={onClose} type="button">
+            <div className="flex justify-end gap-4 mt-8">
+              <Button
+                variant="outline"
+                onClick={onClose}
+                className="px-6 hover:bg-gray-50"
+              >
                 Cancel
               </Button>
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-primary hover:bg-primary/90 text-black font-medium px-8 py-2 rounded-lg shadow-md hover:shadow-lg transform transition-all duration-300 hover:-translate-y-0.5 focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg shadow-lg hover:shadow-xl transform transition-all duration-200 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <div className="flex items-center gap-2">
-                    <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                        fill="none"
-                      />
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      />
-                    </svg>
-                    Submitting...
+                    <motion.div
+                      animate={{ rotate: 360 }}
+                      transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                    />
+                    <span>Submitting...</span>
                   </div>
                 ) : (
                   "Submit Application"
@@ -255,7 +289,7 @@ export function ApplicationForm({
               </Button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
     </Dialog>
   );

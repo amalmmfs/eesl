@@ -25,9 +25,15 @@ export interface Publication {
       id: 0,
       title: "Key Anodic Interfacial Phenomena and their Control in Next-Generation Lithium and Sodium Metal Batteries",
       authors: [
-        "Kingshuk Roy", "Manas K. Bhunia", "Pitchiah E. Karthik", "Ashutosh Rana", "Bidisa Das", "Abhik Banerjee", "Satishchandra Ogale"
+        "Kingshuk Roy", 
+        "Manas K. Bhunia", 
+        "Pitchiah E. Karthik", 
+        "Ashutosh Rana", 
+        "Bidisa Das", 
+        "Abhik Banerjee", 
+        "Satishchandra Ogale"
       ],
-      journal: "Wiley",
+      journal: "Small", //TODO: Change to journal name
       year: 2025,
       publicationLink: "https://onlinelibrary.wiley.com/doi/10.1002/smll.202410167"
     },
