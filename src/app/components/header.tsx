@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,8 +48,8 @@ export default function Header() {
   return (
     <header className="bg-black w-full top-0 z-50">
       {/* Upper Header */}
-      <div className="container border-b border-gray-700 bg-gradient-to-b from-black to-gray-900">
-        <div className="flex justify-between items-center h-24 md:h-28 px-4 mx-auto max-w-6xl">
+      <div className="w-full border-b border-gray-700 bg-gradient-to-b from-black to-gray-900">
+        <div className="flex justify-between items-center h-24 md:h-28 px-4 mx-auto max-w-7xl">
           <div className="relative w-[160px] md:w-[220px] h-[80px] md:h-[100px]">
             <Image
               src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png"
@@ -77,7 +78,7 @@ export default function Header() {
       </div>
 
       {/* Lower Header */}
-      <div className="container border-b border-gray-700 bg-gradient-to-r from-gray-900 to-black">
+      <div className="w-full border-b border-gray-700 bg-gradient-to-r from-gray-900 to-black">
         <div className="relative flex h-16 items-center justify-between px-4 mx-auto max-w-6xl">
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center justify-center w-full space-x-12">
@@ -129,49 +130,75 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       <div
         className={`
-        fixed inset-y-0 right-0 w-[250px] bg-black/95
-        transform transition-transform duration-300 ease-in-out z-50
-        ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
-        md:hidden
+          fixed inset-y-0 right-0 w-[280px] bg-gradient-to-b from-black/95 to-gray-900/95
+          transform transition-all duration-300 ease-out backdrop-blur-lg z-50
+          ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
+          md:hidden
         `}
       >
-        {/* Close button area */}
-        <div className="flex justify-end p-4">
-          <Button
-            variant="ghost"
-            onClick={() => setIsMenuOpen(false)}
-            className="text-white hover:text-primary"
-          >
-            <X className="h-6 w-6" />
-          </Button>
-        </div>
-
-        {/* Mobile Navigation Links */}
-        <nav className="flex flex-col px-6 py-8 space-y-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
+        <div className="flex flex-col h-full">
+          {/* Logo Area */}
+          <div className="flex justify-between items-center p-6 border-b border-gray-800">
+            <div className="relative w-[120px] h-[50px]">
+              <Image
+                src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png"
+                alt="EESL Logo"
+                fill
+                className="object-contain brightness-400 contrast-125"
+              />
+            </div>
+            <Button
+              variant="ghost"
               onClick={() => setIsMenuOpen(false)}
-              className={`
-          text-lg py-2 border-b border-gray-800
-          transition-colors duration-200
-          ${
-            pathname === link.href
-              ? "text-primary font-medium"
-              : "text-gray-300 hover:text-white"
-          }
-        `}
+              className="text-white hover:bg-white/10 rounded-full p-2"
             >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+              <X className="h-6 w-6" />
+            </Button>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex-1 overflow-y-auto py-6 px-4">
+            <div className="space-y-2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`
+                    flex items-center px-4 py-3 rounded-lg
+                    transition-all duration-200 ease-out
+                    ${
+                      pathname === link.href
+                        ? "bg-primary text-white font-medium shadow-lg"
+                        : "text-gray-300 hover:bg-white/10 hover:text-white"
+                    }
+                  `}
+                >
+                  <span className="text-base">{link.label}</span>
+                  {pathname === link.href && (
+                    <motion.div
+                      layoutId="activeTab"
+                      className="ml-auto w-1.5 h-1.5 rounded-full bg-white"
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.6,
+                      }}
+                    />
+                  )}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </div>
       </div>
 
-      {/* Backdrop Overlay */}
+      {/* Backdrop */}
       {isMenuOpen && (
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden z-40"
           onClick={() => setIsMenuOpen(false)}
         />
