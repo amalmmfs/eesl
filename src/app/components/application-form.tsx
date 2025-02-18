@@ -7,23 +7,9 @@ import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { toast } from "sonner";
+import toast, { Toaster } from "react-hot-toast";
 import { useDropzone } from "react-dropzone";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
 import { motion } from "framer-motion";
-
-const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
-);
-
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().regex(phoneRegex, "Invalid Number!"),
-  education: z.string().min(2, "Please specify your qualification"),
-});
 
 interface ApplicationFormProps {
   role: string;
@@ -43,16 +29,7 @@ export function ApplicationForm({
     education: "",
     resume: null as File | null,
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
-    resolver: zodResolver(formSchema),
-  });
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: { "application/pdf": [".pdf"] },
@@ -74,22 +51,51 @@ export function ApplicationForm({
     return () => window.removeEventListener("keydown", handleEscape);
   }, [onClose]);
 
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSubmitting(true);
+
     try {
-      // Handle form submission logic here
-      console.log("Submitting application data:", data);
-      toast.success("Application submitted successfully!");
-      onClose();
-    } catch (error: unknown) {
+      const submissionData = new FormData();
+      submissionData.append("name", formData.name);
+      submissionData.append("email", formData.email);
+      submissionData.append("phone", formData.phone);
+      submissionData.append("education", formData.education);
+      submissionData.append("role", role);
+
+      if (formData.resume) {
+        submissionData.append("resume", formData.resume);
+      }
+
+      const response = await fetch("/api/submit-application", {
+        method: "POST",
+        body: submissionData,
+      });
+
+      if (response.ok) {
+        toast.success("Application submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          education: "",
+          resume: null,
+        });
+        onClose();
+      } else {
+        throw new Error("Failed to submit application");
+      }
+    } catch (error) {
       toast.error("Failed to submit application. Please try again.");
       console.error("Error submitting application:", error);
     } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
+      <Toaster position="bottom-right" />
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -108,58 +114,35 @@ export function ApplicationForm({
             {role === "PhD" ? "Apply for PhD" : `Apply for ${role}`}
           </h2>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="text-sm font-medium text-gray-700">
                 Full Name
               </label>
               <Input
-                {...register("name")}
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
                 className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your full name"
+                required
                 autoFocus
               />
-              {errors.name && (
-                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                  </svg>
-                  {errors.name.message}
-                </span>
-              )}
             </div>
 
             <div>
               <label className="text-sm font-medium text-gray-700">Email</label>
               <Input
-                {...register("email")}
+                type="email"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
                 className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your email address"
+                required
               />
-              {errors.email && (
-                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                  </svg>
-                  {errors.email.message}
-                </span>
-              )}
             </div>
 
             <div>
@@ -173,18 +156,6 @@ export function ApplicationForm({
                 inputClass="w-full p-2 rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 containerClass="w-full"
               />
-              {errors.phone && (
-                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                  </svg>
-                  {errors.phone.message}
-                </span>
-              )}
             </div>
 
             <div>
@@ -192,26 +163,14 @@ export function ApplicationForm({
                 Educational Qualification
               </label>
               <Input
-                {...register("education")}
                 value={formData.education}
                 onChange={(e) =>
                   setFormData({ ...formData, education: e.target.value })
                 }
                 className="mt-1 w-full rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                 placeholder="Enter your highest qualification"
+                required
               />
-              {errors.education && (
-                <span className="text-red-500 text-sm mt-1 flex items-center gap-1">
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-                  </svg>
-                  {errors.education.message}
-                </span>
-              )}
             </div>
 
             <div>
@@ -227,9 +186,9 @@ export function ApplicationForm({
                       ? "border-blue-500 bg-blue-50"
                       : "border-gray-300 hover:border-blue-400"
                   }
-                `}
+                    `}
               >
-                <input {...getInputProps()} />
+                <input {...getInputProps()} required={!formData.resume} />
                 {formData.resume ? (
                   <div className="flex items-center justify-center gap-2 text-gray-600">
                     <svg
