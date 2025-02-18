@@ -1,6 +1,6 @@
 
 Todo-
- - [ ] Header Responsiveness
+ - [X] Header Responsiveness
  - [X] Oppurtunities Page UX and Functionality (Improve styles later)
  - [ ] Toast Notifications not working
  - [x] Conditional Design of Facilities
