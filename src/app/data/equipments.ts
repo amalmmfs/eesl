@@ -237,12 +237,12 @@ export const equipments = [
     ]
   },
   {
-    category: "Pouch Cell Fabrication Line",
+    category: "Pouch Cell Facilities",
     items: [
       {
-        title: "Title Goes Here",
+        title: "Pouch Cell Fabrication Line",
         description: "Our lab is equipped with a full pouch cell line installed inside the glove box, which allows fabrication of varieties of pouch cells, for example •	Li/Na metal battery (Anode Free battery) • Solid State Battery •	Li/Na ion battery. Heating  antechamber allows electrode drying for air-sensitive materials as well",
-        imageUrl: "/images/stacking-machine.jpg"
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739884285/PC_irkbvv.png",
       },
     ]
   },
@@ -342,7 +342,7 @@ export const equipments = [
       {
         title: "Inert Sample transfer systems and heating/cooling System",
         description: "Our lab is equipped with various transfer holders and docking systems that allow sample transfer glove globe boxes to instruments without any atmosphere contamination. We also have various cold and hot stages to perform experiments at different temperatures.  All the details are shown in the following schematic",
-        imageUrl: "/images/glovebox.jpg"
+        imageUrl: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739884421/Inert_Sample_Transfer_Systems_cbyil7.png"
       },
     ]
   },
