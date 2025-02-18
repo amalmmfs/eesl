@@ -4,6 +4,9 @@ Todo-
  - [ ] Oppurtunities Page UX and Functionality
  - [x] Conditional Design of Facilities
  - [ ] Gallery
+ - [ ] Ratelimiting, Security and Traffic Management (Low Priority)
+ - [ ] SEO
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
