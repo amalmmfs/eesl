@@ -5,7 +5,6 @@ import { careerOpportunities } from "@/app/data/careerOppurtunities";
 import { ApplicationForm } from "@/app/components/application-form";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-// import Image from "next/image";
 
 export default function CareersPage() {
   const fadeInUp = {
@@ -119,9 +118,6 @@ export default function CareersPage() {
             <h3 className="text-2xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
               {careerOpportunities.phdPosition.title}
             </h3>
-            {/* <p className="text-gray-600 mb-6 leading-relaxed">
-              {careerOpportunities.phdPosition.description}
-            </p> */}
             <ul className="space-y-3 mb-8">
               {careerOpportunities.phdPosition.responsibilities.map(
                 (resp, idx) => (
@@ -201,20 +197,7 @@ export default function CareersPage() {
             </div>
           </div>
         </motion.section>
-        {/* Application Instructions */}
-        {/* <motion.section
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          className="bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg p-8"
-        >
-          <h2 className="text-2xl font-bold mb-4">How to Apply</h2>
-          <p className="text-gray-300">
-            {careerOpportunities.applicationInstructions}
-          </p>
-        </motion.section> */}
 
-        {/* Application Form Modal */}
         {selectedPosition && (
           <ApplicationForm
             role={selectedPosition}
