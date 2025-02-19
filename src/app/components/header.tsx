@@ -130,8 +130,13 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       <div
         className={`
-          fixed inset-y-0 right-0 w-[280px] bg-gradient-to-b from-black/95 to-gray-900/95
-          transform transition-all duration-300 ease-out backdrop-blur-lg z-50
+          fixed inset-y-0 right-0 w-[280px] 
+          bg-gradient-to-b from-black/40 to-gray-900/40
+          transform transition-all duration-300 ease-out 
+          backdrop-blur-xl
+          border-l border-white/10
+          shadow-[0_0_15px_rgba(0,0,0,0.2)]
+          z-50
           ${isMenuOpen ? "translate-x-0" : "translate-x-full"}
           md:hidden
         `}
