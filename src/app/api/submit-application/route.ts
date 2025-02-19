@@ -1,3 +1,12 @@
+/**
+ * Handles the submission of a job application form.
+ *
+ * This function is an API route handler that processes the form data submitted by a user and sends an email with the application details to a configured email address.
+ *
+ * @param req - The incoming HTTP request object.
+ * @returns A JSON response indicating the success or failure of the application submission.
+ */
+
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -20,39 +29,56 @@ export async function POST(req: Request) {
     const role = formData.get("role");
     const resume = formData.get("resume") as File;
 
-    
+    if (
+      !name ||
+      !email ||
+      !phone ||
+      !education ||
+      !role ||
+      !resume
+    ) {
+      return NextResponse.json(
+        { message: "All fields are required" },
+        { status: 400 }
+      );
+    }
 
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.RECEPIENT_EMAIL,
+      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      replyTo: email as string,
+      to: "eeslcareers@gmail.com",
       subject: `New Application for ${role} Position`,
       html: `
-        <div style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-            <img src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png" alt="EESL Logo" style="height: 60px;" />
-            <img src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/TCG-RISE.png" alt="TCG RISE Logo" style="height: 60px;" />
-          </div>
-          
-          <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 25px; border-radius: 10px; margin-bottom: 30px;">
-            <h2 style="color: #2b3674; margin: 0 0 20px 0; font-size: 24px; text-align: center;">New Application Received</h2>
-            <p style="color: #2b3674; font-size: 18px; margin-bottom: 15px;"><strong>Position Applied For:</strong> ${role}</p>
-          </div>
+        <div style="max-width: 600px; margin: 0 auto; padding: 30px; font-family: 'Arial', sans-serif; background-color: #1a1a1a; color: #ffffff; border-radius: 12px;">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <img src="https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738227525/EESL/EESL-Logo.png" alt="EESL Logo" style="height: 60px; margin-bottom: 20px;">
+      <h2 style="color: #60a5fa; font-size: 24px; margin: 0;">New Application Received</h2>
+    </div>
+    
 
-          <div style="background: #ffffff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-            <h3 style="color: #2b3674; margin: 0 0 20px 0; font-size: 20px;">Applicant Details</h3>
-            
-            <div style="margin-bottom: 15px;">
-              <p style="color: #2b3674; margin: 5px 0;"><strong>Name:</strong> ${name}</p>
-              <p style="color: #2b3674; margin: 5px 0;"><strong>Email:</strong> ${email}</p>
-              <p style="color: #2b3674; margin: 5px 0;"><strong>Phone:</strong> ${phone}</p>
-              <p style="color: #2b3674; margin: 5px 0;"><strong>Education:</strong> ${education}</p>
-            </div>
-          </div>
+    <div style="background: #2d2d2d; padding: 25px; border-radius: 8px;">
+      <h3 style="color: #60a5fa; margin: 0 0 20px 0;">Applicant Information</h3>
+      
+      <div style="margin-bottom: 15px;">
+        <p style="color: #9ca3af; margin: 0 0 5px 0;">Full Name</p>
+        <p style="color: #ffffff; margin: 0; font-size: 16px;">${formData.get('name')}</p>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <p style="color: #9ca3af; margin: 0 0 5px 0;">Email Address</p>
+        <p style="color: #ffffff; margin: 0; font-size: 16px;">${formData.get('email')}</p>
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        <p style="color: #9ca3af; margin: 0 0 5px 0;">Phone Number</p>
+        <p style="color: #ffffff; margin: 0; font-size: 16px;">${formData.get('phone')}</p>
+      </div>
+    </div>
 
-          <div style="text-align: center; margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
-            <p style="color: #6c757d; margin: 0;">This is an automated email from the EESL Application System</p>
-          </div>
-        </div>
+    <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #404040;">
+      <p style="color: #9ca3af; margin: 0; font-size: 14px;">EESL Recruitment Team</p>
+    </div>
+  </div>
       `,
       attachments: [
         {
