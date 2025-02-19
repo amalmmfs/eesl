@@ -2,11 +2,13 @@
 Todo-
  - [X] Header Responsiveness
  - [X] Oppurtunities Page UX and Functionality (Improve styles later)
- - [ ] Toast Notifications not working
+ - [X] Toast Notifications not working
  - [x] Conditional Design of Facilities
  - [ ] Gallery
  - [ ] Ratelimiting, Security and Traffic Management (Low Priority)
- - [ ] SEO
+ - [X] SEO
+ - [ ] Responsiveness for Larger screens
+ - [ ] Try out Mailgun (Low Priority)
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
