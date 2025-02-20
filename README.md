@@ -8,7 +8,8 @@ Todo-
  - [X] Ratelimiting using Upsatsh & Redis
  - [X] SEO
  - [ ] Responsiveness for Larger screens
- - [X] Try out Resend (Low Priority)
+ - [X] Email Delivery using Resend
+ - [ ] Analytics using PostHog 
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
