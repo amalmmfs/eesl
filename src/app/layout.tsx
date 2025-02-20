@@ -4,6 +4,7 @@ import { Roboto, Source_Sans_3 } from "next/font/google";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
+import { PostHogProvider } from "./providers";
 
 export const metadata: Metadata = {
   title: "EESL",
@@ -33,12 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} ${sourceSans.variable}`}>
       <body>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <Toaster position="top-right" />
+        <PostHogProvider>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <Toaster position="top-right" />
+        </PostHogProvider>
       </body>
     </html>
   );
