@@ -95,7 +95,6 @@ export function ApplicationForm({
 
   return (
     <>
-      {/* <Toaster position="bottom-right" /> */}
       <Dialog open={isOpen} onOpenChange={onClose}>
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center">
           <motion.div

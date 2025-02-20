@@ -29,7 +29,7 @@ export default function CareersPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[300px] w-full bg-white"
+        className="relative h-[250px] w-full bg-gradient-to-r from-slate-100 to-blue-100"
       >
         <div className="relative container max-w-6xl mx-auto px-4 h-full flex flex-col justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-900">
@@ -42,7 +42,7 @@ export default function CareersPage() {
         </div>
       </motion.section>
 
-      <div className="container max-w-6xl mx-auto px-4 py-16">
+      <div className="container max-w-6xl mx-auto px-4 py-8">
         {/* Research Associate Positions */}
         <motion.section
           variants={fadeInUp}
@@ -59,7 +59,6 @@ export default function CareersPage() {
                 <motion.div
                   key={index}
                   className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100/20"
-                  whileHover={{ y: -5, scale: 1.02 }}
                 >
                   <h3 className="text-2xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
                     {position.title}
