@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search, ExternalLink } from "lucide-react";
 import { publications } from "../data/publications";
+import { motion } from "framer-motion";
 
 export default function PublicationsPage() {
   const [search, setSearch] = useState("");
@@ -43,9 +44,13 @@ export default function PublicationsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 max-w-6xl">
-        {/* Responsive Header */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative h-[250px] w-full bg-gradient-to-r from-slate-100 to-blue-100"
+      >
+        <div className="relative container max-w-6xl mx-auto px-4 h-full flex flex-col justify-center text-center">
           <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-900">
             Research Publications
           </h1>
@@ -54,9 +59,10 @@ export default function PublicationsPage() {
             and scientific advancement
           </p>
         </div>
+      </motion.section>
 
-        {/* Responsive Search */}
-        <div className="relative mb-8 sm:mb-12 md:mb-16 max-w-2xl mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 max-w-6xl">
+        <div className="relative mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
           <div className="absolute inset-0 bg-blue-100 blur-xl opacity-20"></div>
           <div className="relative bg-white rounded-xl shadow-sm">
             <Search className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-blue-500 h-4 sm:h-5 w-4 sm:w-5" />
@@ -70,7 +76,6 @@ export default function PublicationsPage() {
           </div>
         </div>
 
-        {/* Responsive Publications List */}
         {years.map((year) => {
           const yearPublications = currentPublications.filter(
             (pub) => pub.year === year
@@ -78,7 +83,7 @@ export default function PublicationsPage() {
           if (yearPublications.length === 0) return null;
 
           return (
-            <div key={year} className="mb-8 sm:mb-12 md:mb-16">
+            <div key={year} className="mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-gray-800 border-b pb-3 sm:pb-4 px-4">
                 {year}
               </h2>
@@ -115,9 +120,8 @@ export default function PublicationsPage() {
           );
         })}
 
-        {/* Responsive Pagination */}
         {pageNumbers > 1 && (
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 sm:mt-12 md:mt-16 px-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8 sm:mt-12 px-4">
             <Button
               variant="outline"
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}

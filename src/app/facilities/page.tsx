@@ -83,15 +83,15 @@ const Facilities = () => {
         transition={{ duration: 0.6 }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight mb-3 sm:mb-4 bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-900">
           Facilities in RISE
         </h1>
-        <p className="text-xl text-gray-600 mb-8">
+        <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto px-4">
           Explore our state-of-the-art research equipment and facilities
         </p>
 
         {/* Search Bar */}
-        <div className="max-w-xl mx-auto relative">
+        <div className="max-w-xl mx-auto relative mt-4">
           <div className="relative">
             <input
               type="text"
