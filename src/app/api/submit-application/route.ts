@@ -28,7 +28,7 @@ export async function POST(req: Request) {
   const role = formData.get("role");
   const resume = formData.get("resume") as File;
 
-  const ip = req.headers.get("x-forwarded-for") ?? "127.0.0.1";
+  const ip = (req.headers.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
 
   try {
     const { success, reset } = await ratelimit.limit(ip);
