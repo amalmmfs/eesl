@@ -97,4 +97,4 @@ export async function POST(req: Request) {
   }
 }
 
-export const runtime = "edge"; // Better performance with Edge runtime
+// export const runtime = "edge"; // Better performance with Edge runtime
