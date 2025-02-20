@@ -3,9 +3,9 @@ Todo-
  - [X] Header Responsiveness
  - [X] Oppurtunities Page UX and Functionality (Improve styles later)
  - [X] Toast Notifications not working
- - [x] Conditional Design of Facilities
+ - [X] Conditional Design of Facilities
  - [ ] Gallery bug for vertical images
- - [ ] Ratelimiting, Security and Traffic Management (Low Priority)
+ - [X] Ratelimiting using Upsatsh & Redis
  - [X] SEO
  - [ ] Responsiveness for Larger screens
  - [X] Try out Resend (Low Priority)
