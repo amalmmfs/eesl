@@ -5,6 +5,7 @@ import {
   Heading,
   Html,
   Img,
+  Font,
   Preview,
   Section,
   Text,
@@ -24,6 +25,16 @@ export default function ApplicationEmail({
   return (
     <Html>
       <Head />
+      <Font
+        fontFamily="Roboto"
+        fallbackFontFamily="Verdana"
+        webFont={{
+          url: "https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2",
+          format: "woff2",
+        }}
+        fontWeight={400}
+        fontStyle="normal"
+      />
       <Preview>New Application Received for {role}</Preview>
       <Body
         style={{
