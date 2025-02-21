@@ -4,7 +4,7 @@ Todo-
  - [X] Oppurtunities Page UX and Functionality (Improve styles later)
  - [X] Toast Notifications not working
  - [X] Conditional Design of Facilities
- - [ ] Gallery bug for vertical images
+ - [X] Gallery bug for vertical images
  - [X] Ratelimiting using Upsatsh & Redis
  - [X] SEO
  - [ ] Responsiveness for Larger screens
