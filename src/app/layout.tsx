@@ -4,7 +4,8 @@ import { Roboto, Source_Sans_3 } from "next/font/google";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
-import { PostHogProvider } from "./providers";
+import { PostHogProvider } from "./providers/ph-provider";
+import SuspendedPostHogPageView from "./components/posthog/posthog-page-view-component";
 
 export const metadata: Metadata = {
   title: "EESL",
@@ -37,6 +38,7 @@ export default function RootLayout({
         <PostHogProvider>
           <div className="flex min-h-screen flex-col">
             <Header />
+            <SuspendedPostHogPageView />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>
