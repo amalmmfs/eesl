@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import { Toaster } from "react-hot-toast";
 import { PostHogProvider } from "./providers/ph-provider";
 import SuspendedPostHogPageView from "./components/posthog/posthog-page-view-component";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "EESL",
@@ -39,7 +40,10 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Header />
             <SuspendedPostHogPageView />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1">
+              {children}
+              <Analytics />
+            </main>
             <Footer />
           </div>
           <Toaster position="top-right" />
