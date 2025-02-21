@@ -73,12 +73,12 @@ export function Gallery({ items }: GalleryProps) {
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4
-            animate-[fadeIn_0.3s_ease-in-out]"
+      animate-[fadeIn_0.3s_ease-in-out]"
           onClick={closeModal}
         >
           <div
-            className="relative max-w-4xl max-h-[90vh] w-full
-              animate-[scaleIn_0.3s_ease-in-out]"
+            className="relative w-full h-full flex items-center justify-center
+        animate-[scaleIn_0.3s_ease-in-out]"
             onClick={(e) => e.stopPropagation()}
           >
             {isLoading && (
@@ -91,16 +91,16 @@ export function Gallery({ items }: GalleryProps) {
               alt="Enlarged view"
               width={1200}
               height={800}
-              className="w-full h-full object-contain rounded-lg
-                transition-opacity duration-300
-                opacity-0 data-[loaded=true]:opacity-100"
+              className="max-h-[90vh] max-w-[90vw] w-auto h-auto object-contain rounded-lg
+          transition-opacity duration-300
+          opacity-0 data-[loaded=true]:opacity-100"
               onLoadingComplete={() => setIsLoading(false)}
               data-loaded={!isLoading}
             />
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2
-                hover:bg-black/75 transition-colors duration-200"
+          hover:bg-black/75 transition-colors duration-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
