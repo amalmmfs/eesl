@@ -10,7 +10,7 @@ Todo-
  - [ ] Responsiveness for Larger screens
  - [X] Email Delivery using Resend
  - [X] Analytics using PostHog
- - [ ] Google Search Console setup
+ - [X] Google Search Console setup
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
