@@ -9,7 +9,7 @@ import SuspendedPostHogPageView from "./components/posthog/posthog-page-view-com
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "EESL",
+  title: "EESL | Electrochemical Energy Systems Laboratory",
   description:
     "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems. Our state-of-the-art equipment and facilities support groundbreaking research in sodium-ion batteries, lithium-ion batteries, supercapacitors, fuel cells, and solar photovoltaics. We're dedicated to advancing sustainable energy technologies through innovative research and development.",
   keywords:
