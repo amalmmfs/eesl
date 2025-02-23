@@ -16,6 +16,8 @@ export const metadata: Metadata = {
     "EESL equipment, Electrochemical Energy Systems Laboratory, Research facilities, laboratory equipment, scientific instruments, Batteries, Sodium ion batteries, Lithium ion batteries, Supercapacitors, Fuel cells, Solar cells, Photovoltaics, Energy storage, Energy conversion, Energy materials, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Glove Box",
   twitter: {
     card: "summary_large_image",
+    description:
+      "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems. Our state-of-the-art equipment and facilities support groundbreaking research in sodium-ion batteries, lithium-ion batteries, supercapacitors, fuel cells, and solar photovoltaics. We're dedicated to advancing sustainable energy technologies through innovative research and development.",
   },
   // openGraph: {
   //   type: "website",
