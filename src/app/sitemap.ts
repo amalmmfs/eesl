@@ -3,37 +3,42 @@ import { MetadataRoute } from "next";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/research`,
+      url: "https://eesl.org.in/",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/publications`,
+      url: "https://eesl.org.in/publications",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/gallery`,
+      url: "https://eesl.org.in/facilities",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/facilities`,
+      url: "https://eesl.org.in/research",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact`,
+      url: "https://eesl.org.in/contact",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/team`,
+      url: "https://eesl.org.in/team",
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/careers`,
+      url: "https://eesl.org.in/careers",
+      lastModified: new Date(),
+      priority: 0.8,
+    },
+    {
+      url: "https://eesl.org.in/gallery",
       lastModified: new Date(),
       priority: 0.8,
     },
