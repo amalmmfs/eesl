@@ -92,14 +92,15 @@ export default function HeroSection() {
                 Electrochemical Energy Storage Laboratory
               </h1>
             </div>
-            <div className="space-y-4 text-gray-300 text-justify font-body">
-              <p>
+            <div className="max-w-3xl mx-auto space-y-6 text-gray-300 font-body text-justify">
+              <p className="text-lg leading-relaxed md:text-xl lg:text-2xl animate-fade-in-up">
                 Our research focuses on advancing next-generation energy storage
                 technologies, particularly solid-state and sodium-ion batteries,
                 along with the development of anode-free lithium and sodium
                 metal technology.
               </p>
-              <p>
+
+              <p className="text-base text-justify leading-relaxed md:text-lg lg:text-xl text-gray-400 animate-fade-in-up delay-100">
                 Equipped with comprehensive characterization facilities and a
                 solid and liquid pouch cell assembly unit, our lab also utilizes
                 synchrotron and neutron facilities worldwide to study battery
@@ -131,7 +132,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8 }}
             className="order-1 lg:order-2"
           >
-            <div className="relative h-[300px] md:h-[500px] w-full rounded-2xl overflow-hidden">
+            <div className="relative h-[300px] md:h-[570px] w-full rounded-2xl overflow-hidden">
               <Carousel images={images.map((img) => img.url)} />
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-gray-900/20 to-transparent pointer-events-none" />
