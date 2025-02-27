@@ -39,6 +39,7 @@ export default function Header() {
     { href: "/publications", label: "Publications" },
     { href: "/facilities", label: "Facility" },
     { href: "/team", label: "Team" },
+    { href: "/conferences", label: "Conferences" },
     { href: "/gallery", label: "Gallery" },
     { href: "/#news", label: "News", onClick: handleNewsClick },
     { href: "/careers", label: "Oppurtunities" },
