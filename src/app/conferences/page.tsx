@@ -2,64 +2,87 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { FaFilePdf } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { IoMdClose } from "react-icons/io";
 
 const ConferencesPage = () => {
-  const [downloading, setDownloading] = useState(false);
+  interface PhotoType {
+    id: number;
+    src: string;
+    alt: string;
+    title?: string;
+  }
+
+  const [selectedImage, setSelectedImage] = useState<PhotoType | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     document.title = "Conferences | EESL";
-  }, []);
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
 
-  const photos = [
+    // Add event listener for escape key
+    const handleEscapeKey = (e: { key: string }) => {
+      if (e.key === "Escape" && isModalOpen) {
+        closeModal();
+      }
+    };
+
+    window.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isModalOpen]);
+
+  const openModal = (image: PhotoType) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedImage(null), 300); // Clear image after animation completes
+  };
+
+  const icsbPhotos: PhotoType[] = [
     {
       id: 1,
-      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/1711539653983_ewhfiv.jpg",
-      alt: "Conference Photo 1",
-      title: "Annual Energy Efficiency Summit 2023",
+      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Slide1_e93deh.png",
+      alt: "ICSB Conference Photo 1",
     },
     {
       id: 2,
-      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Slide1_e93deh.png",
-      alt: "Conference Photo 2",
-      title: "Renewable Energy Conference",
+      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885994/Slide1_ldaoyo.tiff",
+      alt: "ICSB Conference Photo 2",
     },
     {
       id: 3,
       src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Flyer_ICSB_-Final_nbxfhg.jpg",
-      alt: "Conference Photo 3",
-      title: "Sustainable Development Workshop",
+      alt: "ICSB Conference Photo 3",
     },
     {
       id: 4,
-      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885994/Slide1_ldaoyo.tiff",
-      alt: "Conference Photo 4",
-      title: "Energy Conservation Symposium",
+      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742934156/Industries_ICSB25_page-0001_khh1hs.jpg",
+      alt: "ICSB Conference Photo 4",
     },
   ];
-
-  const pdfAttachments = [
+  const energyPhotos: PhotoType[] = [
     {
       id: 1,
-      title: "Discussion Flyer",
-      filename: "Discussion_flyer.pdf",
-      path: "https://drive.google.com/uc?export=download&id=1bks6XOcm5hzHbugq3zO3zcOr_lWdY0Ul",
+      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742933924/Discussion_flyer_page-0001_z4f8lk.jpg",
+      alt: "Energy Conference Photo 1",
     },
     {
       id: 2,
-      title: "Industries ICSB 2025",
-      filename: "Industries_ICSB25.pdf",
-      path: "https://drive.google.com/uc?export=download&id=1p2ANzYrLCCuIuZ5lhh5gLIbA64zwz3Ny",
+      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/1711539653983_ewhfiv.jpg",
+      alt: "Energy Conference Photo 2",
     },
   ];
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const handleDownload = (path: string | URL | undefined, title: string) => {
-    setDownloading(true);
-    setTimeout(() => setDownloading(false), 3000);
-    window.open(path, "_blank");
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -83,22 +106,38 @@ const ConferencesPage = () => {
         </div>
       </div>
 
-      {/* Conference Photos Section */}
+      {/* ICSB Conference Section */}
       <div className="max-w-6xl mx-auto px-4 py-16">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            Conference Highlights
+          <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+            International Conference on Sustainable Batteries - ICSB 2025
           </h2>
+          <div className="max-w-4xl mx-auto mb-12">
+            <p className="text-gray-600 text-lg text-center mb-4">
+              Dr. Abhik banerjee has organized the exciting Global Conversation
+              on Sustainable Energy Storage at &quot;International Conference on
+              Sustainable Batteries ICSB- 2025 | February 24-27, Kolkata, India,
+              with Dr.Jagjit Nanda (International Convenor), Dr. Amartya
+              Mukhopadhyay (IITB), Dr. Urmimala Maitra (IACS) Link website :
+              Hosted by Research Institute for Sustainable Energy (RISE) TCG
+              CREST, Kolkata & Battery Research Society, ICSB-25 has gathers
+              world-leading experts, researchers, academicians, industry
+              professionals, leaders from government agencies, and policymakers
+              to share a common platform to discuss recent technical advances,
+              innovations, and developments in batteries and energy storage.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {photos.map((photo) => (
+            {icsbPhotos.map((photo) => (
               <motion.div
                 key={photo.id}
                 whileHover={{ scale: 1.03 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
+                onClick={() => openModal(photo)}
               >
                 <div className="relative w-full" style={{ paddingTop: "75%" }}>
                   <Image
@@ -110,18 +149,13 @@ const ConferencesPage = () => {
                     priority
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    {photo.title}
-                  </h3>
-                </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
       </div>
 
-      {/* PDF Attachments Section */}
+      {/* Energy Conference Section */}
       <div className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
@@ -129,53 +163,43 @@ const ConferencesPage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-              Conference Documents
+            <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+              RISE Energy Summit 2024: Challenges & Innovations in Na and
+              Solid-State Batteries
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto max-w-4xl">
-              {pdfAttachments.map((pdf) => (
+            <div className="max-w-4xl mx-auto mb-12">
+              <p className="text-gray-600 text-lg text-center mb-4">
+                RISE is organizing a one-day Energy Discussion on Current
+                Challenges in Na and Solid solid-state batteries with a
+                planetary talk by Prof Shirley Meng from the University of
+                Chicago on 17th Feb 2024. There are additional talks by eminent
+                battery experts.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              {energyPhotos.map((photo) => (
                 <motion.div
-                  key={pdf.id}
-                  whileHover={{ scale: 1.05 }}
+                  key={photo.id}
+                  whileHover={{ scale: 1.03 }}
                   className="bg-white rounded-lg shadow-lg overflow-hidden"
+                  onClick={() => openModal(photo)}
                 >
-                  <div className="p-8 flex flex-col items-center text-center">
-                    <div className="bg-blue-600 p-5 rounded-full mb-6">
-                      <FaFilePdf className="text-white text-3xl" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-6">
-                      {pdf.title}
-                    </h3>
-                    <button
-                      onClick={() => handleDownload(pdf.path, pdf.title)}
-                      className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition duration-300"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-2"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                        />
-                      </svg>
-                      {downloading ? "Starting Download..." : "Download PDF"}
-                    </button>
+                  <div
+                    className="relative w-full"
+                    style={{ paddingTop: "75%" }}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      priority
+                    />
                   </div>
                 </motion.div>
               ))}
             </div>
-            {downloading && (
-              <p className="text-center mt-8 text-gray-600">
-                Your download is starting. If it doesn&apos;t begin
-                automatically, please click the button again.
-              </p>
-            )}
           </motion.div>
         </div>
       </div>
@@ -203,8 +227,61 @@ const ConferencesPage = () => {
           </Link>
         </motion.div>
       </div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {isModalOpen && selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-80"
+            onClick={closeModal}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-4xl w-full max-h-[90vh] bg-white rounded-lg overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 z-10 bg-white bg-opacity-80 rounded-full p-2 shadow-md hover:bg-opacity-100 transition-all duration-200"
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                <IoMdClose className="text-gray-800 text-xl" />
+              </button>
+
+              <div className="relative w-full" style={{ height: "80vh" }}>
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                  priority
+                />
+              </div>
+
+              <div className="p-4 bg-white">
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {selectedImage.title}
+                </h3>
+                <p className="text-sm text-gray-500 mt-1">
+                  Press ESC key or click outside to close
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
-
 export default ConferencesPage;
