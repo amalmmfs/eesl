@@ -119,7 +119,7 @@ const ConferencesPage = () => {
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-gray-600 text-lg text-center mb-4">
               Dr. Abhik banerjee has organized the exciting Global Conversation
-              on Sustainable Energy Storage at &quot;International Conference on
+              on Sustainable Energy Storage at International Conference on
               Sustainable Batteries ICSB- 2025 | February 24-27, Kolkata, India,
               with Dr.Jagjit Nanda (International Convenor), Dr. Amartya
               Mukhopadhyay (IITB), Dr. Urmimala Maitra (IACS){" "}
