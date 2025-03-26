@@ -119,16 +119,30 @@ const ConferencesPage = () => {
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-gray-600 text-lg text-center mb-4">
               Dr. Abhik banerjee has organized the exciting Global Conversation
-              on Sustainable Energy Storage at &quot;International Conference on
+              on Sustainable Energy Storage at International Conference on
               Sustainable Batteries ICSB- 2025 | February 24-27, Kolkata, India,
               with Dr.Jagjit Nanda (International Convenor), Dr. Amartya
-              Mukhopadhyay (IITB), Dr. Urmimala Maitra (IACS) Link website :
+              Mukhopadhyay (IITB), Dr. Urmimala Maitra (IACS){" "}
+              <a
+                href="https://www.icsb25.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                https://www.icsb25.com/
+              </a>{" "}
+            </p>
+            <p className="text-gray-600 text-lg text-center mb-4">
               Hosted by Research Institute for Sustainable Energy (RISE) TCG
               CREST, Kolkata & Battery Research Society, ICSB-25 has gathers
               world-leading experts, researchers, academicians, industry
               professionals, leaders from government agencies, and policymakers
               to share a common platform to discuss recent technical advances,
               innovations, and developments in batteries and energy storage.
+              academicians, industry professionals, leaders from government
+              agencies, and policymakers to share a common platform to discuss
+              recent technical advances, innovations, and developments in
+              batteries and energy storage.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
