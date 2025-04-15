@@ -50,11 +50,11 @@ const ConferencesPage = () => {
   };
 
   const icsbPhotos: PhotoType[] = [
-    {
-      id: 1,
-      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Slide1_e93deh.png",
-      alt: "ICSB Conference Photo 1",
-    },
+    // {
+    //   id: 1,
+    //   src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Slide1_e93deh.png",
+    //   alt: "ICSB Conference Photo 1",
+    // },
     {
       id: 2,
       src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885994/Slide1_ldaoyo.tiff",
@@ -65,11 +65,11 @@ const ConferencesPage = () => {
       src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Flyer_ICSB_-Final_nbxfhg.jpg",
       alt: "ICSB Conference Photo 3",
     },
-    {
-      id: 4,
-      src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742934156/Industries_ICSB25_page-0001_khh1hs.jpg",
-      alt: "ICSB Conference Photo 4",
-    },
+    // {
+    //   id: 4,
+    //   src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742934156/Industries_ICSB25_page-0001_khh1hs.jpg",
+    //   alt: "ICSB Conference Photo 4",
+    // },
   ];
   const energyPhotos: PhotoType[] = [
     {
