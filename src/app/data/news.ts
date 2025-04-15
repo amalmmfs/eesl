@@ -89,7 +89,5 @@ export const newsItems: NewsItem[] = [
       "Dr. Abhik Banerjee received a DRDO grant to develop high-energy lithium-ion batteries using silicon-graphite anodes.",
     news: "Dr. Abhik Banerjee has received a grant from the Defense Research and Development Organisation (DRDO) to develop high-energy density lithium-ion batteries utilizing silicon-graphite anode materials.",
     category: "Grant",
-    newsLink:
-      "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202416100",
   },
 ];

@@ -33,10 +33,10 @@ export const teamData: TeamData = {
           period: "2015",
           position: "Employee at KPIT Technologies",
         },
-        // {
-        //   period: "2009-2015",
-        //   position: "PhD Student at National Chemical Laboratory, Pune",
-        // },
+        {
+          period: "2009-2015",
+          position: "PhD at National Chemical Laboratory, Pune",
+        },
       ],
       about:
         "Dr. Abhik currently serves as the team leader and Associate Professor at the Research Institute of Sustainable Energy (RISE) under TCG CREST. His team focuses on addressing the fundamental challenges that are currently obstructing the development of solid-state batteries, sodium-ion batteries, silicon, and lithium/sodium metal anodes. They are dedicated to providing practical solutions that enhance safety, increase energy density, and enable faster charging for battery technologies. With over 15 years of experience, Dr. Abhik Banerjee specializes in the design, innovative chemical synthesis, characterization, and understanding of the structure-property-performance relationships of various materials, particularly those used in solid-state electrochemical energy storage.",
