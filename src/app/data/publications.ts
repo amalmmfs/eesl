@@ -38,7 +38,7 @@ export const publications: Publication[] = [
       "Debashis Adhikari",
       "Pradip Pachfule",
     ],
-    journal: "Willey",
+    journal: "Advanced Materials",
     year: 2025,
     publicationLink:
       "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202416100",
