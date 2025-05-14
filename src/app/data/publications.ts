@@ -22,6 +22,25 @@ export const processPublications = (
 
 export const publications: Publication[] = [
   {
+    id: 52,
+    title:
+      "Revisiting Water Oxidation Reaction with Micro Bubble Lithography (MBL) Printed ZIF-67 MOF Electrocatalysts",
+    authors: [
+      "Khokan Manna",
+      "Anand Dev Ranjan",
+      "Himanshi Singh",
+      "Rakesh Sen",
+      "Francis Verpoort",
+      "Abhik Banerjee",
+      "Ayan Banerjee",
+      "Soumyajit Roy",
+    ],
+    journal: "Wiley",
+    year: 2025,
+    publicationLink:
+      "https://onlinelibrary.wiley.com/doi/10.1002/smtd.202401627",
+  },
+  {
     id: 51,
     title:
       "Xantphos–Cu-Decorated Covalent Organic Frameworks for C─H Arylation through Sensitized Electron Transfer",
@@ -42,16 +61,6 @@ export const publications: Publication[] = [
     year: 2025,
     publicationLink:
       "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202416100",
-  },
-  {
-    id: 52,
-    title:
-      "Revisiting Water Oxidation Reaction with Micro Bubble Lithography (MBL) Printed ZIF-67 MOF Electrocatalysts",
-    authors: [],
-    journal: "Wiley",
-    year: 2025,
-    publicationLink:
-      "https://onlinelibrary.wiley.com/doi/10.1002/smtd.202401627",
   },
   {
     id: 0,
