@@ -1,3 +1,18 @@
+
+Todo-
+ - [X] Header Responsiveness
+ - [X] Oppurtunities Page UX and Functionality (Improve styles later)
+ - [X] Toast Notifications not working
+ - [X] Conditional Design of Facilities
+ - [X] Gallery bug for vertical images
+ - [X] Ratelimiting using Upsatsh & Redis
+ - [X] SEO
+ - [ ] Responsiveness for Larger screens
+ - [X] Email Delivery using Resend
+ - [X] Analytics using PostHog
+ - [X] Google Search Console setup
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
