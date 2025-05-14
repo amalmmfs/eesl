@@ -57,13 +57,11 @@ export const teamData: TeamData = {
     ],
     "Research Associates": [
       {
-        name: "Dr. Soumita Chakraborty",
+        name: "Dr. Pritha Mondal",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738853933/Soumita_Chakraborty_rfj8vv.jpg",
-        educationQualification: ["PhD: JNCASR, Bangalore"],
-        research_area: [
-          "Electrolyte and SEI engineering for Lithium-ion and Lithium Metal batteries",
-        ],
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1747233661/Pritha_Mondal_dgnzbu.jpg",
+        educationQualification: ["PhD: IISC, Bengaluru"],
+        research_area: [""],
       },
       {
         name: "Dr. Ripan Kr. Biswas",
@@ -224,15 +222,6 @@ export const teamData: TeamData = {
         research_area: ["Cathode study for anode-free Sodium-ion batteries"],
       },
       {
-        name: "Ajith Ambattuparambil Valsan",
-        image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488378/EESL/Team/Current%20Members/Interns/Ajith%20Valsan.jpg",
-        educationQualification: ["MSc: IISER, Kolkata"],
-        research_area: [
-          "Ether-based electrolyte systems for sodium anode-free batteries",
-        ],
-      },
-      {
         name: "Mahendra Mainkar",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488389/EESL/Team/Current%20Members/Interns/Mahendra%20Mainkar.jpg",
@@ -317,6 +306,20 @@ export const teamData: TeamData = {
         "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513367/EESL/Team/Current%20Members/Alumni/Adithya.png",
       about:
         "Adithya is currently working as a Junior-Engineer-1 in Gegadyne Energy, Mumbai",
+    },
+
+    {
+      name: "Dr. Soumita Chakraborty",
+      image:
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738853933/Soumita_Chakraborty_rfj8vv.jpg",
+      about:
+        "Dr. Soumita is currently an Postdoctoral Research Associate at University of Manchester.",
+    },
+    {
+      name: "Ajith Ambattuparambil Valsan",
+      image:
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488378/EESL/Team/Current%20Members/Interns/Ajith%20Valsan.jpg",
+      about: "Ajith is currently doing his PhD at Deakin University, Australia",
     },
   ],
   collaborators: [
