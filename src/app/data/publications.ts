@@ -35,7 +35,7 @@ export const publications: Publication[] = [
       "Ayan Banerjee",
       "Soumyajit Roy",
     ],
-    journal: "Wiley",
+    journal: "Small Methods",
     year: 2025,
     publicationLink:
       "https://onlinelibrary.wiley.com/doi/10.1002/smtd.202401627",
@@ -57,7 +57,7 @@ export const publications: Publication[] = [
       "Debashis Adhikari",
       "Pradip Pachfule",
     ],
-    journal: "Wiley",
+    journal: "Advanced Materials",
     year: 2025,
     publicationLink:
       "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202416100",
