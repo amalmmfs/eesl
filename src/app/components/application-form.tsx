@@ -25,7 +25,7 @@ export function ApplicationForm({
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "+91",
+    phone: "", // Will default to the country set in the PhoneInput component
     education: "",
     resume: null as File | null,
   });
@@ -65,6 +65,10 @@ export function ApplicationForm({
 
       if (formData.resume) {
         submissionData.append("resume", formData.resume);
+      } else {
+        toast.error("Please upload your resume");
+        setIsSubmitting(false);
+        return;
       }
 
       const response = await fetch("/api/submit-application", {
@@ -77,7 +81,7 @@ export function ApplicationForm({
         setFormData({
           name: "",
           email: "",
-          phone: "",
+          phone: "+91", // Match the initial state
           education: "",
           resume: null,
         });
@@ -154,7 +158,13 @@ export function ApplicationForm({
                 <PhoneInput
                   country="in"
                   value={formData.phone}
-                  onChange={(phone) => setFormData({ ...formData, phone })}
+                  onChange={(phone) => {
+                    setFormData({ ...formData, phone });
+                  }}
+                  isValid={(value) => {
+                    if (value.length < 8) return false;
+                    return true;
+                  }}
                   inputClass="w-full p-2 rounded-lg border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all"
                   containerClass="w-full"
                 />
@@ -181,14 +191,17 @@ export function ApplicationForm({
                 </label>
                 <div
                   {...getRootProps()}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Upload resume"
                   className={`
-                  mt-1 rounded-lg border-2 border-dashed p-8 text-center cursor-pointer transition-all
-                  ${
-                    isDragActive
-                      ? "border-blue-500 bg-blue-50"
-                      : "border-gray-300 hover:border-blue-400"
-                  }
-                  `}
+  mt-1 rounded-lg border-2 border-dashed p-8 text-center cursor-pointer transition-all
+  ${
+    isDragActive
+      ? "border-blue-500 bg-blue-50"
+      : "border-gray-300 hover:border-blue-400"
+  }
+  `}
                 >
                   <input {...getInputProps()} required={!formData.resume} />
                   {formData.resume ? (

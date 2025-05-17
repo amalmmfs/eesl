@@ -13,14 +13,6 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-// const staggerChildren = {
-//   animate: {
-//     transition: {
-//       staggerChildren: 0.1,
-//     },
-//   },
-// };
-
 export default function TeamPage() {
   const { currentMembers, alumni, collaborators, faculty } = teamData;
   const [activeTab, setActiveTab] = useState("faculty");

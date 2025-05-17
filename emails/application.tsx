@@ -21,6 +21,7 @@ export default function ApplicationEmail({
   role: string;
   email: string;
   phone: string;
+  education: string;
 }) {
   return (
     <Html>

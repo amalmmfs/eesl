@@ -28,6 +28,14 @@ export async function POST(req: Request) {
   const role = formData.get("role");
   const resume = formData.get("resume") as File;
 
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email && !emailRegex.test(email.toString())) {
+    return NextResponse.json(
+      { message: "Please provide a valid email address" },
+      { status: 400 }
+    );
+  }
   const ip = (req.headers.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0];
 
   try {
@@ -61,24 +69,42 @@ export async function POST(req: Request) {
     );
   }
 
+  const allowedFileTypes = [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ];
+  const maxFileSize = 5 * 1024 * 1024; // 5MB
+
   if (!name || !email || !phone || !education || !role || !resume) {
     return NextResponse.json(
       { message: "All fields are required" },
+      { status: 400 }
+    );
+  } else if (!allowedFileTypes.includes(resume.type)) {
+    return NextResponse.json(
+      { message: "Resume must be a PDF or Word document" },
+      { status: 400 }
+    );
+  } else if (resume.size > maxFileSize) {
+    return NextResponse.json(
+      { message: "Resume file size must be less than 5MB" },
       { status: 400 }
     );
   }
 
   try {
     const data = await resend.emails.send({
-      from: `${formData.get("name")} <onboarding@resend.dev>`,
+      from: `EESL Application <applications@yourdomain.com>`,
       replyTo: formData.get("email") as string,
-      to: [`eeslcareers@gmail.com`],
+      to: [process.env.APPLICATION_EMAIL_RECIPIENT || "eeslcareers@gmail.com"],
       subject: `New Application for ${formData.get("role")} Position`,
       react: ApplicationEmail({
         name: formData.get("name") as string,
         role: formData.get("role") as string,
         email: formData.get("email") as string,
         phone: formData.get("phone") as string,
+        education: formData.get("education") as string,
       }),
       attachments: [
         {
@@ -93,6 +119,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ data });
   } catch (error) {
     console.error("Error sending email:", error);
-    return NextResponse.json({ error });
+    return NextResponse.json(
+      {
+        message: "Failed to send application email",
+        error: error instanceof Error ? error.message : "Unknown error",
+      },
+      { status: 500 }
+    );
   }
 }

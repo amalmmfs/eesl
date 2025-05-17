@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [, setIsLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Contact Us  | EESL";
+    document.title = "Contact Us | EESL";
     const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);

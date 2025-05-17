@@ -4,7 +4,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
       url: "https://eesl.org.in/",
-      lastModified: new Date(),
+      lastModified: new Date("2024-04-15"), // Use the actual last update date for each page
       priority: 0.8,
     },
     {

@@ -1,5 +1,3 @@
-import { formatChemicalFormula } from "../utils/formatChemicalFormula";
-
 export interface Publication {
   id: number;
   title: string;
@@ -15,8 +13,7 @@ export const processPublications = (
 ): Publication[] => {
   return publications.map((pub) => ({
     ...pub,
-    formattedTitle: formatChemicalFormula(pub.title),
-    // formattedJournal: formatChemicalFormula(pub.journal)
+    formattedTitle: pub.title,
   }));
 };
 
@@ -75,7 +72,7 @@ export const publications: Publication[] = [
       "Abhik Banerjee",
       "Satishchandra Ogale",
     ],
-    journal: "Small", //TODO: Change to journal name
+    journal: "Small",
     year: 2025,
     publicationLink:
       "https://onlinelibrary.wiley.com/doi/10.1002/smll.202410167",
@@ -953,8 +950,4 @@ export const publications: Publication[] = [
     year: 2011,
     publicationLink: "https://pubs.acs.org/doi/abs/10.1021/jp203318n",
   },
-].map((pub) => ({
-  ...pub,
-  formattedTitle: formatChemicalFormula(pub.title),
-  formattedJournal: formatChemicalFormula(pub.journal),
-}));
+];

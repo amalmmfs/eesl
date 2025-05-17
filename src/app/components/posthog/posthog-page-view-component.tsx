@@ -1,4 +1,4 @@
-// app/PostHogPageView.tsx
+// src/app/components/posthog/posthog-page-view-component.tsx
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
