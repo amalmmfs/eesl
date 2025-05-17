@@ -14,23 +14,30 @@ export default function Header() {
   const pathname = usePathname();
 
   const router = useRouter();
-
   const handleNewsClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
     if (pathname !== "/") {
       await router.push("/");
+      // Wait for page to load before scrolling
+      window.addEventListener("load", () => {
+        scrollToNewsSection();
+      });
+      return;
     }
 
-    setTimeout(() => {
-      const newsSection = document.getElementById("news");
-      if (newsSection) {
-        window.scrollTo({
-          top: newsSection.offsetTop,
-          behavior: "smooth",
-        });
-      }
-    }, 300);
+    // If already on homepage, scroll immediately
+    scrollToNewsSection();
+  };
+
+  const scrollToNewsSection = () => {
+    const newsSection = document.getElementById("news");
+    if (newsSection) {
+      window.scrollTo({
+        top: newsSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
 
   const navLinks = [
@@ -42,7 +49,7 @@ export default function Header() {
     { href: "/conferences", label: "Conferences" },
     { href: "/gallery", label: "Gallery" },
     { href: "/#news", label: "News", onClick: handleNewsClick },
-    { href: "/careers", label: "Oppurtunities" },
+    { href: "/careers", label: "Opportunities" },
     { href: "/contact", label: "Contact Us" },
   ];
 
@@ -169,7 +176,12 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      link.onClick(e);
+                    }
+                    setIsMenuOpen(false);
+                  }}
                   className={`
                     flex items-center px-4 py-3 rounded-lg
                     transition-all duration-200 ease-out

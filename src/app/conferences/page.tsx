@@ -50,11 +50,6 @@ const ConferencesPage = () => {
   };
 
   const icsbPhotos: PhotoType[] = [
-    // {
-    //   id: 1,
-    //   src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Slide1_e93deh.png",
-    //   alt: "ICSB Conference Photo 1",
-    // },
     {
       id: 2,
       src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885994/Slide1_ldaoyo.tiff",
@@ -65,11 +60,6 @@ const ConferencesPage = () => {
       src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742885992/Flyer_ICSB_-Final_nbxfhg.jpg",
       alt: "ICSB Conference Photo 3",
     },
-    // {
-    //   id: 4,
-    //   src: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1742934156/Industries_ICSB25_page-0001_khh1hs.jpg",
-    //   alt: "ICSB Conference Photo 4",
-    // },
   ];
   const energyPhotos: PhotoType[] = [
     {
@@ -118,7 +108,7 @@ const ConferencesPage = () => {
           </h2>
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-gray-600 text-lg text-center mb-4">
-              Dr. Abhik banerjee has organized the exciting Global Conversation
+              Dr. Abhik Banerjee has organized the exciting Global Conversation
               on Sustainable Energy Storage at International Conference on
               Sustainable Batteries ICSB- 2025 | February 24-27, Kolkata, India,
               with Dr.Jagjit Nanda (International Convenor), Dr. Amartya
@@ -139,10 +129,6 @@ const ConferencesPage = () => {
               professionals, leaders from government agencies, and policymakers
               to share a common platform to discuss recent technical advances,
               innovations, and developments in batteries and energy storage.
-              academicians, industry professionals, leaders from government
-              agencies, and policymakers to share a common platform to discuss
-              recent technical advances, innovations, and developments in
-              batteries and energy storage.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -184,10 +170,9 @@ const ConferencesPage = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <p className="text-gray-600 text-lg text-center mb-4">
                 RISE is organizing a one-day Energy Discussion on Current
-                Challenges in Na and Solid solid-state batteries with a
-                planetary talk by Prof Shirley Meng from the University of
-                Chicago on 17th Feb 2024. There are additional talks by eminent
-                battery experts.
+                Challenges in Na and solid-state batteries with a planetary talk
+                by Prof Shirley Meng from the University of Chicago on 17th Feb
+                2024. There are additional talks by eminent battery experts.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

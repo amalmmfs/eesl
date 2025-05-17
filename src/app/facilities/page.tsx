@@ -12,11 +12,8 @@ const Facilities = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     document.title = "Facilities | EESL";
-    const timer = setTimeout(() => setIsLoading(false), 1000);
-    return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
@@ -33,19 +30,24 @@ const Facilities = () => {
   const filteredEquipments = useMemo(() => {
     if (!searchQuery) return equipments;
 
+    const lowerQuery = searchQuery.toLowerCase();
+
     return equipments
-      .map((category) => ({
-        ...category,
-        items: category.items.filter(
+      .map((category) => {
+        const filteredItems = category.items.filter(
           (item) =>
-            item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.description
-              ?.toLowerCase()
-              .includes(searchQuery.toLowerCase()) ??
-              false)
-        ),
-      }))
-      .filter((category) => category.items.length > 0);
+            item.title?.toLowerCase().includes(lowerQuery) ||
+            (item.description?.toLowerCase()?.includes(lowerQuery) ?? false)
+        );
+
+        if (filteredItems.length === 0) return null;
+
+        return {
+          ...category,
+          items: filteredItems,
+        };
+      })
+      .filter(Boolean);
   }, [searchQuery]);
 
   const containerVariants = {
@@ -113,11 +115,13 @@ const Facilities = () => {
         className="max-w-6xl mx-auto mb-12"
       >
         <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-          {filteredEquipments.map((equipment) => (
-            <button
-              key={equipment.category}
-              onClick={() => setActiveCategory(equipment.category)}
-              className={`
+          {filteredEquipments.map(
+            (equipment) =>
+              equipment && (
+                <button
+                  key={equipment.category}
+                  onClick={() => setActiveCategory(equipment.category)}
+                  className={`
                       px-4 py-2 
                       rounded-full
                       text-sm md:text-base 
@@ -134,10 +138,11 @@ const Facilities = () => {
                       active:shadow-none active:translate-y-1
                       hover:ring-2 hover:ring-blue-200/50
             `}
-            >
-              {equipment.category}
-            </button>
-          ))}
+                >
+                  {equipment.category}
+                </button>
+              )
+          )}{" "}
         </div>
       </motion.div>
 
@@ -149,63 +154,81 @@ const Facilities = () => {
         className="max-w-6xl mx-auto"
       >
         {filteredEquipments
-          .filter((equipment) => equipment.category === activeCategory)
-          .map((equipment) => (
-            <div key={equipment.category}>
-              <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-3xl font-semibold text-gray-800 mb-8 border-b pb-2"
-              >
-                {equipment.category}
-              </motion.h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {equipment.items.map((item) => (
-                  <motion.div
-                    key={item.title}
-                    variants={cardVariants}
-                    className={`bg-white cursor-pointer rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
-                      equipment.category === "Pouch Cell Facilities" ||
-                      equipment.category === "Inert Sample Transfer Systems"
-                        ? "col-span-full md:col-span-2 lg:col-span-3"
-                        : ""
-                    }`}
-                    onClick={() => setSelectedImage(item.imageUrl)}
+          .filter((equipment) => equipment?.category === activeCategory)
+          .map(
+            (equipment) =>
+              equipment && (
+                <div key={equipment.category}>
+                  <motion.h2
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="text-3xl font-semibold text-gray-800 mb-8 border-b pb-2"
                   >
-                    <div
-                      className={`relative ${
-                        equipment.category === "Pouch Cell Facilities" ||
-                        equipment.category === "Inert Sample Transfer Systems"
-                          ? "aspect-[16/9]"
-                          : "aspect-[4/3]"
-                      } w-full bg-gray-50`}
-                    >
-                      <Image
-                        src={item.imageUrl}
-                        alt={item.title || "Equipment"}
-                        className="object-contain hover:object-cover transition-all duration-700 ease-out p-2"
-                        fill
-                        quality={100}
-                        sizes={
+                    {equipment.category}
+                  </motion.h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {equipment.items.map((item) => (
+                      <motion.div
+                        key={item.title}
+                        variants={cardVariants}
+                        className={`bg-white cursor-pointer rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 ${
                           equipment.category === "Pouch Cell Facilities" ||
                           equipment.category === "Inert Sample Transfer Systems"
-                            ? "100vw"
-                            : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        }
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    </div>
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900 text-center">
-                        {item.title}
-                      </h3>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          ))}
+                            ? "col-span-full md:col-span-2 lg:col-span-3"
+                            : ""
+                        }`}
+                        onClick={() => setSelectedImage(item.imageUrl)}
+                      >
+                        <div
+                          className={`relative ${
+                            equipment.category === "Pouch Cell Facilities" ||
+                            equipment.category ===
+                              "Inert Sample Transfer Systems"
+                              ? "aspect-[16/9]"
+                              : "aspect-[4/3]"
+                          } w-full bg-gray-50`}
+                        >
+                          <Image
+                            src={item.imageUrl}
+                            alt={item.title || "Equipment"}
+                            className="object-contain hover:object-cover transition-all duration-700 ease-out p-2"
+                            fill
+                            quality={100}
+                            sizes={
+                              equipment.category === "Pouch Cell Facilities" ||
+                              equipment.category ===
+                                "Inert Sample Transfer Systems"
+                                ? "100vw"
+                                : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            }
+                            priority
+                            onError={() => {
+                              console.error(
+                                `Failed to load image: ${item.imageUrl}`
+                              );
+                              // Optionally show a fallback image or UI element
+                              const fallbackImageUrl = "/images/fallback.jpg";
+                              const imgElement = document.querySelector(
+                                `img[src="${item.imageUrl}"]`
+                              ) as HTMLImageElement;
+                              if (imgElement) {
+                                imgElement.src = fallbackImageUrl;
+                              }
+                            }}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        </div>
+                        <div className="p-4">
+                          <h3 className="text-lg font-semibold text-gray-900 text-center">
+                            {item.title}
+                          </h3>
+                        </div>
+                      </motion.div>
+                    ))}{" "}
+                  </div>
+                </div>
+              )
+          )}
       </motion.div>
 
       {/* Image Modal */}
@@ -240,6 +263,9 @@ const Facilities = () => {
                 </div>
               )}
               <div className="relative w-full h-full">
+                <h2 id="modal-title" className="sr-only">
+                  Equipment Detail Image
+                </h2>
                 <Image
                   src={selectedImage}
                   alt="Equipment detail"
@@ -263,5 +289,4 @@ const Facilities = () => {
     </motion.div>
   );
 };
-
 export default Facilities;

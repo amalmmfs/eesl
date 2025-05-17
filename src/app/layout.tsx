@@ -13,26 +13,26 @@ export const metadata: Metadata = {
   description:
     "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems. Our state-of-the-art equipment and facilities support groundbreaking research in sodium-ion batteries, lithium-ion batteries, supercapacitors, fuel cells, and solar photovoltaics. We're dedicated to advancing sustainable energy technologies through innovative research and development.",
   keywords:
-    "Abhik Banerjee, EESL equipment, Electrochemical Energy Systems Laboratory, Research facilities, laboratory equipment, scientific instruments, Batteries, Sodium ion batteries, Lithium ion batteries, Supercapacitors, Fuel cells, Solar cells, Photovoltaics, Energy storage, Energy conversion, Energy materials, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Glove Box",
+    "Abhik Banerjee, EESL equipment, Electrochemical Energy Systems Laboratory, Research facilities, laboratory equipment, scientific instruments, Batteries, Sodium ion batteries, Lithium ion batteries, Supercapacitors, Fuel cells, Solar cells, Photovoltaics, Energy storage, Energy conversion, Energy materials, Electrochemical engineering, Electrochemical systems, Electrochemical devices, Electrochemical processes, Electrochemical technologies, Electrochemical research, Electrochemical science, Glove Box",
   twitter: {
     card: "summary_large_image",
     description:
       "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems. Our state-of-the-art equipment and facilities support groundbreaking research in sodium-ion batteries, lithium-ion batteries, supercapacitors, fuel cells, and solar photovoltaics. We're dedicated to advancing sustainable energy technologies through innovative research and development.",
   },
-  // openGraph: {
-  //   type: "website",
-  //   title: "EESL | Electrochemical Energy Systems Laboratory",
-  //   description:
-  //     "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems.",
-  //   images: [
-  //     {
-  //       url: "https://eesl.org.in/",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "EESL Laboratory",
-  //     },
-  //   ],
-  // },
+  openGraph: {
+    type: "website",
+    title: "EESL | Electrochemical Energy Systems Laboratory",
+    description:
+      "EESL (Electrochemical Energy Systems Laboratory) is a cutting-edge research facility specializing in advanced energy storage solutions, batteries, and electrochemical systems.",
+    images: [
+      {
+        url: "https://eesl.org.in/images/lab-photo.jpg", // Update with actual image path
+        width: 1200,
+        height: 630,
+        alt: "EESL Laboratory",
+      },
+    ],
+  },
 };
 const roboto = Roboto({
   subsets: ["latin"],
@@ -46,6 +46,8 @@ const sourceSans = Source_Sans_3({
   variable: "--font-sourcesans",
 });
 
+const isProd = process.env.NODE_ENV === "production";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,18 +56,27 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} ${sourceSans.variable}`}>
       <body>
-        <PostHogProvider>
+        {isProd ? (
+          <PostHogProvider>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <SuspendedPostHogPageView />
+              <main className="flex-1">
+                {children}
+                <Analytics />
+              </main>
+              <Footer />
+            </div>
+            <Toaster position="top-right" />
+          </PostHogProvider>
+        ) : (
           <div className="flex min-h-screen flex-col">
             <Header />
-            <SuspendedPostHogPageView />
-            <main className="flex-1">
-              {children}
-              <Analytics />
-            </main>
+            <main className="flex-1">{children}</main>
             <Footer />
+            <Toaster position="top-right" />
           </div>
-          <Toaster position="top-right" />
-        </PostHogProvider>
+        )}
       </body>
     </html>
   );
