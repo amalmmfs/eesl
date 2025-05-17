@@ -61,7 +61,9 @@ export const teamData: TeamData = {
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1747233661/Pritha_Mondal_dgnzbu.jpg",
         educationQualification: ["PhD: IISC, Bengaluru"],
-        research_area: [""],
+        research_area: [
+          "Ether based electrolyte for low temperature Na- ion battery",
+        ],
       },
       {
         name: "Dr. Ripan Kr. Biswas",
