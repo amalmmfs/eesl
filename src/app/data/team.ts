@@ -265,7 +265,7 @@ export const teamData: TeamData = {
       image:
         "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738513368/EESL/Team/Current%20Members/Alumni/Minal%20Wable.jpg",
       about:
-        "Minal Wable is currently pursuing his Ph.D. at the Oklahoma State University under the guidance of Prof. Ömer Özgür Çapraz",
+        "Minal Wable is currently pursuing her Ph.D. at the Oklahoma State University under the guidance of Prof. Ömer Özgür Çapraz",
     },
     {
       name: "Dr. Debanjana Pahari",
