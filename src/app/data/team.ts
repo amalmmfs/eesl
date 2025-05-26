@@ -205,7 +205,7 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Sayan Ghosh",
+        name: "Sayan Chatterjee",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488322/EESL/Team/Current%20Members/Research%20Engineer/Sayan%20Ghosh.jpg",
         educationQualification: ["MSc: IIT, Kharagpur"],
