@@ -19,6 +19,25 @@ export const processPublications = (
 
 export const publications: Publication[] = [
   {
+    id: 53,
+    title:
+      "A Dimolybdenum Paddlewheel Embedded Covalent Organic Framework for Photocatalytic Hydrogen Peroxide Generation",
+    authors: [
+    "Bidhan Kumbhakar", 
+    "Avanti Chakraborty", 
+    "Uttam Pal", 
+    "Gaurav Jhaa", 
+    "Sukanta Mondal", 
+    "Abhik Banerjee", 
+    "Tanusri Saha-Dasgupta", 
+    "Pradip Pachfule"
+    ],
+    journal: "Small Micro",
+    year: 2025,
+    publicationLink: 
+      "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202501823",
+  },
+  {
     id: 52,
     title:
       "Revisiting Water Oxidation Reaction with Micro Bubble Lithography (MBL) Printed ZIF-67 MOF Electrocatalysts",
