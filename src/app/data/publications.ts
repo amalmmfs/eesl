@@ -32,7 +32,7 @@ export const publications: Publication[] = [
     "Tanusri Saha-Dasgupta", 
     "Pradip Pachfule"
     ],
-    journal: "Small Micro",
+    journal: "Small",
     year: 2025,
     publicationLink: 
       "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202501823",
