@@ -165,15 +165,6 @@ export const teamData: TeamData = {
         research_area: ["Oxygen redox in Na layered oxide cathodes"],
       },
       {
-        name: "Shristi Pradhan",
-        image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/Project%20Associates/Shristi%20Pradhan",
-        educationQualification: ["MSc: VIT, Vellore"],
-        research_area: [
-          "Study of anionic redox in layered transition metal oxide cathodes in sodium-ion batteries",
-        ],
-      },
-      {
         name: "Shruti Guha",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1738488283/EESL/Team/Current%20Members/Project%20Associates/Shruti%20Guha.jpg",
@@ -322,6 +313,15 @@ export const teamData: TeamData = {
       image:
         "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488378/EESL/Team/Current%20Members/Interns/Ajith%20Valsan.jpg",
       about: "Ajith is currently doing his PhD at Deakin University, Australia",
+    },
+    {
+      name: "Shristi Pradhan",
+      image:
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/Project%20Associates/Shristi%20Pradhan",
+      educationQualification: ["MSc: VIT, Vellore"],
+      research_area: [
+        "Study of anionic redox in layered transition metal oxide cathodes in sodium-ion batteries",
+      ],
     },
   ],
   collaborators: [
