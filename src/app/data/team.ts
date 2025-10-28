@@ -120,15 +120,6 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "S Jaishree",
-        image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488236/EESL/Team/Current%20Members/PhD%20Students/S%20Jaishree.jpg",
-        educationQualification: ["MSc: NIT, Jamshedpur"],
-        research_area: [
-          "Electrolytes in Lithium Ion and Lithium metal battery.",
-        ],
-      },
-      {
         name: "Debalina Sarkar",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/PhD%20Students/Debalina%20Sarkar",
@@ -157,13 +148,6 @@ export const teamData: TeamData = {
       },
     ],
     "Project Associates": [
-      {
-        name: "Shrestha Ghosh",
-        image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882861/EESL/Team/Current%20Members/Project%20Associates/Shrestha%20Ghosh.jpg",
-        educationQualification: ["MSc: IACS, Kolkata"],
-        research_area: ["Oxygen redox in Na layered oxide cathodes"],
-      },
       {
         name: "Shruti Guha",
         image:
@@ -318,10 +302,20 @@ export const teamData: TeamData = {
       name: "Shristi Pradhan",
       image:
         "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/Project%20Associates/Shristi%20Pradhan",
-      educationQualification: ["MSc: VIT, Vellore"],
-      research_area: [
-        "Study of anionic redox in layered transition metal oxide cathodes in sodium-ion batteries",
-      ],
+      about: 
+        "Shristi is currently pursuing her PhD at the University of Illinois Chicago",
+    },
+    {
+      name: "S Jaishree",
+      image:
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488236/EESL/Team/Current%20Members/PhD%20Students/S%20Jaishree.jpg",
+      about: "S Jaishree is currently preparing for her CAT examination",
+    },
+    {
+      name: "Shrestha Ghosh",
+      image:
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736882861/EESL/Team/Current%20Members/Project%20Associates/Shrestha%20Ghosh.jpg",
+      about: "Shrestha is currently pursuing her PhD at TCG CREST",
     },
   ],
   collaborators: [
