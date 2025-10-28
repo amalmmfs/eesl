@@ -21,21 +21,63 @@ export const publications: Publication[] = [
   {
     id: 53,
     title:
-      "A Dimolybdenum Paddlewheel Embedded Covalent Organic Framework for Photocatalytic Hydrogen Peroxide Generation",
+      "Solid-State Lithium Metal Batteries with Improved Performance via Polymer Electrolyte Interface Modification",
     authors: [
-    "Bidhan Kumbhakar", 
-    "Avanti Chakraborty", 
-    "Uttam Pal", 
-    "Gaurav Jhaa", 
-    "Sukanta Mondal", 
-    "Abhik Banerjee", 
-    "Tanusri Saha-Dasgupta", 
-    "Pradip Pachfule"
+      "Preeti Yadav",
+      "Pallavi Thakur",
+      "Lily Mandal",
+      "Abhik Banerjee",
+      "Tharangattu N. Narayanan",
     ],
-    journal: "Small",
+    journal: "ACS Publications",
     year: 2025,
-    publicationLink: 
-      "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202501823",
+    publicationLink:
+      "https://pubs.acs.org/doi/10.1021/acsami.5c14962",
+  },
+  {
+    id: 54,
+    title:
+      "A Thiazole-Linked Dithiophenedione-Functionalized Covalent Organic Framework for Photocatalytic Oxidative Dehydrogenation Reactions",
+    authors: [
+      "Bikash Mishra",
+      "Shyamali Maji",
+      "Monojit Roy",
+      "Supriti Dutta",
+      "Archisman Sinha",
+      "Tarak Nath Das",
+      "Sukanta Mondal",
+      "Abhik Banerjee",
+      "Arne Thomas",
+      "Pradip Pachfule",
+      "Debashis Adhikari",
+    ],
+    journal: "ACS Publications",
+    year: 2025,
+    publicationLink:
+      "https://pubs.acs.org/doi/10.1021/acs.chemmater.5c01745",
+  },
+  {
+    id: 55,
+    title:
+      "Effect of the Cation Sublattice Configuration on Li Ion Dynamics for the Spinel Li–Mg–Al–Cl System",
+    authors: [
+      "Susmita Bera",
+      "Anagha Vinayan",
+      "Lily Mandal",
+      "Ripan K. Biswas",
+      "Zhao Chen",
+      "Aditya Rawal",
+      "Selva Chandrasekaran Selvaraj",
+      "Maxim Adveev",
+      "Amreen Bano",
+      "Anh T. Ngo",
+      "Neeraj Sharma",
+      "Abhik Banerjee",
+    ],
+    journal: "ACS Publications",
+    year: 2025,
+    publicationLink:
+      "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238"
   },
   {
     id: 52,
