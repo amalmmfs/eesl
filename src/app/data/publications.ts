@@ -77,22 +77,7 @@ export const publications: Publication[] = [
     journal: "ACS Publications",
     year: 2025,
     publicationLink:
-      "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238",
-      "A Dimolybdenum Paddlewheel Embedded Covalent Organic Framework for Photocatalytic Hydrogen Peroxide Generation",
-    authors: [
-    "Bidhan Kumbhakar", 
-    "Avanti Chakraborty", 
-    "Uttam Pal", 
-    "Gaurav Jhaa", 
-    "Sukanta Mondal", 
-    "Abhik Banerjee", 
-    "Tanusri Saha-Dasgupta", 
-    "Pradip Pachfule"
-    ],
-    journal: "Small",
-    year: 2025,
-    publicationLink: 
-      "https://onlinelibrary.wiley.com/doi/abs/10.1002/smll.202501823",
+      "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238"
   },
   {
     id: 52,
