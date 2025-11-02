@@ -301,7 +301,7 @@ export const teamData: TeamData = {
     {
       name: "Shristi Pradhan",
       image:
-        "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/Project%20Associates/Shristi%20Pradhan",
+        "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1762110614/Shristi_Wisconsin_ntesmq.jpg",
       about: 
         "Shristi is currently pursuing her PhD at the University of Illinois Chicago",
     },
