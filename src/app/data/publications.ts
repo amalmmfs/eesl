@@ -29,7 +29,7 @@ export const publications: Publication[] = [
       "Abhik Banerjee",
       "Tharangattu N. Narayanan",
     ],
-    journal: "ACS Publications",
+    journal: "ACS Applied Materials & Interfaces",
     year: 2025,
     publicationLink:
       "https://pubs.acs.org/doi/10.1021/acsami.5c14962",
@@ -51,7 +51,7 @@ export const publications: Publication[] = [
       "Pradip Pachfule",
       "Debashis Adhikari",
     ],
-    journal: "ACS Publications",
+    journal: "Chemistry of Materials",
     year: 2025,
     publicationLink:
       "https://pubs.acs.org/doi/10.1021/acs.chemmater.5c01745",
@@ -74,7 +74,7 @@ export const publications: Publication[] = [
       "Neeraj Sharma",
       "Abhik Banerjee",
     ],
-    journal: "ACS Publications",
+    journal: "ACS Energy Letters",
     year: 2025,
     publicationLink:
       "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238"
