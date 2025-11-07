@@ -19,6 +19,27 @@ export const processPublications = (
 
 export const publications: Publication[] = [
   {
+    id: 56,
+    title:
+      "Cationic Covalent Organic Framework for Photocatalytic Defluorinative Amination of Fluoroarenes",
+    authors: [
+      "Supriti Dutta",
+      "Monojit Roy",
+      "Shyamali Maji",
+      "Bikash Mishra",
+      "Dr. Anirban Sen",
+      "Aparna Tiwari",
+      "Tarak Nath Das",
+      "Sukanta Mondal",
+      "Dr. Abhik Banerjee",
+      "Prof. Dr. Debashis Adhikari",
+      "Prof. Dr. Pradip Pachfule",
+    ],
+    journal: "Angewandte Chemie",
+    year: 2025,
+    publicationLink: "https://doi.org/10.1002/ange.202516235",
+  },
+  {
     id: 53,
     title:
       "Solid-State Lithium Metal Batteries with Improved Performance via Polymer Electrolyte Interface Modification",
@@ -31,8 +52,7 @@ export const publications: Publication[] = [
     ],
     journal: "ACS Applied Materials & Interfaces",
     year: 2025,
-    publicationLink:
-      "https://pubs.acs.org/doi/10.1021/acsami.5c14962",
+    publicationLink: "https://pubs.acs.org/doi/10.1021/acsami.5c14962",
   },
   {
     id: 54,
@@ -53,8 +73,7 @@ export const publications: Publication[] = [
     ],
     journal: "Chemistry of Materials",
     year: 2025,
-    publicationLink:
-      "https://pubs.acs.org/doi/10.1021/acs.chemmater.5c01745",
+    publicationLink: "https://pubs.acs.org/doi/10.1021/acs.chemmater.5c01745",
   },
   {
     id: 55,
@@ -76,8 +95,7 @@ export const publications: Publication[] = [
     ],
     journal: "ACS Energy Letters",
     year: 2025,
-    publicationLink:
-      "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238"
+    publicationLink: "https://pubs.acs.org/doi/10.1021/acsenergylett.5c02238",
   },
   {
     id: 52,
