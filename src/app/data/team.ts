@@ -54,6 +54,13 @@ export const teamData: TeamData = {
           "Interfaces and interphases in solid-state batteries, in-operando analysis of solid-state batteries",
         ],
       },
+      {
+        name: "Dr. Aniruddha Basu",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Aniruddha_clpjat.jpg",
+        educationQualification: ["PhD: NCL Pune"],
+        research_area: ["NMC-Si High Energy Density Battery"],
+      },
     ],
     "Research Associates": [
       {
@@ -95,26 +102,23 @@ export const teamData: TeamData = {
         name: "Newton Roy",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883047/EESL/Team/Current%20Members/PhD%20Students/Newton%20Roy.png",
-        educationQualification: ["MSc: Bidhannagar College, Kolkata"],
+        educationQualification: ["M.Sc: Bidhannagar College, Kolkata"],
         research_area: [
           "Electrolyte design for anode free Li and Na metal batteries",
         ],
       },
       {
-        name: "Himanshi Singh",
+        name: "Mahendra Mainkar",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883060/EESL/Team/Current%20Members/PhD%20Students/Himanshi%20Singh.png",
-        educationQualification: ["MSc: Banaras Hindu University"],
-        research_area: [
-          "Anode modifications for Sodium ion battery",
-          "Electrolyte modifications and solid electrolyte interphase in Sodium ion batteries",
-        ],
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Mahendra_too66e.jpg",
+        educationQualification: ["M.Sc: IIT, Madras"],
+        research_area: ["Low stack pressure solid state batteries"],
       },
       {
         name: "Ishita Das",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883068/EESL/Team/Current%20Members/PhD%20Students/Ishita%20Roy.png",
-        educationQualification: ["MSc: C.M.D. College, Bilaspur"],
+        educationQualification: ["M.Sc: C.M.D. College, Bilaspur"],
         research_area: [
           "Electrolytes in Lithium Ion and Lithium metal battery",
         ],
@@ -123,7 +127,9 @@ export const teamData: TeamData = {
         name: "Debalina Sarkar",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/f_auto,q_auto/v1/EESL/Team/Current%20Members/PhD%20Students/Debalina%20Sarkar",
-        educationQualification: ["MSc: Savitribai Phule Pune University, Pune"],
+        educationQualification: [
+          "M.Sc: Savitribai Phule Pune University, Pune",
+        ],
         research_area: [
           "Understanding the structure and thermal safety aspect of Na layered oxide cathodes",
         ],
@@ -132,7 +138,7 @@ export const teamData: TeamData = {
         name: "Moumita Samanta",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738654066/Moumita_Samanta_bkb33a.jpg",
-        educationQualification: ["MSc: Panskura Banamali College"],
+        educationQualification: ["M.Sc: Panskura Banamali College"],
         research_area: [
           "Study of electrochemical interfaces of aqueous and non-aqueous battery",
         ],
@@ -141,9 +147,20 @@ export const teamData: TeamData = {
         name: "Debopam Pal",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1739791661/Debopam_Pal_kzlmxl.jpg",
-        educationQualification: ["MSc: Visva-Bharati university"],
+        educationQualification: ["M.Sc: Visva-Bharati University"],
         research_area: [
           "Synthesis of organic solvents and additives for Li and Na-metal Batteries",
+        ],
+      },
+      {
+        name: "Tejpartap Singh",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Tej_wlsn8m.jpg",
+        educationQualification: [
+          "PhD Inspire Fellow - IIT Indore & RISE TCG Crest",
+        ],
+        research_area: [
+          "Ionic and electronic percolation of carbolyte in solid state batteries",
         ],
       },
     ],
@@ -151,7 +168,7 @@ export const teamData: TeamData = {
       {
         name: "Shruti Guha",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/c_crop,ar_1:1/v1738488283/EESL/Team/Current%20Members/Project%20Associates/Shruti%20Guha.jpg",
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779734413/Shruti_wsaxoc.jpg",
         educationQualification: ["M Tech: Technical University of Denmark"],
         research_area: [
           "Formulation and Optimization of dry coating process",
@@ -166,6 +183,36 @@ export const teamData: TeamData = {
         research_area: [
           "Understanding the stability of Na layered oxide cathodes under ambient conditions ",
         ],
+      },
+      {
+        name: "Mrigesh Palav",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488368/EESL/Team/Current%20Members/Interns/Mrigesh%20Palav.jpg",
+        educationQualification: ["B Tech: NIT, Calicut"],
+        research_area: ["Cathode study for anode-free Sodium-ion batteries"],
+      },
+      {
+        name: "Gayatri Unni",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Gayatri_dbyjkw.jpg",
+        educationQualification: ["M.Sc: University of Madras, Chennai"],
+        research_area: ["High energy density Li-ion batteries"],
+      },
+      {
+        name: "Sumanth N.",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Sumanth_jdrxo3.jpg",
+        educationQualification: ["M.Sc: REVA University, Bangalore"],
+        research_area: ["Sn anode for Na-ion batteries"],
+      },
+      {
+        name: "Tiasa Seal",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Tiasa_myaxa0.jpg",
+        educationQualification: [
+          "M.Sc: Diamond Harbour Women's University, Kolkata",
+        ],
+        research_area: ["TBD"],
       },
     ],
     "Research Engineer": [
@@ -183,7 +230,7 @@ export const teamData: TeamData = {
         name: "Sayan Chatterjee",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488322/EESL/Team/Current%20Members/Research%20Engineer/Sayan%20Ghosh.jpg",
-        educationQualification: ["MSc: IIT, Kharagpur"],
+        educationQualification: ["M.Sc: IIT, Kharagpur"],
         research_area: [
           "Electrolytes in Lithium Ion and Lithium metal battery",
         ],
@@ -192,20 +239,29 @@ export const teamData: TeamData = {
 
     Interns: [
       {
-        name: "Mrigesh Palav",
+        name: "Amal MN",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488368/EESL/Team/Current%20Members/Interns/Mrigesh%20Palav.jpg",
-        educationQualification: ["B Tech: NIT, Calicut"],
-        research_area: ["Cathode study for anode-free Sodium-ion batteries"],
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731783/Amal_fcmkk7.jpg",
+        educationQualification: ["B Tech: CECRI, Karaikudi"],
+        research_area: [
+          "Operando Raman for SEI Study for Li and Na metal anode",
+        ],
       },
       {
-        name: "Mahendra Mainkar",
+        name: "Ambily Ganga",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488389/EESL/Team/Current%20Members/Interns/Mahendra%20Mainkar.jpg",
-        educationQualification: ["MSc: IIT, Madras"],
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731783/Ambily_w0ljuf.jpg",
+        educationQualification: ["M.Sc: Digital University, Kerala"],
         research_area: [
-          "Inorganic solid electrolytes for all-solid-state batteries",
+          "Degradation of Na full cells using impedance analysis",
         ],
+      },
+      {
+        name: "Annesha Gupta",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Annesha_uzwsqu.jpg",
+        educationQualification: ["M.Sc CIPET: IPT Bhuvaneshwar"],
+        research_area: ["Direct recycyling of NMC cathode"],
       },
     ],
     "Visiting Student": [
@@ -216,6 +272,15 @@ export const teamData: TeamData = {
         educationQualification: ["Research Scholar at IIT (ISM), Dhanbad"],
         research_area: [
           "Development of Iron-Manganese based transition metal oxides for sodium-ion batteries",
+        ],
+      },
+      {
+        name: "Nisha Kumari",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Nikita_tytbap.jpg",
+        educationQualification: ["Reseach Scholar at IIT Indore"],
+        research_area: [
+          "Structure and diffusion in composite solid electrolyte",
         ],
       },
     ],
@@ -302,7 +367,7 @@ export const teamData: TeamData = {
       name: "Shristi Pradhan",
       image:
         "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1762110614/Shristi_Wisconsin_ntesmq.jpg",
-      about: 
+      about:
         "Shristi is currently pursuing her PhD at the University of Illinois Chicago",
     },
     {
