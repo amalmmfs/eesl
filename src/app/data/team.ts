@@ -263,6 +263,17 @@ export const teamData: TeamData = {
         educationQualification: ["M.Sc CIPET: IPT Bhuvaneshwar"],
         research_area: ["Direct recycyling of NMC cathode"],
       },
+      {
+        name: "Tejpartap Singh",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1736883060/EESL/Team/Current%20Members/PhD%20Students/Himanshi%20Singh.png",
+        educationQualification: [
+          "PhD Inspire Fellow - IIT Indore & RISE TCG Crest",
+        ],
+        research_area: [
+          "Ionic and electronic percolation of carbolyte in solid state batteries",
+        ],
+      },
     ],
     "Visiting Student": [
       {
