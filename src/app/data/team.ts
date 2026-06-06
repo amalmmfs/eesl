@@ -163,6 +163,17 @@ export const teamData: TeamData = {
           "Ionic and electronic percolation of carbolyte in solid state batteries",
         ],
       },
+      {
+        name: "Tejpartap Singh B",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Tej_wlsn8m.jpg",
+        educationQualification: [
+          "PhD Inspire Fellow - IIT Indore & RISE TCG Crest",
+        ],
+        research_area: [
+          "Ionic and electronic percolation of carbolyte in solid state batteries",
+        ],
+      },
     ],
     "Project Associates": [
       {
