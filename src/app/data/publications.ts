@@ -1,23 +1,8 @@
-export interface Publication {
-  id: number;
-  title: string;
-  authors: string[];
-  journal: string;
-  year: number;
-  publicationLink: string;
-  formattedTitle?: string;
-}
+import type { Publication } from "@/lib/publications/types";
 
-export const processPublications = (
-  publications: Publication[],
-): Publication[] => {
-  return publications.map((pub) => ({
-    ...pub,
-    formattedTitle: pub.title,
-  }));
-};
+export type { Publication };
 
-export const publications: Publication[] = [
+export const manualPublications: Publication[] = [
   {
     id: 56,
     title:
