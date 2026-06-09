@@ -239,7 +239,7 @@ export const teamData: TeamData = {
 
     Interns: [
       {
-        name: "Amal MN",
+        name: "Amal M M",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731783/Amal_fcmkk7.jpg",
         educationQualification: ["B Tech: CECRI, Karaikudi"],
