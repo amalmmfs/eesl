@@ -108,7 +108,7 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Mahendra Mainkar",
+        name: "Mahendra Mainkar N.",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Mahendra_too66e.jpg",
         educationQualification: ["M.Sc: IIT, Madras"],
