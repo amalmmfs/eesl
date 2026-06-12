@@ -153,14 +153,14 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Tejpartap Singh",
+        name: "Tejpratap Singh",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Tej_wlsn8m.jpg",
         educationQualification: [
           "PhD Inspire Fellow - IIT Indore & RISE TCG Crest",
         ],
         research_area: [
-          "Ionic and electronic percolation of carbolyte in solid state batteries",
+          "Ionic and Electronic Percolation of Catholyte in Solid-state Batteries",
         ],
       },
     ],
