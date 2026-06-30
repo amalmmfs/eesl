@@ -108,7 +108,7 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Mahendra Mainkar N.",
+        name: "Mahendra Mainkar",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Mahendra_too66e.jpg",
         educationQualification: ["M.Sc: IIT, Madras"],
@@ -187,7 +187,7 @@ export const teamData: TeamData = {
       {
         name: "Mrigesh Palav",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1738488368/EESL/Team/Current%20Members/Interns/Mrigesh%20Palav.jpg",
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782824226/WhatsApp_Image_2026-06-18_at_09.13.25_n9nblr.jpg",
         educationQualification: ["B Tech: NIT, Calicut"],
         research_area: ["Cathode study for anode-free Sodium-ion batteries"],
       },
@@ -213,6 +213,13 @@ export const teamData: TeamData = {
           "M.Sc: Diamond Harbour Women's University, Kolkata",
         ],
         research_area: ["TBD"],
+      },
+       {
+        name: "Annesha Gupta",
+        image:
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Annesha_uzwsqu.jpg",
+        educationQualification: ["M.Sc CIPET: IPT Bhuvaneshwar"],
+        research_area: ["Direct recycyling of NMC cathode"],
       },
     ],
     "Research Engineer": [
@@ -242,7 +249,7 @@ export const teamData: TeamData = {
         name: "Amal M M",
         image:
           "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731783/Amal_fcmkk7.jpg",
-        educationQualification: ["B Tech: CECRI, Karaikudi"],
+        educationQualification: ["B Tech: CSIR-CECRI, Karaikudi"],
         research_area: [
           "Operando Raman for SEI Study for Li and Na metal anode",
         ],
@@ -257,12 +264,39 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Annesha Gupta",
+        name: "Arkaprava Adhikary",
         image:
-          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1779731782/Annesha_uzwsqu.jpg",
-        educationQualification: ["M.Sc CIPET: IPT Bhuvaneshwar"],
-        research_area: ["Direct recycyling of NMC cathode"],
+          "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796537/DSC01572_qkyate.jpg",
+        educationQualification: ["B.Sc.: St. Xavier's College (Autonomous), Kolkata" ],
+        research_area: [
+          "Electronic Structure and Li-ion Transport in Halide Solid Electrolytes",
+        ],
       },
+      {
+        name: "Pritam Ghosh",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796535/DSC01577_snbxgk.jpg",
+        educationQualification: ["M.Tech: IIT Kanpur"],
+        research_area: [
+          "Influence of Na\u207A Diffusivity in Carbon on Sodium Metal Growth at High Current Densities on Carbon Coated Aluminium Collectors"
+        ],
+      },
+      {
+        name: "Abhinandan Dhar",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796536/DSC01565_rfdtcy.jpg",
+        educationQualification: ["M.Sc.: IIT Madras"],
+        research_area: [
+          "Oxidation Stability of Li3N-LiX Composite/Solid Solution"
+        ],
+      },
+      {
+        name: "Md Waqar Ahmed",
+        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796536/DSC01569_kw5rwy.jpg",
+        educationQualification: ["B.Tech: Heritage Institute of Technology, Kolkata"],
+        research_area: [
+          "Optimization of Carbon Coatings on Aluminium Foils for Large-Area and High Density Sodium Metal Deposition"
+        ],
+      },
+          
     ],
     "Visiting Student": [
       {
