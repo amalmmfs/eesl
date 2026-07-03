@@ -195,6 +195,7 @@ export default function Header() {
                   <span className="text-base">{link.label}</span>
                   {pathname === link.href && (
                     <motion.div
+                    suppressHydrationWarning
                       layoutId="activeTab"
                       className="ml-auto w-1.5 h-1.5 rounded-full bg-white"
                       transition={{

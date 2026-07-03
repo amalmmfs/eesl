@@ -4,6 +4,82 @@ export type { Publication };
 
 export const manualPublications: Publication[] = [
   {
+    id: 62,
+    title:
+      "Regulating Li-Ion Transport via Solvent and Ion Clustering Using Ternary Salts in Nonfluorinated Solvents for Extended Cyclability of Zero-Excess Lithium-Metal Batteries",
+    authors: [
+      "Shuvadip Pradhan",
+      "Akash K. Meel",
+      "Shubhadeep Pal",
+      "Sreeroop Ghosh",
+      "Abhik Banerjee",
+      "Santosh Mogurampelly",
+      "Tharangattu N. Narayanan",
+    ],
+    journal: "Journal of the American Chemical Society",
+    year: 2026,
+    publicationLink: "https://pubs.acs.org/doi/10.1021/jacs.6c10517",
+  },
+  {
+    id: 59,
+    title:
+      "Role of Interfacial Dynamics in Bulk Ion Dynamics of Single Crystal NMC in Solid State Batteries",
+    authors: [
+      "Lily Mandal",
+      "RIPAN K. Biswas",
+      "Susmita Bera",
+      "S. Nandy",
+      "Suraj Halder",
+      "Sheetal Kumar Jain",
+      "Abhik Banerjee",
+    ],
+    journal: "ACS Energy Letters",
+    year: 2026,
+    publicationLink: "https://doi.org/10.1021/acsenergylett.5c03652",
+  },
+  {
+    id: 60,
+    title:
+      "Cationic Covalent Organic Framework for Photocatalytic Defluorinative Amination of Fluoroarenes",
+    authors: [
+      "S. Dutta",
+      "M. Roy",
+      "S. Maji",
+      "B. Mishra",
+      "A. Sen",
+      "A. Tiwari",
+      "T. N. Das",
+      "S. Mondal", 
+      "Dr. Abhik Banerjee", 
+      "Prof. Dr. Debashis Adhikari", 
+      "Prof. Dr. Pradip Pachfule"
+    ],
+    journal: "Angewandte Chemie",
+    year: 2026,
+    publicationLink: "https://doi.org/10.1002/ange.202516235",
+  },
+  {
+    id: 61,
+    title:
+      "Amide Additives Enhance the Understanding of Kinetic Reversibility in Zinc Anode Stability Using Ultramicroelectrodes",
+    authors: [
+      "J. H. Nguyen",
+      "Ashutosh Rana",
+      "K. Shiprath",
+      "Brajesh Rajesh Bhagat",
+      "S. Paul",
+      "S. Chatterjee",
+      "Newton Roy", 
+      "Ishita Das", 
+      "Bidisa Das", 
+      "Abhik Banerjee",
+      "Jeffrey E. Dick"
+    ],
+    journal: "Chemical Science",
+    year: 2026,
+    publicationLink: "https://doi.org/10.1039/d5sc06311f",
+  },
+  {
     id: 56,
     title:
       "Influence of Positional Isomerism in Weakly Solvating Ethers on Lithium Metal Deposition",
@@ -115,7 +191,7 @@ export const manualPublications: Publication[] = [
   {
     id: 55,
     title:
-      "Effect of the Cation Sublattice Configuration on Li Ion Dynamics for the Spinel Li–Mg–Al–Cl System",
+      "Effect of the Cation Sublattice Configuration on Li Ion Dynamics for the Spinel Li-Mg–Al–Cl System",
     authors: [
       "Susmita Bera",
       "Anagha Vinayan",
