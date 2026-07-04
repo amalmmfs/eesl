@@ -212,7 +212,7 @@ export const teamData: TeamData = {
         educationQualification: [
           "M.Sc: Diamond Harbour Women's University, Kolkata",
         ],
-        research_area: ["TBD"],
+        research_area: ["Electrolyte Development for Si-Gr-LNMO Electrodes"],
       },
        {
         name: "Annesha Gupta",
