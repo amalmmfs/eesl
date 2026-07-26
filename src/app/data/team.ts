@@ -281,14 +281,6 @@ export const teamData: TeamData = {
         ],
       },
       {
-        name: "Pritam Ghosh",
-        image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796535/DSC01577_snbxgk.jpg",
-        educationQualification: ["M.Tech: IIT Kanpur"],
-        research_area: [
-          "Influence of Na\u207A Diffusivity in Carbon on Sodium Metal Growth at High Current Densities on Carbon Coated Aluminium Collectors"
-        ],
-      },
-      {
         name: "Abhinandan Dhar",
         image: "https://res.cloudinary.com/dmw1bwmpr/image/upload/v1782796536/DSC01565_rfdtcy.jpg",
         educationQualification: ["M.Sc.: IIT Madras"],
